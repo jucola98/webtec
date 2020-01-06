@@ -20,14 +20,14 @@
         <!-- CSS Global -->
         <link href="{{asset('plugins/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('plugins/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css">
-        <link href="{{asset('plugins/owl.carousel.min.css')}}" rel="stylesheet')}}" type="text/css">  
-        <link href="{{asset('plugins/animate.css" rel="stylesheet')}}" type="text/css">  
-        <link href="{{asset('plugins/subscribe-better.css" rel="stylesheet')}}" type="text/css">
+        <link href="{{asset('plugins/owl.carousel.min.css')}}" rel="stylesheet" type="text/css">  
+        <link href="{{asset('plugins/animate.css"')}}" rel="stylesheet" type="text/css">  
+        <link href="{{asset('plugins/subscribe-better.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('plugins/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css">   
         
         <!-- Icon Font -->
         <link href="{{asset('icons-font/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">   
-        <link href="{{asset('icons-font/font-elegant/elegant.css" rel="stylesheet')}}" type="text/css">   
+        <link href="{{asset('icons-font/font-elegant/elegant.css')}}"  rel="stylesheet" type="text/css">   
         <link href="{{asset('icons-font/simple-line-icons-master/css/simple-line-icons.css')}}" rel="stylesheet" type="text/css">   
 
 
@@ -410,5 +410,18 @@
 
             </footer>
             <!-- /FOOTER -->
+            <script src={{asset("plugins/jquery-2.1.3.js")}}></script>        
+            <script src={{asset("plugins/bootstrap.min.js")}}></script>
+            <script src={{asset("plugins/bootstrap-select.min.js")}}></script>
+            <script src={{asset("plugins/owl.carousel.min.js")}}></script>
+            <script src={{asset("plugins/countdown/jquery.plugin.min.js")}}></script>
+            <script src={{asset("plugins/countdown/jquery.countdown.js")}}></script>
+            <script src={{asset("plugins/jquery.subscribe-better.min.js")}}></script>
+            <script src={{asset("plugins/jquery.mCustomScrollbar.concat.min.js")}}></script>
+    
+    
+            <!-- Custom Js  --> 
+            <script src={{asset("js/home-fourteen.js")}}></script>
+            <script src={{asset("plugins/owl-animated-text.js")}}></script>
         </body>
     </html>
