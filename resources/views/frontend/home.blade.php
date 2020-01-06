@@ -10,7 +10,11 @@
 <section class="main-slider">
 	<div class="single-slider-1 owl-carousel owl-dots-2 owl-nav-1">
 		<div class="item">
+<<<<<<< HEAD:resources/views/frontEnd/home.blade.php
 			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_1.jpg')}}" />
+=======
+			<img alt="slider" src={{asset("img/home-fourteen/slideshow_1.jpg")}}8 />
+>>>>>>> c46b1b61f35fe0b100961ab83e50af37b1ed64cf:resources/views/frontend/home.blade.php
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown">NEW ARRIVAL</h5>
@@ -21,7 +25,11 @@
 			</div>
 		</div>
 		<div class="item">
+<<<<<<< HEAD:resources/views/frontEnd/home.blade.php
 			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_2.jpg')}}" />
+=======
+			<img alt="slider" src={{asset("img/home-fourteen/slideshow_2.jpg")}} />
+>>>>>>> c46b1b61f35fe0b100961ab83e50af37b1ed64cf:resources/views/frontend/home.blade.php
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown"> NEW ARRIVAL </h5>
