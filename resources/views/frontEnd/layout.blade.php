@@ -14,31 +14,31 @@
         <title>Home-14/Logancee</title>
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed icon" sizes="144x144" href="{{asset('assets/ico/apple-touch-icon-144-precomposed.png')}}">
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed icon" sizes="144x144" href="{{asset('ico/apple-touch-icon-144-precomposed.png')}}">
+        <link rel="shortcut icon" href="{{asset('assets/ico/favicon.ico')}}">
 
         <!-- CSS Global -->
-        <link href="{{asset('assets/plugins/bootstrap.min.css" rel="stylesheet')}}" type="text/css">
-        <link href="{{asset('assets/plugins/bootstrap-select.min.css" rel="stylesheet')}}" type="text/css">
-        <link href="{{asset('assets/plugins/owl.carousel.min.css" rel="stylesheet')}}" type="text/css">  
-        <link href="{{asset('assets/plugins/animate.css" rel="stylesheet')}}" type="text/css">  
-        <link href="{{asset('assets/plugins/subscribe-better.css" rel="stylesheet')}}" type="text/css">
-        <link href="{{asset('assets/plugins/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css">   
+        <link href="{{asset('plugins/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('plugins/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('plugins/owl.carousel.min.css')}}" rel="stylesheet" type="text/css">  
+        <link href="{{asset('plugins/animate.css')}}" rel="stylesheet" type="text/css">  
+        <link href="{{asset('plugins/subscribe-better.css')}}" rel="stylesheet" type="text/css">
+        
 
         <!-- Icon Font -->
-        <link href="{{asset('assets/icons-font/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">   
-        <link href="{{asset('assets/icons-font/font-elegant/elegant.css" rel="stylesheet')}}" type="text/css">   
-        <link href="{{asset('assets/icons-font/simple-line-icons-master/css/simple-line-icons.css')}}" rel="stylesheet" type="text/css">   
+        <link href="{{asset('icons-font/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">   
+        <link href="{{asset('icons-font/font-elegant/elegant.css" rel="stylesheet')}}" type="text/css">   
+        <link href="{{asset('icons-font/simple-line-icons-master/css/simple-line-icons.css')}}" rel="stylesheet" type="text/css">   
 
 
         <!-- Custom CSS -->
         <link href="{{asset('css/home-fourteen.css')}}" rel="stylesheet" type="text/css">
 
 
-        <!--[if lt IE 9]>
-          <script src="assets/plugins.html5shiv.min.js"></script>
-          <script src="assets/plugins/respond.min.js"></script>
-        <![endif]-->
+        
+          <script src="{{asset('assets/plugins.html5shiv.min.js')}}"></script>
+          <script src="{{asset('assets/plugins/respond.min.js')}}"></script>
+        
     </head>
     <body class="wide">        
         <!-- PRELOADER -->
@@ -363,7 +363,7 @@
             </header>
 			<!-- /HEADER -->
 			
-			@yield('section')
+			@yield('content')
 
 			<!-- Newsletter Starts-->
 			<section class="section-five newsletter">
@@ -385,8 +385,7 @@
                 </section>
                 <!-- / Newsletter Ends -->  
 
-            </article>
-            <!-- / CONTENT AREA -->
+         
 
             <!-- FOOTER -->
             <footer class="footer-six">
