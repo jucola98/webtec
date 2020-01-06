@@ -10,7 +10,7 @@
 <section class="main-slider">
 	<div class="single-slider-1 owl-carousel owl-dots-2 owl-nav-1">
 		<div class="item">
-			<img alt="slider" src="assets/img/home-fourteen/slideshow_1.jpg" />
+			<img alt="slider" src={{asset("img/home-fourteen/slideshow_1.jpg")}}8 />
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown">NEW ARRIVAL</h5>
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img alt="slider" src="assets/img/home-fourteen/slideshow_2.jpg" />
+			<img alt="slider" src={{asset("img/home-fourteen/slideshow_2.jpg")}} />
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown"> NEW ARRIVAL </h5>
