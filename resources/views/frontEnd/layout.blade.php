@@ -36,8 +36,8 @@
 
 
         
-          <script src="{{asset('assets/plugins.html5shiv.min.js')}}"></script>
-          <script src="{{asset('assets/plugins/respond.min.js')}}"></script>
+          <script src="{{asset('plugins/html5shiv.min.js')}}"></script>
+          <script src="{{asset('plugins/respond.min.js')}}"></script>
         
     </head>
     <body class="wide">        
@@ -54,7 +54,7 @@
             <header class="header-wrap header-two"> 
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-12 logo-wrap">
-                        <a class="logo" href="index.html"> <img src="assets/img/common/main-logo.png" alt="logo" title="Logo"> </a>
+                        <a class="logo" href="index.html"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo"> </a>
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-12">       
                         <div class="top-elements">

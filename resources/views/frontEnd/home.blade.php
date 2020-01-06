@@ -10,7 +10,7 @@
 <section class="main-slider">
 	<div class="single-slider-1 owl-carousel owl-dots-2 owl-nav-1">
 		<div class="item">
-			<img alt="slider" src="assets/img/home-fourteen/slideshow_1.jpg" />
+			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_1.jpg')}}" />
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown">NEW ARRIVAL</h5>
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="item">
-			<img alt="slider" src="assets/img/home-fourteen/slideshow_2.jpg" />
+			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_2.jpg')}}" />
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown"> NEW ARRIVAL </h5>
@@ -46,7 +46,7 @@
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="block-top-item">
 					<div class="images">
-						<img src="assets/img/home-fourteen/item-3.jpg" alt="">
+						<img src="{{asset('img/home-fourteen/item-3.jpg')}}" alt="">
 					</div>
 					<div class="block-content">          
 						<i class="icon_pin_alt"></i>      
@@ -58,7 +58,7 @@
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="block-top-item">
 					<div class="images">
-						<img src="assets/img/home-fourteen/item-4.jpg" alt="">
+						<img src="{{asset('img/home-fourteen/item-4.jpg')}}" alt="">
 					</div>
 					<div class="block-content">          
 						<i class="icon_currency"></i>      
@@ -70,7 +70,7 @@
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="block-top-item">
 					<div class="images">
-						<img src="assets/img/home-fourteen/item-5.jpg" alt="">
+						<img src="{{asset('img/home-fourteen/item-5.jpg')}}" alt="">
 					</div>
 					<div class="block-content">          
 						<i class="icon_comment_alt"></i>      
@@ -95,12 +95,12 @@
 	</div>  
 	<div class="col-md-6 col-sm-12 item-wrap">
 		<div class="item-img">
-			<img class="img" src="assets/img/home-fourteen/item-1.jpg" alt="" />
+			<img class="img" src="{{asset('img/home-fourteen/item-1.jpg')}}" alt="" />
 		</div>
 	</div>  
 	<div class="col-md-6 col-sm-12 item-wrap">
 		<div class="item-img">
-			<img class="img" src="assets/img/home-fourteen/item-2.jpg" alt="" />
+			<img class="img" src="{{asset('img/home-fourteen/item-2.jpg')}}" alt="" />
 			<div class="caption">
 				<h2 class="main-title">red wing</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis diam sed tellus cursus, quis dictum erat pellentesque.</p>
@@ -140,14 +140,14 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-1.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-1.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-1.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-1.jpg')}}">          
 										</span>
 									</a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/gray.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/black.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/product/gray.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/product/black.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -168,9 +168,9 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-2.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-2.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-2.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-2.jpg')}}">          
 										</span>
 									</a>
 									<div class="quick-view">
@@ -194,9 +194,9 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-3.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-3.jpg">          
+											<img alt="" src="assets/img/home-fourteen/prod-flip-3.jpg">          
 										</span>
 									</a>
 									<ul class="color-swatch-item">
