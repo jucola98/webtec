@@ -163,6 +163,7 @@
                                             </div>  
                                         </div>
                                     </li>  
+                                    <!--
                                     <li class="dropdown mega-dropdown">
                                         <a aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Shop</a>
                                         <div class="dropdown-menu mega-dropdown-menu">
@@ -219,16 +220,15 @@
                                                 </div>
                                             </div>  
                                         </div>
-                                    </li>
+                                    </li>-->
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Features <div class="bubble"> </div> </a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Uomo <div class="bubble"> </div> </a>
+                                        
                                         <ul class="dropdown-menu">  
-                                            <li><a href="categories-2-column.html"> Category Col 2 </a></li>                                            
-                                            <li><a href="categories-3-column.html"> Category Col 3 </a></li>
-                                            <li><a href="categories-4-column.html"> Category Col 4 </a></li>
-                                            <li><a href="categories-list-view.html"> Category List </a></li>                                            
-                                            <li><a href="categories-sidebar-left.html"> Category Sidebar Left </a></li>
-                                            <li><a href="categories-sidebar-right.html"> Category Sidebar Right </a></li>
+                                        @foreach (App\Http\Controllers\FrontendController::fetchCategoriesMan() as $records)
+                                            <li><a href="{{ route('home',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
+                                        @endforeach    
+                                            <!--
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Sub Menu</a>
                                                 <ul class="dropdown-menu">  
@@ -243,20 +243,16 @@
                                                         </ul>
                                                     </li> 
                                                 </ul>
-                                            </li>
+                                            </li>-->
                                         </ul>
                                     </li>                                   
                                                                                                                              
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Blog</a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Donna</a>
                                         <ul class="dropdown-menu">  
-                                            <li><a href="blog-grid-with-sidebar.html"> Blog Grid With Sidebar </a></li>                                            
-                                            <li><a href="blog-grid-no-sidebar.html"> Blog Grid No Sidebar </a></li>
-                                            <li><a href="blog-list-with-sidebar.html"> Blog List With Sidebar </a></li>
-                                            <li><a href="blog-list-no-sidebar.html"> Blog List No Sidebar </a></li>
-                                            <li><a href="blog-masonry-no-sidebar.html"> Blog Masonry </a></li>
-                                            <li><a href="blog-small-thumb.html"> Blog Small Thumb </a></li>
-                                            <li><a href="blog-single.html"> Blog Single </a></li>
+                                            @foreach (App\Http\Controllers\FrontendController::fetchCategoriesWoman() as $records)
+                                                <li><a href="{{ route('home',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
+                                            @endforeach 
                                         </ul>
                                     </li>
                                     <li><a href="contact-us.html">Contact</a></li>
