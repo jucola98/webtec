@@ -65,7 +65,7 @@
                             <div class="header-cart-wrap">
                                 <div class="header-cart">
                                     <a href="shopping-cart.html"> 
-                                        <i class="cart-icon icon-handbag icons"></i> <span class="count"> 2 </span> 
+                                        <i class="cart-icon icon-handbag icons"></i> 
                                     </a>
                                 </div>
                                 <div class="cart-popup"> 
@@ -114,25 +114,27 @@
                             <div class="top-settings"> 
                                 <a href="#" class="icon-settings icons">  </a> 
                                 <ul class="settings-popup">
-                                    <li class="country-flag">
-                                        <h2 class="title-2">select language</h2>
-                                        <a href="#" class="active"> <img class="img-responsive" src="{{asset('img/home-fourteen/flags/flag-1.png')}}" alt=""> </a>
-                                        <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/flags/flag-2.png')}}" alt=""> </a>
-                                        <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/flags/flag-3.png')}}" alt=""> </a>
-                                    </li>
-                                    <li class="country-currency">
-                                        <h2 class="title-2">select currency</h2>
-                                        <a href="#"> <span class="fa fa-usd"></span> </a>
-                                        <a href="#"> <span class="fa fa-euro"></span> </a>
-                                        <a href="#"> <span class="fa fa-gbp"></span> </a>
-                                    </li>
-                                    <li class="additional-page font-2">                                          
-                                        <a href="#"> <span class="icon-lock icons"></span> Log in/Sign Up </a>
-                                        <a href="#"> <span class="icon-user icons"></span> My Account </a>
-                                        <a href="#"> <span class="icon-heart icons"></span> My Wishlist </a>
+                                 <li class="additional-page font-2">   
+                                 @if(Auth::check())                                       
+                                        <a href="{{ route('logout') }}" 
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            <span class="icon-lock icons"></span>
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                        </form>
+                                        <a href="#"> <span class="icon-user icons"></span> My Accaunt </a>
+                                        <a href="#"> <span class="icon-handbag icons"></span> My Cart </a>
+                                        <a href="#"> <span class="icon-note icons"></span> My Checkout </a>
+                                        @else
+                                        <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
+                                        <a href="#"> <span class="icon-user icons"></span> My Accaunt </a>
                                         <a href="#"> <span class="icon-handbag icons"></span> My Cart </a>
                                         <a href="#"> <span class="icon-note icons"></span> My Checkout </a>
                                     </li>
+                                    @endif
                                 </ul>
                             </div>                            
                         </div>
@@ -142,39 +144,12 @@
                             <div id="primary-navigation">                                        
                                 <ul class="primary-navbar font-2">
                                     <li class="dropdown mega-dropdown active">
-                                        <a aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Home</a>
+                                    <li><a href="contact-us.html">Home</a></li>
                                         <div class="dropdown-menu mega-dropdown-menu">
-                                            <div class="col-sm-12 col-lg-4 menu-block">
-                                                <div class="sub-list">                                                 
-                                                    <ul>
-                                                        <li><a href="index.html">Home 1</a></li>
-                                                        <li><a href="index-2.html">Home 2</a></li>
-                                                        <li><a href="index-3.html">Home 3</a></li>
-                                                        <li><a href="index-4.html">Home 4</a></li>
-                                                        <li><a href="index-5.html">Home 5</a></li>
-                                                        <li><a href="index-6.html">Home 6</a></li>
-                                                        <li><a href="index-7.html">Home 7</a></li>
-                                                        <li><a href="index-8.html">Home 8</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div> 
-                                            <div class="col-sm-12 col-lg-4 menu-block">                                                
-                                                <div class="sub-list">                                                
-                                                    <ul>
-                                                        <li><a href="index-9.html">Home 9</a></li>
-                                                        <li><a href="index-10.html">Home 10</a></li>
-                                                        <li><a href="index-11.html">Home 11</a></li>
-                                                        <li><a href="index-12.html">Home 12</a></li>
-                                                        <li><a href="index-13.html">Home 13</a></li>
-                                                        <li><a href="index-14.html">Home 14</a></li>
-                                                        <li><a href="index-15.html">Home 15</a></li>
-                                                        <li><a href="index-16.html">Home 16</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                           
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="flex-item overlay">
-                                                    <img alt="" src="{{asset('img/homee-fourteen/mega_images_1.jpg')}}" />
+                                                    <img alt="" src="{{asset('img/home-fourteen/mega_images_1.jpg')}}" />
                                                     <div class="flex-wrap">
                                                         <div class="flex-caption middle">                                                
                                                             <div class="menu-offer">                                                    
@@ -246,7 +221,7 @@
                                         </div>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Features <div class="bubble"> <span class="hot-tag">hot!</span> </div> </a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Features <div class="bubble"> </div> </a>
                                         <ul class="dropdown-menu">  
                                             <li><a href="categories-2-column.html"> Category Col 2 </a></li>                                            
                                             <li><a href="categories-3-column.html"> Category Col 3 </a></li>
@@ -285,8 +260,14 @@
                                         </ul>
                                     </li>
                                     <li><a href="contact-us.html">Contact</a></li>
+                                    <div class="flex-center position-ref full-height">
+                                    
+                        
+                    
+                
+            
                                     <li class="dropdown mega-dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Pages</a>
+                                       
                                         <div class="dropdown-menu mega-dropdown-menu">
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="sub-list">                                                        
@@ -320,7 +301,7 @@
                                             </div>
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="sub-list">                                                      
-                                                    <h2 class="title-2">Pages</h2>                                                                
+                                                                                                                  
                                                     <ul>
                                                         <li> <a href="about-us.html">About Us</a> </li>                                                   
                                                         <li> <a href="shopping-cart.html">Shopping Cart</a> </li>
