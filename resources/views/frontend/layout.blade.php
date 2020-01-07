@@ -21,7 +21,7 @@
         <link href="{{asset('plugins/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('plugins/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('plugins/owl.carousel.min.css')}}" rel="stylesheet" type="text/css">  
-        <link href="{{asset('plugins/animate.css"')}}" rel="stylesheet" type="text/css">  
+        <link href="{{asset('plugins/animate.css')}}" rel="stylesheet" type="text/css">  
         <link href="{{asset('plugins/subscribe-better.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('plugins/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css">   
         
@@ -47,12 +47,12 @@
                   
 
             <!-- HEADER -->
-            <header class="header-wrap header-two"> 
+            <header class=" container header-wrap header-two"> 
                 <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-12 logo-wrap">
-                        <a class="logo" href="index.html"> <img src="assets/img/common/main-logo.png" alt="logo" title="Logo"> </a>
+                    <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
+                        <a class="logo" href="index.html"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo"> </a>
                     </div>
-                    <div class="col-md-9 col-sm-9 col-xs-12">       
+                    <div class="col-md-10 col-sm-10 col-xs-12">       
                         <div class="top-elements">
                             <span class="nav-trigger open icon_menu"></span>
                             <div class="search-form-wrap">
@@ -77,7 +77,7 @@
                                             <li>
                                                 <div class="alert">
                                                     <a href="#" class="close icon_close" data-dismiss="alert" aria-label="close"></a>
-                                                    <a class="img" href="product-layout-1.html"> <img src="assets/img/common/cart-item-1.png" alt=""/> </a>
+                                                    <a class="img" href="product-layout-1.html"> <img src="{{asset('img/home-fourteen/cart-item-1.png')}}" alt=""/> </a>
                                                     <div class="cart-title">
                                                         <a class="font-2" href="#">samurai t-shirt</a>
                                                         <p class="price"> 
@@ -87,7 +87,7 @@
                                                 </div>
                                                 <div class="alert">
                                                     <a href="#" class="close icon_close" data-dismiss="alert" aria-label="close"></a>
-                                                    <a class="img" href="product-layout-1.html"> <img src="assets/img/common/cart-item-2.png" alt=""/> </a>
+                                                    <a class="img" href="product-layout-1.html"> <img src=" {{asset('img/home-fourteen/cart-item-2.png')}}" alt=""/> </a>
                                                     <div class="cart-title">
                                                         <a class="font-2" href="#">samurai t-shirt</a>
                                                         <p class="price"> 
@@ -116,9 +116,9 @@
                                 <ul class="settings-popup">
                                     <li class="country-flag">
                                         <h2 class="title-2">select language</h2>
-                                        <a href="#" class="active"> <img class="img-responsive" src="assets/img/common/flags/flag-1.png" alt=""> </a>
-                                        <a href="#"> <img class="img-responsive" src="assets/img/common/flags/flag-2.png" alt=""> </a>
-                                        <a href="#"> <img class="img-responsive" src="assets/img/common/flags/flag-3.png" alt=""> </a>
+                                        <a href="#" class="active"> <img class="img-responsive" src="{{asset('img/home-fourteen/flags/flag-1.png')}}" alt=""> </a>
+                                        <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/flags/flag-2.png')}}" alt=""> </a>
+                                        <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/flags/flag-3.png')}}" alt=""> </a>
                                     </li>
                                     <li class="country-currency">
                                         <h2 class="title-2">select currency</h2>
@@ -174,7 +174,7 @@
                                             </div>
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="flex-item overlay">
-                                                    <img alt="" src="assets/img/common/mega_images_1.jpg" />
+                                                    <img alt="" src="{{asset('img/homee-fourteen/mega_images_1.jpg')}}" />
                                                     <div class="flex-wrap">
                                                         <div class="flex-caption middle">                                                
                                                             <div class="menu-offer">                                                    
@@ -203,7 +203,7 @@
                                             </div>
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="sub-list">
-                                                    <a href="#"> <img class="img-responsive" src="assets/img/common/mega-menu-1.jpg" alt=""> </a>
+                                                    <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/mega-menu-1.jpg')}}" alt=""> </a>
                                                     <h2 class="title-2">Suggestions</h2>
                                                     <ul>
                                                         <li><a href="#">New Products</a></li>
@@ -217,7 +217,7 @@
                                             </div> 
                                             <div class="col-sm-12 col-lg-4 menu-block">                                                
                                                 <div class="sub-list">
-                                                    <a href="#"> <img class="img-responsive" src="assets/img/common/mega-menu-2.jpg" alt=""> </a>
+                                                    <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/mega-menu-2.jpg')}}" alt=""> </a>
                                                     <h2 class="title-2">Collections</h2>
                                                     <ul>
                                                         <li><a href="#">Basics</a></li>
@@ -231,7 +231,7 @@
                                             </div>
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="sub-list">
-                                                    <a href="#"> <img class="img-responsive" src="assets/img/common/mega-menu-3.jpg" alt=""> </a>
+                                                    <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/mega-menu-3.jpg')}}" alt=""> </a>
                                                     <h2 class="title-2">Accessories</h2>                                                                
                                                     <ul>
                                                         <li><a href="#">Accessories</a></li>
@@ -271,22 +271,7 @@
                                             </li>
                                         </ul>
                                     </li>                                   
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >portfolio</a>
-                                        <ul class="dropdown-menu">  
-                                            <li><a href="portfolio-free-style.html"> Portfolio Free Style </a></li>                                            
-                                            <li><a href="portfolio-grid-col-2.html"> Portfolio Col 2 </a></li>
-                                            <li><a href="portfolio-grid-col-2-masonry.html"> Portfolio Col 2 Masonry </a></li>
-                                            <li><a href="portfolio-grid-col-3.html"> Portfolio Col 3 </a></li>
-                                            <li><a href="portfolio-grid-col-3-masonry.html"> Portfolio Col 3 Masonry </a></li>
-                                            <li><a href="portfolio-grid-col-3-wide.html"> Portfolio Col 3 Wide </a></li>
-                                            <li><a href="portfolio-grid-col-4.html"> Portfolio Col 4 </a></li>
-                                            <li><a href="portfolio-single-image.html"> Portfolio Single Image </a></li>
-                                            <li><a href="portfolio-single-slider.html"> Portfolio Single Slider </a></li>
-                                            <li><a href="portfolio-single-audio.html"> Portfolio Single Audio </a></li>
-                                            <li><a href="portfolio-single-video.html"> Portfolio Single Video </a></li>
-                                        </ul>
-                                    </li>                                                                                              
+                                                                                                                             
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Blog</a>
                                         <ul class="dropdown-menu">  
@@ -389,7 +374,7 @@
                 <div class="footer-wrap">
                     <div class="container">
                         <div class="footer-logo">
-                            <a href="index.html"> <img src="assets/img/common/main-logo-2.png" alt="logo" title="Logo" /> </a>
+                            <a href="index.html"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo" /> </a>
                         </div>
                         <div class="footer-share font-2">
                             <ul>

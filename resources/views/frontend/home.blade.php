@@ -10,7 +10,7 @@
 <section class="main-slider">
 	<div class="single-slider-1 owl-carousel owl-dots-2 owl-nav-1">
 		<div class="item">
-			<img alt="slider" src={{asset("img/home-fourteen/slideshow_1.jpg")}} />
+			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_1.jpg')}}" />
 			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown">NEW ARRIVAL</h5>
@@ -21,8 +21,8 @@
 			</div>
 		</div>
 		<div class="item">
-			<img alt="slider" src={{asset("img/home-fourteen/slideshow_2.jpg")}} />
-			<div class="slide-info">
+			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_2.jpg')}}" />
+			<div class="slide-info>
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown"> NEW ARRIVAL </h5>
 					<h2 class="main-title" data-animation-in="slideInUp"> Lookbook 2017  </h2>
@@ -146,8 +146,8 @@
 										</span>
 									</a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/product/gray.png')}}" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/product/black.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/gray.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/black.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -176,8 +176,6 @@
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
 									</div>
-									<div class="new-tag"> new </div>
-									<div class="sale-tag"> sale </div>
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">typo print t-shirt</a> </h2>
@@ -196,12 +194,12 @@
 									<a href="#" class="img"> 
 										<img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/home-fourteen/prod-flip-3.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-3.jpg')}}">          
 										</span>
 									</a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/blue.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/pink.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/blue.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/pink.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -223,15 +221,14 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img">
-										<img src="assets/img/common/product/prod-4.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-4.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-4.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-4.jpg')}}">          
 										</span>
 									</a>   
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
 									</div>
-									<div class="sale-tag"> sale </div>
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">creative adidas t-shirt</a> </h2>
@@ -248,15 +245,14 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-5.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-1.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-5.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-5.jpg')}}">          
 										</span>
 									</a>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
 									</div>
-									<div class="sale-tag"> sale </div>
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">creative adidas shirt</a> </h2>
@@ -273,14 +269,14 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-6.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-4.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-6.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-6.jpg')}}">          
 										</span>
 									</a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/blue.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/pink.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/blue.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/pink.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -304,10 +300,10 @@
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
-									<a href="#" class="img"> <img src="assets/img/common/product/prod-1.jpg" alt="" /> </a>
+									<a href="#" class="img"> <img src="{{asset('img/home-fourteen/prod-1.jpg')}}" alt="" /> </a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/gray.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/black.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/gray.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/black.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -327,7 +323,7 @@
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
-									<a href="#" class="img"> <img src="assets/img/common/product/prod-2.jpg" alt="" /> </a>
+									<a href="#" class="img"> <img src="{{asset('img/home-fourteen/prod-2.jpg')}}" alt="" /> </a>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
 									</div>
@@ -348,10 +344,10 @@
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
-									<a href="#" class="img"> <img src="assets/img/common/product/prod-3.jpg" alt="" /> </a>
+									<a href="#" class="img"> <img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> </a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/blue.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/pink.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/blue.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/pink.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -372,7 +368,7 @@
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
-									<a href="#" class="img"> <img src="assets/img/common/product/prod-4.jpg" alt="" /> </a>   
+									<a href="#" class="img"> <img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> </a>   
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
 									</div>
@@ -397,9 +393,9 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-5.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-5.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-5.jpg')}}">          
 										</span>
 									</a>
 									<div class="quick-view">
@@ -422,14 +418,14 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-6.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-6.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-6.jpg')}}">          
 										</span>
 									</a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/blue.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/pink.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/blue.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/pink.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -450,14 +446,14 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-7.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-3.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-7.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-7.jpg')}}">          
 										</span>
 									</a>
 									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="assets/img/common/product/gray.png" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="assets/img/common/product/black.png" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/gray.png')}}" alt="" /> </a> </li>
+										<li> <a href="#"> <img src="{{asset('img/home-fourteen/black.png')}}" alt="" /> </a> </li>
 									</ul>
 									<div class="quick-view">
 										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
@@ -478,9 +474,9 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> 
-										<img src="assets/img/common/product/prod-8.jpg" alt="" /> 
+										<img src="{{asset('img/home-fourteen/prod-4.jpg')}}" alt="" /> 
 										<span class="product-hover">
-											<img alt="" src="assets/img/common/product/prod-flip-8.jpg">          
+											<img alt="" src="{{asset('img/home-fourteen/prod-flip-8.jpg')}}">          
 										</span>
 									</a>
 									<div class="quick-view">
