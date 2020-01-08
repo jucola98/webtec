@@ -146,21 +146,12 @@
 											<img alt="" src="{{asset('img/home-fourteen/prod-flip-1.jpg')}}">          
 										</span>
 									</a>
-									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/gray.png')}}" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/black.png')}}" alt="" /> </a> </li>
-									</ul>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">samurai t-shirt</a> </h2>
 									<span class="price"> <b>$45.05</b> <del></del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -174,17 +165,13 @@
 											<img alt="" src="{{asset('img/home-fourteen/prod-flip-2.jpg')}}">          
 										</span>
 									</a>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">typo print t-shirt</a> </h2>
 									<span class="price"> <b>$67.05</b> <del>$102.50</del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
+										
 									</div>
 								</div>
 							</div>
@@ -197,23 +184,14 @@
 										<span class="product-hover">
 											<img alt="" src="{{asset('img/home-fourteen/prod-flip-3.jpg')}}">          
 										</span>
-									</a>
-									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/blue.png')}}" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/pink.png')}}" alt="" /> </a> </li>
-									</ul>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
-									<div class="new-tag"> new </div>
+									</a>	
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">Denim black shirt</a> </h2>
 									<span class="price"> <b>$72.30</b> <del></del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
+										
 									</div>
 								</div>
 							</div>
@@ -226,18 +204,13 @@
 										<span class="product-hover">
 											<img alt="" src="{{asset('img/home-fourteen/prod-flip-4.jpg')}}">          
 										</span>
-									</a>   
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
+									</a>  
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">creative adidas t-shirt</a> </h2>
 									<span class="price"> <b>$45.05</b> <del>$85.60</del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -250,18 +223,13 @@
 										<span class="product-hover">
 											<img alt="" src="{{asset('img/home-fourteen/prod-flip-5.jpg')}}">          
 										</span>
-									</a>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
+									</a>	
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">creative adidas shirt</a> </h2>
 									<span class="price"> <b>$80.35</b> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -275,21 +243,14 @@
 											<img alt="" src="{{asset('img/home-fourteen/prod-flip-6.jpg')}}">          
 										</span>
 									</a>
-									<ul class="color-swatch-item">
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/blue.png')}}" alt="" /> </a> </li>
-										<li> <a href="#"> <img src="{{asset('img/home-fourteen/pink.png')}}" alt="" /> </a> </li>
-									</ul>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
+									
+									
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">pfo grey t-shirt</a> </h2>
 									<span class="price"> <b>$72.30</b> <del></del> </span>
 									<div class="product-links"> 
-										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
+										<a href="#" class="add-to-cart">Add To Cart</a>	
 									</div>
 								</div>
 							</div>
@@ -305,18 +266,13 @@
 									<ul class="color-swatch-item">
 										<li> <a href="#"> <img src="{{asset('img/home-fourteen/gray.png')}}" alt="" /> </a> </li>
 										<li> <a href="#"> <img src="{{asset('img/home-fourteen/black.png')}}" alt="" /> </a> </li>
-									</ul>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
+									</ul>	
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">samurai t-shirt</a> </h2>
 									<span class="price"> <b>$45.05</b> <del></del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -325,11 +281,6 @@
 							<div class="product-item">
 								<div class="product-image">
 									<a href="#" class="img"> <img src="{{asset('img/home-fourteen/prod-2.jpg')}}" alt="" /> </a>
-									<div class="quick-view">
-										<a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-									</div>
-									<div class="new-tag"> new </div>
-									<div class="sale-tag"> sale </div>
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">typo print t-shirt</a> </h2>
@@ -360,8 +311,6 @@
 									<span class="price"> <b>$72.30</b> <del></del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -380,8 +329,6 @@
 									<span class="price"> <b>$45.05</b> <del>$85.60</del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -409,8 +356,6 @@
 									<span class="price"> <b>$80.35</b> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -437,8 +382,6 @@
 									<span class="price"> <b>$72.30</b> <del></del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>
@@ -464,9 +407,7 @@
 									<h2 class="product-title"> <a href="#">amior jacket two color</a> </h2>
 									<span class="price"> <b>$140.35</b> </span>
 									<div class="product-links"> 
-										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
+										<a href="#" class="add-to-cart">Add To Cart</a>	
 									</div>
 								</div>
 							</div>
@@ -490,8 +431,6 @@
 									<span class="price"> <b>$66.20</b> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
-										<a href="#" class="icon_heart_alt"></a>
-										<a href="#" class="icon_piechart"></a>
 									</div>
 								</div>
 							</div>

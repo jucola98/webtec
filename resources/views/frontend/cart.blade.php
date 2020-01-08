@@ -13,7 +13,7 @@
                         <div class="site-breadcumb">                        
                             <h1 class="title-1">shopping cart</h1> 
                             <ol class="breadcrumb breadcrumb-menubar">
-                                <li> <a href="#"> Home </a> Shopping Cart </li>                             
+                                <li> <a href="{{ route('master') }}"> Home </a> Shopping Cart </li>                             
                             </ol>
                         </div>  
                     </div>

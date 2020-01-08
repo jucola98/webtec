@@ -9,7 +9,7 @@
                         <div class="site-breadcumb">                        
                             <h1 class="title-1">checkout</h1> 
                             <ol class="breadcrumb breadcrumb-menubar">
-                                <li> <a href="#"> Home </a> checkout </li>                             
+                                <li> <a href="{{ route('master') }}"> Home </a> checkout </li>                             
                             </ol>
                         </div>  
                     </div>

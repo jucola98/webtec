@@ -106,10 +106,10 @@
                                         </div>
                                         <div class="buttons">
                                             <div class="left"> 
-                                                <a href="shopping-cart.html" class="theme-btn-1 btn small-btn">View Cart</a>
+                                                <a href="{{ route('cart') }}" class="theme-btn-1 btn small-btn">View Cart</a>
                                             </div>
                                             <div class="right"> 
-                                                <a href="checkout.html" class="theme-btn btn small-btn"> Checkout </a>
+                                                <a href="{{ route('checkout') }}" class="theme-btn btn small-btn"> Checkout </a>
                                             </div>
                                         </div>
                                     </div>
@@ -134,9 +134,8 @@
                                         <a href="#"> <span class="icon-note icons"></span> My Checkout </a>
                                         @else
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
-                                        <a href="#"> <span class="icon-user icons"></span> My Accaunt </a>
-                                        <a href="#"> <span class="icon-handbag icons"></span> My Cart </a>
-                                        <a href="#"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
                                     </li>
                                     @endif
                                 </ul>
