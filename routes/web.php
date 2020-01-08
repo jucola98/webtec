@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend/home');
-});
+
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'FrontendController@getMaster')->name('master');
+Route::get('/contact', 'FrontendController@getContact')->name('contact');
+Route::get('/cart', 'FrontendController@getCart')->name('cart');
+Route::get('/checkout', 'FrontendController@getCheckout')->name('checkout');
 

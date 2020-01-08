@@ -133,6 +133,7 @@
 				<li class=""> <a href="#prod-tab-2"  data-toggle="tab"> New Arrival  </a> </li>
 				<li class=""> <a href="#prod-tab-3"  data-toggle="tab"> Most Wanted  </a> </li>
 			</ul>
+			
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">
 					<div class="prod-slider-1 owl-carousel owl-nav-2">
@@ -498,6 +499,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </section>

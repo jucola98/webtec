@@ -23,7 +23,8 @@
         <link href="{{asset('plugins/owl.carousel.min.css')}}" rel="stylesheet" type="text/css">  
         <link href="{{asset('plugins/animate.css')}}" rel="stylesheet" type="text/css">  
         <link href="{{asset('plugins/subscribe-better.css')}}" rel="stylesheet" type="text/css">
-        <link href="{{asset('plugins/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css">   
+        <link href="{{asset('plugins/jquery.mCustomScrollbar.min.css')}}" rel="stylesheet" type="text/css"> 
+        <link href="{{asset('plugins/magnify.css')}}" rel="stylesheet" type="text/css">  
         
         <!-- Icon Font -->
         <link href="{{asset('icons-font/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">   
@@ -33,6 +34,9 @@
 
         <!-- Custom CSS -->
         <link href="{{asset('css/home-fourteen.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/main-style.css')}}" rel="stylesheet" type="text/css">
+        
+
         
 
         <!--[if lt IE 9]>
@@ -50,7 +54,7 @@
             <header class=" container header-wrap header-two"> 
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
-                        <a class="logo" href="index.html"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo"> </a>
+                        <a class="logo" href="{{ route('master') }}"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo"> </a>
                     </div>
                     <div class="col-md-10 col-sm-10 col-xs-12">       
                         <div class="top-elements">
@@ -64,7 +68,7 @@
                             </div>
                             <div class="header-cart-wrap">
                                 <div class="header-cart">
-                                    <a href="shopping-cart.html"> 
+                                    <a href="#"> 
                                         <i class="cart-icon icon-handbag icons"></i> 
                                     </a>
                                 </div>
@@ -144,7 +148,7 @@
                             <div id="primary-navigation">                                        
                                 <ul class="primary-navbar font-2">
                                     <li class="dropdown mega-dropdown active">
-                                    <li><a href="contact-us.html">Home</a></li>
+                                    <li><a href="{{ route('master') }}">Home</a></li>
                                         <div class="dropdown-menu mega-dropdown-menu">
                                            
                                             <div class="col-sm-12 col-lg-4 menu-block">
@@ -226,7 +230,7 @@
                                         
                                         <ul class="dropdown-menu">  
                                         @foreach (App\Http\Controllers\FrontendController::fetchCategoriesMan() as $records)
-                                            <li><a href="{{ route('home',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
+                                            <li><a href="{{ route('master',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
                                         @endforeach    
                                             <!--
                                             <li class="dropdown">
@@ -255,7 +259,7 @@
                                             @endforeach 
                                         </ul>
                                     </li>
-                                    <li><a href="contact-us.html">Contact</a></li>
+                                    <li><a href="{{ route ('contact') }}">Contact</a></li>
                                     <div class="flex-center position-ref full-height">
                                     
                         
@@ -385,5 +389,6 @@
             <!-- Custom Js  --> 
             <script src={{asset("js/home-fourteen.js")}}></script>
             <script src={{asset("plugins/owl-animated-text.js")}}></script>
+            @yield("js")
         </body>
     </html>

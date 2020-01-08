@@ -219,7 +219,7 @@ img{max-width: 100%; height: auto; transition: all 250ms ease-in-out 0s; -webkit
 /*------------------- 1.2 Global properties (body, common classes, structure etc) Ends -----------------*/
 
 /*---------------------- 1.3 Page section block Starts ----------------------------*/
-.sec-space {padding-bottom: 100px; padding-top: 100px;}
+.sec-space {padding-bottom: 0px; padding-top: 50px;}
 .sec-space-bottom {padding-bottom: 100px;}
 .sec-space-top {padding-top: 100px;}
 .ptb-10{
@@ -1426,7 +1426,7 @@ textarea:focus:-ms-input-placeholder {
     width: 1px;
 }
 .theme-tabs-1 {text-align: center; width: 100%; display: inline-block;}
-.theme-tabs {margin-top: 35px; text-align: center;}
+.theme-tabs {margin-top: 0px; text-align: center;}
 .theme-tabs > li {
     display: inline-block;
     line-height: 1;
@@ -1472,7 +1472,7 @@ textarea:focus:-ms-input-placeholder {
 
 
 @media(max-width: 380px) {
-    .our-products .prod-block {margin-left: 0; margin-right: 0;}
+    .our-products .prod-block {margin-left: 0; margin-right: 0; margin-top:50px !important}
 }
 @media(max-width: 500px) {
     .theme-tabs > li + li {border-left: 0; margin-left: 0;}
@@ -1660,7 +1660,7 @@ textarea:focus:-ms-input-placeholder {
 
 
 /*-------------------------- 3.5 Newsletter Starts------------------- */
-.newsletter {padding: 20px 0 90px; background-color: #f3f3f3;}
+.newsletter {padding: 20px 0 60px; background-color: #f3f3f3;}
 .newsletter p {margin: auto;}
 .newsletter .mail-info {
     margin: 20px auto;
@@ -2065,6 +2065,12 @@ textarea:focus:-ms-input-placeholder {
     .subscribe-wrap {
         padding: 45px 0 15px;
     } 
+    
+}
+
+.container2{
+    margin-top:60px;
+    margin-left:60px;
 }
 
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */

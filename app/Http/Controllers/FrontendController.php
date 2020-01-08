@@ -34,4 +34,7 @@ class FrontendController extends Controller
     public function getSingleproduct(){
         return view('frontend.singleproduct');
     }
+    public function getCheckout(){
+        return view('frontend.checkout');
+    }
 }
