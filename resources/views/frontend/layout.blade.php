@@ -254,7 +254,7 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Donna</a>
                                         <ul class="dropdown-menu">  
                                             @foreach (App\Http\Controllers\FrontendController::fetchCategoriesWoman() as $records)
-                                                <li><a href="{{ route('home',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
+                                                <li><a href="{{ route('master',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
                                             @endforeach 
                                         </ul>
                                     </li>
