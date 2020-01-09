@@ -2072,6 +2072,15 @@ textarea:focus:-ms-input-placeholder {
     margin-top:60px;
     margin-left:60px;
 }
+.display{
+    margin-left:0px;
+}
+.title-3{ 
+    font-size: 14px;
+    margin-left:10px;
+
+}
+
 
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
 
