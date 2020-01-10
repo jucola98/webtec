@@ -54,7 +54,7 @@
             <header class=" container header-wrap header-two"> 
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
-                        <a class="logo" href="{{ route('master') }}"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo"> </a>
+                        <a class="logo" href="{{ route('master') }}"> <img src="{{asset('img/home-fourteen/CozyStore.png')}}" alt="logo" title="Logo"> </a>
                     </div>
                     <div class="col-md-10 col-sm-10 col-xs-12">       
                         <div class="top-elements">
@@ -130,8 +130,8 @@
                                         @csrf
                                         </form>
                                         <a href="#"> <span class="icon-user icons"></span> My Accaunt </a>
-                                        <a href="#"> <span class="icon-handbag icons"></span> My Cart </a>
-                                        <a href="#"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
                                         @else
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
