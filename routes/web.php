@@ -20,4 +20,6 @@ Route::get('/', 'FrontendController@getMaster')->name('master');
 Route::get('/contact', 'FrontendController@getContact')->name('contact');
 Route::get('/cart', 'FrontendController@getCart')->name('cart');
 Route::get('/checkout', 'FrontendController@getCheckout')->name('checkout');
+Route::get('/singleprod', 'FrontendController@getSingle')->name('singkeprod');
+Route::get('/products', 'FrontendController@getProducts')->name('products');
 
