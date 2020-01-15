@@ -22,7 +22,7 @@
 		</div>
 		<div class="item">
 			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_2.jpg')}}" />
-			<div class="slide-info>
+			<div class="slide-info">
 				<div class="caption">
 					<h5 class="title-2" data-animation-in="fadeInDown"> NEW ARRIVAL </h5>
 					<h2 class="main-title" data-animation-in="slideInUp"> Lookbook 2017  </h2>
@@ -46,7 +46,7 @@
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="block-top-item">
 					<div class="images">
-						<img src="{{asset('img/home-fourteen/item-3.jpg')}}" alt="">
+						<img src="{{asset('img/home-fourteen/sw.jpg')}}" alt="">
 					</div>
 					<div class="block-content">          
 						<i class="icon_pin_alt"></i>      
