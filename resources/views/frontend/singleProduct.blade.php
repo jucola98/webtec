@@ -26,12 +26,12 @@
             <div class="col-lg-4 col-md-5 col-sm-6 prod-slider-wrap">                                    
                 <div class="owl-carousel prod-slider sync1">
                     <div class="item popup-gallery"> 
-                        <img src="assets/img/common/prod-layout/layout-1.jpeg" alt="">
-                        <a href="assets/img/common/prod-layout/layout-1.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
+                        <img src="{{asset('img/common/prod-layout/layout-1.jpeg')}}" alt="">
+                        <a href="{{asset('img/common/prod-layout/layout-1.jpeg')}}" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
                     </div>
-                    <div class="item popup-gallery"> 
-                        <img src="assets/img/common/prod-layout/layout-2.jpeg" alt=""> 
-                        <a href="assets/img/common/prod-layout/layout-2.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
+                  <!--<div class="item popup-gallery"> 
+                        <img src="{{asset('img/common/prod-layout/layout-2.jpeg')}}" alt=""> 
+                        <a href="{{asset('img/common/prod-layout/layout-2.jpeg')}}" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
                     </div>
                     <div class="item popup-gallery"> 
                         <img src="assets/img/common/prod-layout/layout-3.jpeg" alt=""> 
@@ -48,16 +48,17 @@
                     <div class="item popup-gallery"> 
                         <img src="assets/img/common/prod-layout/layout-4.jpeg" alt=""> 
                         <a href="assets/img/common/prod-layout/layout-4.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-                    </div>
+                    </div>-->
                 </div>
 
                 <div  class="owl-carousel sync2">
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-1.jpeg" alt=""> </div>
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-2.jpeg" alt=""> </div>
+                    
+                    <div class="item"> <img src="{{asset('img/common/prod-layout/thumb-1.jpeg')}}" alt=""> </div>
+                    <!--<div class="item"> <img src="{{asset('img/common/prod-layout/thumb-2.jpeg')}}" alt=""> </div>
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-3.jpeg" alt=""> </div>
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div>  
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-2.jpeg" alt=""> </div>
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div> 
+                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div>--> 
                 </div>
             </div>
             <!-- Single Products Slider Ends --> 
@@ -66,45 +67,66 @@
             <div class="col-lg-8 col-md-7 col-sm-6">
                 <div class="product-detail">
                     <div class="prod-lr-btn">                                   
-                        <a href="#"> <i class=" arrow_left"></i> <img src="assets/img/common/prod-layout/next-1.jpg" alt="" /> </a>
-                        <a href="#"> <i class=" arrow_right "></i> <img src="assets/img/common/prod-layout/next-2.jpg" alt="" /> </a>
+                        <a href="#"> <i class=" arrow_left"></i> <img src="{{asset('img/common/prod-layout/next-1.jpg')}}" alt="" /> </a>
+                        <a href="#"> <i class=" arrow_right "></i> <img src="{{asset('img/common/prod-layout/next-2.jpg')}}" alt="" /> </a>
                     </div>
                     <div class="product-heading">
-                        <h2 class="section-title">samurai t-shirt</h2>                                              
+                        <h2 class="section-title">{{$singart->name}}</h2>                                              
                     </div>
                     <div class="rating">                                                              
-                        <span class="star"></span>
-                        <span class="star"></span>
-                        <span class="star"></span>                                           
-                        <span class="star"></span>
-                        <span class="star"></span>
-                        <div class="product-review">
+                        @for ($i=(int)$singart->rating;$i>0;$i--)
+                        <span class="star active"></span>
+                        <!--<span class="no star"></span>-->
+                    @endfor
+                    @if($singart->rating-(int)$singart->rating==0.5)
+                        <span class="star half"></span>
+                    @endif
+                    @for ($i=(int)(5-$singart->rating);$i>0;$i--)
+                        <span class="no star"></span>
+                        <!--<span class="no star"></span>-->
+                    @endfor
+                        <span>{{$singart->rating}}/5</span>
+                    @if($singart->stock==0)
+                        <br> <span style="color:red;">Product not in stock</span>
+                    @endif
+                        <!--<div class="product-review">
                             <ul class="list-items black-color">
                                 <li>Be the first to review this product</li>
                             </ul>
-                        </div>
+                        </div>-->
                     </div>  
                     <div class="price">
-                        <b>$45.05</b> <del>$85.60</del>
+                        @if(($singart->sale)>0)
+                            <b>${{($singart->price)-($singart->price)*($singart->sale/100)}}</b> <del>${{$singart->price}}</del><span class="green-color"> {{$singart->sale}}%</span>
+                        @else
+                            <b>${{($singart->price)}}</b><!--forse va aggiunto un campo per gestire i saldi-->
+                        @endif
                     </div>
 
                     <div class="product-availability">
-                        <ul class="stock-detail list-items black-color">                                       
-                            <li class=""> <i class="icon-layers icons"></i> <span> Only <b>15</b> Left </span> <i class="arrow_carrot-down"></i> </li>
-                            <li> <b>Available:</b> <span class="green-color"> In Stock </span>  </li>
+                        <ul class="stock-detail list-items black-color">  
+                            @if($singart->stock>0)                                     
+                                <li class=""> <i class="icon-layers icons"></i> <span> Only <b>{{$singart->stock}}</b> Left </span> <i class="arrow_carrot-down"></i> </li>
+                                <li>
+                                
+                                <b>Available:</b> <span class="green-color"> In Stock </span>  
+                            @else
+                                <b>Available:</b> <span class="red-color"> Not In Stock </span>  
+                            @endif
+                            </li>
                         </ul>                                                                             
                     </div>
 
                     <hr class="divider-2">   
 
                     <div class="product-description">
-                        <p>A simple product in Logancee is just that: simple physical product that you ship. There are no options like size or color that the end user can pick during the order. </p>                                        
-                        <p>Each simple product has a unique SKU (Stock Keeping Unit); inventory is handled at the simple product level.</p>
+                        <p>{{$singart->description}}</p>
                     </div>
 
                     <hr class="divider-2">   
 
                     <div class="prod-btns">
+                        @if($singart->stock>0)
                         <div class="quantity">
                             <button class="btn minus"><i class="icon_minus-06"></i></button>
                             <input type="number" title="Qty" value="03" name="quantity" min="1" step="1" class="form-control qty">
@@ -112,7 +134,10 @@
                         </div>
                         <div class="add-to-cart">
                             <button class="theme-btn-1 btn cart-btn"> <i class="icon ion-ios-plus-empty white-color"></i> Add to Cart </button>                                       
-                        </div>                                    
+                        </div>
+                        @else
+
+                        @endif                                    
                     </div>
 
                     <div class="prod-code upper-case">

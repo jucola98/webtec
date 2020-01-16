@@ -44,7 +44,8 @@
                                     <div class="search-selectpicker selectpicker-wrapper">
                                         <select class="selectpicker"  data-width="100%"  onchange="location=this.value;">
                                             <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"name"])}}">Latest</option>
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"price"])}}">Price</option>
+                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"priceasc"])}}">Price ASC</option>
+                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"pricedesc"])}}">Price DESC</option>
                                         </select>
                                     </div>
                                 </form>
@@ -112,18 +113,37 @@
                                             <div class="product-content">
                                                 
                                                     
-                                                <h2 class="product-title"> <a href="{{$item->URI}}">{{$item->name}}</a> </h2>
-                                                <span class="price"> <b>${{$item->price}}</b> <del></del> </span>
+                                                <h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}">{{$item->name}}</a> </h2>
+                                                @if(($item->sale)>0)
+                                                    <span class="price"> <b>${{($item->price)-($item->price)*($item->sale/100)}}</b> <del>${{$item->price}}</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
+                                                @else
+                                                    <span class="price"> <b>${{$item->price}}</b> <del></del> </span>
+                                                @endif
+                                                
                                                 <!--stellette-->
-                                                <div class="rating">                                                              
+                                                <div class="rating"> 
+                                                @for ($i=(int)$item->rating;$i>0;$i--)
                                                     <span class="star active"></span>
-                                                    <span class="star active"></span>
-                                                    <span class="star active"></span>                                           
-                                                    <span class="star active"></span>
-                                                    <span class="no star"></span>                                                 
+                                                    <!--<span class="no star"></span>-->
+                                                @endfor
+                                                @if($item->rating-(int)$item->rating==0.5)
+                                                    <span class="star half"></span>
+                                                @endif
+                                                @if($item->stock==0)
+                                                    <span style="color:red;">Product not in stock</span>
+                                                @endif
+                                                @for ($i=(int)(5-$item->rating);$i>0;$i--)
+                                                    <span class="no star"></span>
+                                                    <!--<span class="no star"></span>-->
+                                                @endfor                                        
                                                 </div>
                                                 <div class="product-links"> 
-                                                    <a href="#" class="add-to-cart"> <span> Add To Cart </span> <i class="icon_cart_alt"></i> </a>
+                                                    @if($item->stock>0)
+                                                        <a href="#" class="add-to-cart"> <span> Add To Cart </span> <i class="icon_cart_alt"></i> </a>  
+                                                    @else
+                                                        <del><span> Add To Cart </span></del> 
+                                                    @endif
+                                                    
                                                     <a href="#" class="icon_heart_alt"></a>
                                                     <a href="#" class="icon_piechart"></a>
                                                 </div>

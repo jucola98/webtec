@@ -21,6 +21,10 @@ class CreateArticleTable extends Migration
             $table->bigInteger('cat_id')->unsigned();
             $table->foreign('cat_id')->references('id')->on('category');
             $table->text('details');
+            $table->integer("sale",false,true)->default(0); //saldi dallo 0.00 a 99.00 
+            $table->float("rating",2,1)->default(3.5);
+            $table->integer("stock",false,true)->default(0);
+
             /*
                 -----ex json---- 
             {
