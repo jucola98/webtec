@@ -768,7 +768,8 @@ textarea:focus:-ms-input-placeholder {
     width: 100%;*/
     vertical-align: middle; 
     z-index: 100;  
-    padding: 25px 0;
+    padding: 5px 0;
+    
 }
 .header-two .menu-bar, .header-two .top-elements {float: right;}
 .header-two .top-elements {margin-left: 25px;}
@@ -1067,10 +1068,11 @@ textarea:focus:-ms-input-placeholder {
     -webkit-transition: all 0.0s ease-in-out 0s;
 }
 .header-two.is-sticky {
-    padding-right: 11.5%;
-    padding-left: 11.5%;
     position: fixed;
-    width: 100%;
+  top: 0;
+  width: 100%;
+  padding-right: 11.5%;
+    padding-left: 11.5%;
 }
 .header-two .row > div {margin-top: 15px; margin-bottom: 15px;}
 

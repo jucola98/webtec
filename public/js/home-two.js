@@ -18,34 +18,17 @@ $(function ($) {
         $('.search-form-wrap .search-form').fadeOut('300');
     });
 
-    //OWL CAROUSEL
 
-    $('.single-slider-1').owlCarousel({
-        rtl: false,
-        loop: true,
-        nav: true,
-        autoplay: false,
-        dots: true,
-        responsive: {
-            0: {items: 1}
-        },
-        navText: [
-            "Prev",
-            "Next"
-        ]
-    });
-
-    $('.prod-slider-1').owlCarousel({
+    $('.block-carousel').owlCarousel({
         dots: false,
         loop: true,
         autoplay: true,
         autoplayHoverPause: true,
         nav: true,
         navText: [
-            "<i class='arrow_carrot-left'></i>",
-            "<i class='arrow_carrot-right'></i>"
+            "Prev",
+            "Next"
         ],
-        margin: 30,
         responsive: {
             1200: {items: 4},
             990: {items: 3},
@@ -57,8 +40,7 @@ $(function ($) {
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     });
 
-
-    /*------------------- Quick Preview Sliders  -------------------*/
+    /*------------------- Product Layout Sliders  -------------------*/
     $(document).on('shown.bs.modal', function () {
         $(this).find('.sync1, .sync2').each(function () {
             $(this).data('owlCarousel') ? $(this).data('owlCarousel').onResize() : null;
@@ -67,6 +49,7 @@ $(function ($) {
 
     var sync1 = $(".sync1");
     var sync2 = $(".sync2");
+
     var navSpeedThumbs = 500;
 
     sync2.owlCarousel({
@@ -144,15 +127,6 @@ $(function ($) {
         scrollableModal: false      //  If the modal window is long and you need the ability for the form to be scrollable, toggle this to true. The default value is false.
     });
 
-    //Countdown
-    if ($().countdown) {
-        var austDay = new Date();
-        austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 25);
-        $('#dealCountdown1').countdown({until: austDay});
-        $('#dealCountdown2').countdown({until: austDay});
-        $('#dealCountdown3').countdown({until: austDay});
-    }
-
     /*------------------- Scroll To Top Animate -------------------*/
     $('#to-top').on('click', function () {
         $('html, body').animate({scrollTop: 0}, 800);
@@ -167,22 +141,22 @@ $(window).on('load',function () {
         $("#loading").fadeOut(300);
     }, 3100);
 });
-
 $(window).on('scroll',function () {
-   
+    /*--------- Sticky Header ---------*/
     if ($(window).width() > 1200) {
-        if ($(this).scrollTop() > 10) {
-            $('.header-two').addClass('is-sticky');
+        if ($(this).scrollTop() > 5) {
+            $('.header-two .header-wrap').addClass('is-sticky');
         }
         else {
-            $('.header-two').removeClass('is-sticky');
+            $('.header-two .header-wrap').removeClass('is-sticky');
         }
     }
-    /*
+
+    /*------------------- Scroll To Top Animate -------------------*/
     if ($(this).scrollTop() > 100) {
         $('#to-top').css({bottom: '55px'});
     }
     else {
         $('#to-top').css({bottom: '-150px'});
-    }*/
+    }
 });

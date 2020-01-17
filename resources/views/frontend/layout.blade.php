@@ -51,7 +51,7 @@
                   
 
             <!-- HEADER -->
-            <header class=" container header-wrap header-two"> 
+            <header class=" container header-wrap header-two "> 
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
                         <a class="logo" href="{{ route('master') }}"> <img src="{{asset('img/home-fourteen/CozyStore.png')}}" alt="logo" title="Logo"> </a>
@@ -387,6 +387,7 @@
     
             <!-- Custom Js  --> 
             <script src={{asset("js/home-fourteen.js")}}></script>
+            
             <script src={{asset("plugins/owl-animated-text.js")}}></script>
             @yield("js")
         </body>
