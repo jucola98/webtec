@@ -5,7 +5,7 @@
 
 @section('content')
 
-
+        {{$quantity}}
             <article class="page-body">
             <!--Breadcrumb Section Start-->
                 <section class="breadcrumb-bg-2">                

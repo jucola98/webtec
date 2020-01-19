@@ -124,22 +124,23 @@
                     </div>
 
                     <hr class="divider-2">   
-
+                    <form action="{{route("testroute")}}" method="post">
+                    @csrf
                     <div class="prod-btns">
                         @if($singart->stock>0)
                         <div class="quantity">
-                            <button class="btn minus"><i class="icon_minus-06"></i></button>
-                            <input type="number" title="Qty" value="03" name="quantity" min="1" step="1" class="form-control qty">
-                            <button class="btn plus"><i class="icon_plus"></i></button>
+                            <button class="btn minus" onclick='productTextHandler(false,{{$singart->stock}});'><i class="icon_minus-06"></i></button>
+                            <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
+                            <button class="btn plus" onclick='productTextHandler(true,{{$singart->stock}});'><i class="icon_plus"></i></button>
                         </div>
                         <div class="add-to-cart">
-                            <button class="theme-btn-1 btn cart-btn"> <i class="icon ion-ios-plus-empty white-color"></i> Add to Cart </button>                                       
+                            <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                         </div>
                         @else
 
                         @endif                                    
                     </div>
-
+                    </form> 
                     <div class="prod-code upper-case">
                         <p> <b>SKU : </b> <b class="black-color">11F25A3678</b> </p>
                         <div class="prod-social"> 
@@ -217,4 +218,7 @@
             </div>
 
         </div>
+        @endsection
+        @section('js')
+            <script src={{asset("js/CartUtils.js")}}></script>         
         @endsection
