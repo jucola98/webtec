@@ -43,10 +43,11 @@
                                     <tbody>
                                     @isset($dataquery)
                                     @foreach ($dataquery  as $item)    
+                                    {{$item}}
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg">
-                                                <a class="media-link" href="singleprod/{{$item->macrocategory}}/{{$item->catid}}"><img src="{{asset('img/common/recent-prod-1.png')}}" alt=""></a> 
+                                                <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{asset('img/common/recent-prod-1.png')}}" alt=""></a> 
                                                 </div>
                                             </td>
                                             <td class="description">
