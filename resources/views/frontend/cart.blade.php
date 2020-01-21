@@ -73,6 +73,22 @@
                                     
                                     </tbody>                               
                                 </table>
+                                <section class="breadcrumb-bg-2-left">                
+                                    <div class="container">
+                                        <div class="site-breadcumb">                        
+                                        <ul class="font-2" >
+                                                <li class="title-2 slidetext"> sub total    <span> $120.10 </span> </li>
+                                                
+                                                <li class="title-2 slidetext"> shipping    <span> $7,00 </span> </li>
+                                                
+                                                <li class="title-2 slidetext"> tax 22%    <span> $120.10 </span> </li>
+                                                <li class="section-title pt-20 slidetext"> <b> grand total  <span class="red-color"> $120.10 </span> </b> </li>
+                                                <li class="ptb-10"> <hr class="divider"> </li>
+                                                <li class="slidetext"> <button class="theme-btn-1 btn submit-btn " type="submit"> <b> proceed to checkout </b> </button> </li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                </section>
                                 <div class="row">
                                     <div class="continue-shopping">
                                         <div class="shp-btn col-sm-8">
@@ -87,22 +103,7 @@
                             </form>
                         </div>
 
-                        <section class="breadcrumb-bg-2">                
-                            <div class="container">
-                                <div class="site-breadcumb">                        
-                                <ul class="font-2">
-                                        <li class="title-2"> sub total    <span> $120.10 </span> </li>
-                                        <br>
-                                        <li class="title-2"> shipping    <span> $7,00 </span> </li>
-                                        <br>
-                                        <li class="title-2"> tax 22%    <span> $120.10 </span> </li>
-                                        <li class="section-title pt-20"> <b> grand total  <span class="red-color"> $120.10 </span> </b> </li>
-                                        <li class="ptb-10"> <hr class="divider"> </li>
-                                        <li> <button class="theme-btn-1 btn submit-btn" type="submit"> <b> proceed to checkout </b> </button> </li>
-                                    </ul>
-                                </div>  
-                            </div>
-                        </section>
+                        
                         
                             
                             
