@@ -77,12 +77,24 @@
                                     <div class="container">
                                         <div class="site-breadcumb">                        
                                         <ul class="font-2" >
-                                                <li class="title-2 slidetext"> sub total    <span> $120.10 </span> </li>
+                                                <li class="title-2 slidetext"> sub total    <span> 
+                                                @isset($total)
+                                                    ${{number_format($total,2)}}
+                                                @endisset
+                                                @empty($total)
+                                                    $0.00    
+                                                @endempty
+                                                
+                                                </span> </li>
                                                 
                                                 <li class="title-2 slidetext"> shipping    <span> $7,00 </span> </li>
-                                                
-                                                <li class="title-2 slidetext"> tax 22%    <span> $120.10 </span> </li>
-                                                <li class="section-title pt-20 slidetext"> <b> grand total  <span class="red-color"> $120.10 </span> </b> </li>
+                                            
+                                                <li class="section-title pt-20 slidetext"> <b> grand total  <span class="red-color">@isset($total)
+                                                    ${{number_format($total+7,2)}}
+                                                @endisset
+                                                @empty($total)
+                                                    $0.00    
+                                                @endempty</span> </b> </li>
                                                 <li class="ptb-10"> <hr class="divider"> </li>
                                                 <li class="slidetext"> <button class="theme-btn-1 btn submit-btn " type="submit"> <b> proceed to checkout </b> </button> </li>
                                             </ul>
