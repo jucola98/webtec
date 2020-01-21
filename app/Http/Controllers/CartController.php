@@ -21,20 +21,26 @@ class CartController extends Controller
                 $cartrow->amount= $request->quantity;
                 $cartrow->products_id=$request->prodid;
                 $cartrow->save();
-                return view("frontend.cart");
+                
             }else{
                 $toupdate=Cart::find($checkifexist->id);
                 $toupdate->amount=$toupdate->amount+$request->quantity;
                 $toupdate->save();
-                return view("frontend.cart");
+                
             } 
+            if(!Auth::guest()){
+                $data=Cart::select("products_id","amount","article.name","article.price","category.id as catid","category.macrocategory")->join("article","cart_content.products_id","=","article.id")->join("category","article.cat_id","=","category.macrocategory")->where("cart_content.user_id","=",Auth::user()->id)->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
+                return view("frontend.cart",["dataquery"=>$data]);
+            }else{
+                return view("auth.login");
+            }
         }else{
             return view("auth.login",["quantity"=>"AAAAAAA"]);
         }
     }
     function cartGet(){
         if(!Auth::guest()){
-            $data=Cart::select("products_id","amount","article.name","article.price","category.id as catid","category.macrocategory")->join("article","cart_content.products_id","=","article.id")->join("category","article.cat_id","=","category.macrocategory")->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
+            $data=Cart::select("products_id","amount","article.name","article.price","category.id as catid","category.macrocategory")->join("article","cart_content.products_id","=","article.id")->join("category","article.cat_id","=","category.macrocategory")->where("cart_content.user_id","=",Auth::user()->id)->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
             return view("frontend.cart",["dataquery"=>$data]);
         }else{
             return view("auth.login");
