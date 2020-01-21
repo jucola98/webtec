@@ -18,7 +18,7 @@ Auth::routes();
 
 Route::get('/', 'FrontendController@getMaster')->name('master');
 Route::get('/contact', 'FrontendController@getContact')->name('contact');
-Route::get('/cart', 'FrontendController@getCart')->name('cart');
+Route::get('/cart', 'CartController@cartGet')->name('cart');
 Route::get('/checkout', 'FrontendController@getCheckout')->name('checkout');
 Route::get('/singleprod/{macrocat}/{prodid}', 'ArticleController@fetchProductById')->name('singleprod');
 Route::get('/products/{macrocat}/{category}', 'CategoryController@getProductsMacroCat')->name('products');

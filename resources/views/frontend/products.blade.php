@@ -129,13 +129,13 @@
                                                 @if($item->rating-(int)$item->rating==0.5)
                                                     <span class="star half"></span>
                                                 @endif
-                                                @if($item->stock==0)
-                                                    <span style="color:red;">Product not in stock</span>
-                                                @endif
                                                 @for ($i=(int)(5-$item->rating);$i>0;$i--)
                                                     <span class="no star"></span>
                                                     <!--<span class="no star"></span>-->
-                                                @endfor                                        
+                                                @endfor
+                                                @if($item->stock==0)
+                                                    <span style="color:red;">Product not in stock</span>
+                                                @endif                                        
                                                 </div>
                                                 <div class="product-links"> 
                                                     @if($item->stock>0)

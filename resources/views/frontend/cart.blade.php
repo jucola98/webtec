@@ -4,8 +4,6 @@
 
 
 @section('content')
-
-        {{$quantity}}
             <article class="page-body">
             <!--Breadcrumb Section Start-->
                 <section class="breadcrumb-bg-2">                
@@ -25,6 +23,9 @@
                         
                         <h2 class="section-title"> your cart items </h2>
                         
+                                
+                            
+                        
                         <!-- Shopping Cart Starts -->
                         <div class="cart-table">
                             <form class="cart-form">
@@ -40,56 +41,36 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @isset($dataquery)
+                                    @foreach ($dataquery  as $item)    
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg">
-                                                    <a class="media-link" href="#"><img src="{{asset('img/common/recent-prod-1.png')}}" alt=""></a> 
+                                                <a class="media-link" href="singleprod/{{$item->macrocategory}}/{{$item->catid}}"><img src="{{asset('img/common/recent-prod-1.png')}}" alt=""></a> 
                                                 </div>
                                             </td>
                                             <td class="description">
-                                                <a href="#">Samurai T-Shirt</a> 
+                                                <a href="#">{{$item->name}}</a> 
                                                 <ul>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Color :</span> <span class="gray-color">White</span> </li>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> XL </span> </li>
                                                 </ul>                                                                                     
                                             </td>    
-                                            <td class="price"> $45.05 </td> 
+                                            <td class="price"> ${{number_format($item->price,2)}} </td> 
                                             <td class="quantity">
                                                 <div class="qty">
-                                                    1
+                                                    {{$item->amount}}
                                                 </div>
                                             </td>
-                                            <td class="price"> $45.05 </td>
+                                            <td class="price"> ${{number_format($item->price * $item->amount,2)}} </td>
                                             <td class="remove-edit">
                                                 <a href="#" class="icon_close fsz-24"></a> 
                                                 <a href="#" class="icon_pencil fsz-14"></a> 
                                             </td>
-                                        </tr>      
-                                        <tr>
-                                            <td class="image">
-                                                <div class="white-bg">
-                                                    <a class="media-link" href="#"><img src="{{asset('img/common/recent-prod-2.png')}}" alt=""></a> 
-                                                </div>
-                                            </td>
-                                            <td class="description">
-                                                <a href="#"> Typograpy T-Shirt </a> 
-                                                <ul>
-                                                    <li> <i class="arrow_carrot-right"></i> <span>Color :</span> <span class="gray-color"> Black </span> </li>
-                                                    <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> 42 </span> </li>
-                                                </ul>                                                                                     
-                                            </td>    
-                                            <td class="price"> $45.05 </td> 
-                                            <td class="quantity">
-                                                <div class="qty">
-                                                    1
-                                                </div>
-                                            </td>
-                                            <td class="price"> $45.05 </td>
-                                            <td class="remove-edit">
-                                                <a href="#" class="icon_close fsz-24"></a> 
-                                                <a href="#" class="icon_pencil fsz-14"></a> 
-                                            </td>
-                                        </tr>      
+                                        </tr>
+                                    @endforeach       
+                                    @endisset  
+                                    
                                     </tbody>                               
                                 </table>
                                 <div class="row">
@@ -105,6 +86,7 @@
                                 </div>
                             </form>
                         </div>
+
                         <section class="breadcrumb-bg-2">                
                             <div class="container">
                                 <div class="site-breadcumb">                        

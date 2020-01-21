@@ -1,10 +1,10 @@
 function productTextHandler(check,stock){
-    
+    if(stock)
     if(check&&($("#quant").attr("value")<stock)){//devo bloccare input
         $("#quant").attr("value",parseInt($("#quant").val())+1);
         $("#quant").val(parseInt($("#quant").attr("value")));
     }
-    if(!check&&($("#quant").attr("value")>0)){
+    if(!check&&($("#quant").attr("value")>1)){
         $("#quant").attr("value",parseInt($("#quant").val())-1);
         $("#quant").val(parseInt($("#quant").attr("value")));
     }
@@ -18,8 +18,4 @@ function changeValueInput(input,stock){
         $("#quant").attr("value",$(input).val());
         //$("#quant").val(parseInt($("#quant").attr("value")));
     }
-    /*
-    alert($(input).val());
-    alert(stock);
-    */
 }

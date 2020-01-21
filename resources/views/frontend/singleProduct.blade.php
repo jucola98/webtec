@@ -107,9 +107,14 @@
                         <ul class="stock-detail list-items black-color">  
                             @if($singart->stock>0)                                     
                                 <li class=""> <i class="icon-layers icons"></i> <span> Only <b>{{$singart->stock}}</b> Left </span> <i class="arrow_carrot-down"></i> </li>
+                                @isset($cartamount)
+                                    <li class=""> <i class="icon-handbag icons"></i> <span> You have <b>{{$cartamount->amount}}</b> products in your cart </span> <i class="arrow_carrot-down"></i> </li>
+                                @endisset
+                               
                                 <li>
                                 
                                 <b>Available:</b> <span class="green-color"> In Stock </span>  
+                                
                             @else
                                 <b>Available:</b> <span class="red-color"> Not In Stock </span>  
                             @endif
@@ -124,21 +129,37 @@
                     </div>
 
                     <hr class="divider-2">   
-                    <form action="{{route("testroute")}}" method="post">
+                    <form action="{{route("testroute",["prodid"=>$singart->id])}}" method="post">
                     @csrf
                     <div class="prod-btns">
                         @if($singart->stock>0)
-                        <div class="quantity">
-                            <button class="btn minus" onclick='productTextHandler(false,{{$singart->stock}});'><i class="icon_minus-06"></i></button>
-                            <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
-                            <button class="btn plus" onclick='productTextHandler(true,{{$singart->stock}});'><i class="icon_plus"></i></button>
-                        </div>
-                        <div class="add-to-cart">
-                            <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
-                        </div>
+                            @isset($cartamount->amount)
+                                @if($singart->stock-$cartamount->amount!=0)
+                                <div class="quantity">
+                                    <a class="btn minus" onclick='productTextHandler(false,{{$singart->stock-$cartamount->amount}});'><i class="icon_minus-06"></i></a>
+                                    <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
+                                    <a class="btn plus" onclick='productTextHandler(true,{{$singart->stock-$cartamount->amount}});'><i class="icon_plus"></i></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
+                                </div>
+                                @endif
+                            @endisset   
+                            @empty($cartamount->amount)
+                                <div class="quantity">
+                                    <a class="btn minus" onclick='productTextHandler(false,{{$singart->stock}});'><i class="icon_minus-06"></i></a>
+                                    <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
+                                    <a class="btn plus" onclick='productTextHandler(true,{{$singart->stock}});'><i class="icon_plus"></i></a>
+                                </div>
+                                <div class="add-to-cart">
+                                <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
+                                </div>
+                            @endempty
+                        
                         @else
 
-                        @endif                                    
+                        @endif
+                                                     
                     </div>
                     </form> 
                     <div class="prod-code upper-case">
