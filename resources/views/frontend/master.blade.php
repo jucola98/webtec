@@ -51,7 +51,7 @@
 					<div class="block-content">          
 						<i class="icon_pin_alt"></i>      
 						<h2 class="section-title">Free Shipping</h2>
-						<p>We provide service free shipping for all order over $99.00</p>           
+						<p>We provide service free shipping for all order over 99.00€</p>           
 					</div>
 				</div>
 			</div>
@@ -379,7 +379,7 @@
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">pfo grey t-shirt</a> </h2>
-									<span class="price"> <b>$72.30</b> <del></del> </span>
+									<span class="price"> <b>72.30€</b> <del></del> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
 									</div>
@@ -405,7 +405,7 @@
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">amior jacket two color</a> </h2>
-									<span class="price"> <b>$140.35</b> </span>
+									<span class="price"> <b>140.35€</b> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>	
 									</div>
@@ -428,7 +428,7 @@
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="#">london t-shirt</a> </h2>
-									<span class="price"> <b>$66.20</b> </span>
+									<span class="price"> <b>66.20€</b> </span>
 									<div class="product-links"> 
 										<a href="#" class="add-to-cart">Add To Cart</a>
 									</div>

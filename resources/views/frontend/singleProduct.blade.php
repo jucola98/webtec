@@ -97,9 +97,9 @@
                     </div>  
                     <div class="price">
                         @if(($singart->sale)>0)
-                            <b>${{($singart->price)-($singart->price)*($singart->sale/100)}}</b> <del>${{$singart->price}}</del><span class="green-color"> {{$singart->sale}}%</span>
+                            <b>{{($singart->price)-($singart->price)*($singart->sale/100)}}€</b> <del>{{$singart->price}}€</del><span class="green-color"> {{$singart->sale}}%</span>
                         @else
-                            <b>${{($singart->price)}}</b><!--forse va aggiunto un campo per gestire i saldi-->
+                            <b>{{($singart->price)}}€</b><!--forse va aggiunto un campo per gestire i saldi-->
                         @endif
                     </div>
 

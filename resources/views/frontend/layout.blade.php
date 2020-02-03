@@ -85,7 +85,7 @@
                                                     <div class="cart-title">
                                                         <a class="font-2" href="#">samurai t-shirt</a>
                                                         <p class="price"> 
-                                                            <b> $45.05 </b>
+                                                            <b> 45.05€ </b>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -95,14 +95,14 @@
                                                     <div class="cart-title">
                                                         <a class="font-2" href="#">samurai t-shirt</a>
                                                         <p class="price"> 
-                                                            <b> $67.05  </b> <del>$102.50 </del>
+                                                            <b> 67.05€  </b> <del>102.50€ </del>
                                                         </p>
                                                     </div>
                                                 </div>
                                             </li>
                                         </ol>
                                         <div class="total">
-                                            <span class="font-2">sub total</span> <span class="total-price">$210.5</span>
+                                            <span class="font-2">sub total</span> <span class="total-price">210.5€</span>
                                         </div>
                                         <div class="buttons">
                                             <div class="left"> 

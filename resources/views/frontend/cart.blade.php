@@ -57,13 +57,13 @@
                                                     <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> XL </span> </li>
                                                 </ul>                                                                                     
                                             </td>    
-                                            <td class="price"> ${{number_format($item->price,2)}} </td> 
+                                            <td class="price"> {{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€ </td> 
                                             <td class="quantity">
                                                 <div class="qty">
                                                     {{$item->amount}}
                                                 </div>
                                             </td>
-                                            <td class="price"> ${{number_format($item->price * $item->amount,2)}} </td>
+                                            <td class="price"> {{number_format((($item->price)-($item->price)*($item->sale/100)) * $item->amount,2)}}€ </td>
                                             <td class="remove-edit">
                                                 <a href="#" class="icon_close fsz-24"></a> 
                                                 <a href="#" class="icon_pencil fsz-14"></a> 
@@ -79,23 +79,20 @@
                                         <div class="site-breadcumb">                        
                                         <ul class="font-2" >
                                                 <li class="title-2 slidetext"> sub total    <span> 
-                                                @isset($total)
-                                                    ${{number_format($total,2)}}
-                                                @endisset
-                                                @empty($total)
-                                                    $0.00    
-                                                @endempty
+                                                
+                                               {{number_format($total,2)}}
                                                 
                                                 </span> </li>
                                                 
-                                                <li class="title-2 slidetext"> shipping    <span> $7,00 </span> </li>
+                                                <li class="title-2 slidetext"> shipping    <span> €7,00 </span> </li>
                                             
-                                                <li class="section-title pt-20 slidetext"> <b> grand total  <span class="red-color">@isset($total)
-                                                    ${{number_format($total+7,2)}}
-                                                @endisset
-                                                @empty($total)
-                                                    $0.00    
-                                                @endempty</span> </b> </li>
+                                                <li class="section-title pt-20 slidetext"> <b> grand total  <span class="red-color">
+                                                @if ($total>0)
+                                                €{{number_format($total+7,2)}}
+                                                @else
+                                                    €0.00    
+                                                @endif
+                                                </span> </b> </li>
                                                 <li class="ptb-10"> <hr class="divider"> </li>
                                                 <li class="slidetext"> <button class="theme-btn-1 btn submit-btn " type="submit"> <b> proceed to checkout </b> </button> </li>
                                             </ul>
