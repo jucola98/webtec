@@ -130,7 +130,15 @@ img{max-width: 100%; height: auto; transition: all 250ms ease-in-out 0s; -webkit
     letter-spacing: 1px;
     font-weight: 600
 }
-.main-title {font-size: 36px;;}
+.main-title-2{
+    color: rgb(255, 255, 255);  
+    text-transform: uppercase;  
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 36px;
+
+}
+.main-title {font-size: 36px;}
 .section-title { font-size: 18px; }
 .title-1{ font-size: 24px; }
 .title-2 { font-size: 14px; }
@@ -389,6 +397,24 @@ h2,h3,h4,h5,h6{
     position: relative;
     letter-spacing: 1px;
     font-weight: 600;
+}
+.theme-btn-3{
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0;
+    color: #ffffff;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    min-width: 170px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: 600;
+
 }
 .theme-btn-1 {    
     background-color: #454545;

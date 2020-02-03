@@ -13,9 +13,9 @@
 			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_1.jpg')}}" />
 			<div class="slide-info">
 				<div class="caption">
-					<h5 class="title-2" data-animation-in="fadeInDown">NEW ARRIVAL</h5>
+					
 					<h2 class="main-title" data-animation-in="fadeInDown"> red wing shoes COLLECTION  </h2>
-					<p data-animation-in="fadeInDown"> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+					
 					<div class="buttons" data-animation-in="rotateIn"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
 				</div>
 			</div>
@@ -24,10 +24,21 @@
 			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_2.jpg')}}" />
 			<div class="slide-info">
 				<div class="caption">
-					<h5 class="title-2" data-animation-in="fadeInDown"> NEW ARRIVAL </h5>
+					
 					<h2 class="main-title" data-animation-in="slideInUp"> Lookbook 2017  </h2>
-					<p data-animation-in="slideInUp"> Hipster style is a fashion trending for Gentleman and Lady with tattoos. You’ll become so cool and attractive with your’s girl. Now let come hare and grab it now ! </p>
-					<div class="buttons" data-animation-in="fadeInUp"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
+					
+					<div class="buttons" data-animation-in="rotateIn"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img alt="slider" src="{{asset('img/home-fourteen/slideshow_3.jpg')}}" />
+			<div class="slide-info">
+				<div class="caption">
+					
+					<h2 class="main-title" data-animation-in="slideInUp"> Lookbook 2017  </h2>
+					
+					<div class="buttons" data-animation-in="rotateIn"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
 				</div>
 			</div>
 		</div>
@@ -39,8 +50,8 @@
 <section class="our-services">
 	<div class="container">
 		<div class="title-wrap">
-			<h2 class="main-title"> welcome to logancee <span class="text-bg">W</span> </h2>       
-			<p>We’re a team of creative and make amazing site in ecommerce from Unite States. We love colour pastel, highlight and simple, its make our design look so awesome </p>
+			<h2 class="main-title"> welcome to CozyStore <span class="text-bg">W</span> </h2>       
+			
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-sm-6 col-xs-12">
@@ -58,7 +69,7 @@
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="block-top-item">
 					<div class="images">
-						<img src="{{asset('img/home-fourteen/item-4.jpg')}}" alt="">
+						<img src="{{asset('img/home-fourteen/sw1.jpg')}}" alt="">
 					</div>
 					<div class="block-content">          
 						<i class="icon_currency"></i>      
@@ -70,7 +81,7 @@
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="block-top-item">
 					<div class="images">
-						<img src="{{asset('img/home-fourteen/item-5.jpg')}}" alt="">
+						<img src="{{asset('img/home-fourteen/sw2.jpg')}}" alt="">
 					</div>
 					<div class="block-content">          
 						<i class="icon_comment_alt"></i>      
@@ -87,35 +98,36 @@
 <!-- Promotion -->
 <section class="promotion clearfix">
 	<div class="col-md-6 col-sm-12 item-wrap">
+		<img class="img" src="{{asset('img/home-fourteen/item-1.jpg')}}" alt="" />
 		<div class="item-content">
-			<h2 class="main-title">super sale up to <span> 50% </span> off for shoes</h2>
-			<p> Logancee Store glad to show that we’ll open <b> super sale up to 50% off </b> for shoes to welcome the Chrismast holiday. </p>
+			<h2 class="main-title-2">Shop our premium sneakers</h2>
+			<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="#">Grab It Now</a></div>
+		</div>
+	</div>  
+	<div class="col-md-6 col-sm-12 item-wrap">
+		<div class="item-img">
+			<img class="img" src="{{asset('img/home-fourteen/item-3.jpg')}}" alt="" />
+			<div class="item-content">
+			<h2 class="main-title">Woman's accessories</h2>
 			<div class="read-more"> <a class="btn theme-btn small-btn" href="#">Grab It Now</a></div>
 		</div>
-	</div>  
-	<div class="col-md-6 col-sm-12 item-wrap">
-		<div class="item-img">
-			<img class="img" src="{{asset('img/home-fourteen/item-1.jpg')}}" alt="" />
 		</div>
 	</div>  
 	<div class="col-md-6 col-sm-12 item-wrap">
 		<div class="item-img">
-			<img class="img" src="{{asset('img/home-fourteen/item-2.jpg')}}" alt="" />
-			<div class="caption">
-				<h2 class="main-title">red wing</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis diam sed tellus cursus, quis dictum erat pellentesque.</p>
-			</div>
+			<img class="img" src="{{asset('img/home-fourteen/item-4.jpg')}}" alt="" />
+			<div class="item-content">
+			<h2 class="main-title-2">the north face nuptse 1992</h2>
+			<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="#">Grab It Now</a></div>
+		</div>
 		</div>
 	</div>
 	<div class="col-md-6 col-sm-12 item-wrap">
+	<img class="img" src="{{asset('img/home-fourteen/item-2.jpg')}}" alt="" />
 		<div class="item-content">
-			<h2 class="main-title">buy red wing shoes just <span> $99 </span> </h2>
-			<p> Today we glad to notice that you can buy cigarette pipe with price just <b> $99. Grab it now ! </b> </p>
-			<h5 class="title-2"> expires in </h5>
-			<div class="countdown-wrapper">
-				<div id="dealCountdown1" class="defaultCountdown clearfix"></div>
-			</div>
+		<h2 class="main-title">f/w 2019 nike collection</h2>
 			<div class="read-more"> <a class="btn theme-btn small-btn" href="#">Shop Now</a></div>
+			</div>
 		</div>
 	</div>                                          
 </section>  
@@ -125,14 +137,10 @@
 <section class="our-products">
 	<div class="container">
 		<div class="title-wrap">
-			<h2 class="main-title"> best our products <span class="text-bg">B</span> </h2>                        
+			<h2 class="main-title">  our best products <span class="text-bg">B</span> </h2>                        
 		</div>
 		<div class="prod-block">  
-			<ul class="theme-tabs font-2">
-				<li class="active"> <a href="#prod-tab-1"  data-toggle="tab"> Best Seller  </a> </li>
-				<li class=""> <a href="#prod-tab-2"  data-toggle="tab"> New Arrival  </a> </li>
-				<li class=""> <a href="#prod-tab-3"  data-toggle="tab"> Most Wanted  </a> </li>
-			</ul>
+		
 			
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">
