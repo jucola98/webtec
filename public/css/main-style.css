@@ -1030,7 +1030,7 @@ textarea:focus:-ms-input-placeholder {
 }
 .header-two .primary-navbar .mega-dropdown {position: static;}
 .header-two .primary-navbar .mega-dropdown-menu {width: 100%; margin: 0;}
-.header-two .mega-dropdown-menu .menu-block {}
+
 .header-two .menu-block + .menu-block {
     border-left: 1px solid #f3f3f3;
     min-height: 285px;
