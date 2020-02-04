@@ -6,15 +6,13 @@
 <article class="page-body">
 
 <!--Breadcrumb Section Start-->
-<section class="breadcrumb-bg mask-overlay">                
-    <div class="container">
-        <div class="site-breadcumb">                        
-            <h1 class="title-1">Simple product</h1> 
-            <ol class="breadcrumb breadcrumb-menubar">
-                <li> <a href="#"> Home </a> <a href="#"> Shop  </a> Simple Product </li>                             
-            </ol>
-        </div>  
-    </div>
+<section class="breadcrumb-bg-6">  
+                <div class="site-breadcumb">                        
+                    <h1 class="title-1">SingleProduct</h1> 
+                        <ol class="breadcrumb breadcrumb-menubar">
+                            <li> <a href="{{ route('master') }}"> Home </a> SingleProduct </li>                             
+                        </ol>
+                </div>  
 </section>
 <!--Breadcrumb Section End-->
 
