@@ -82,12 +82,12 @@
                                             <li>
                                                 <div class="alert">
                                                     
-                                                    @if(App\Http\Controllers\FrontendController::getUserCart()!=null)
+                                                    @if(App\Http\Controllers\FrontendController::getUserCart()[0]!=null)
                                                         @foreach (App\Http\Controllers\FrontendController::getUserCart()[0] as $recordsCart)
-                                                        <a href="#" class="close icon_close" data-dismiss="alert" aria-label="close"></a>
+                                                        
                                                             <a class="img" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}"> <img src="{{asset($recordsCart->URI)}}" alt=""/> </a>
                                                             <div class="cart-title">
-                                                                <a class="font-2" href="#">{{$recordsCart->name}}</a>
+                                                                <a class="font-2" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}">{{$recordsCart->name}}</a>
                                                                 <p class="price"> 
                                                                     <b> {{$recordsCart->price}}€ x {{$recordsCart->amount}}  </b>
                                                                 </p>

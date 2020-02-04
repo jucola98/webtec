@@ -29,6 +29,8 @@ class FrontendController extends Controller
                 $total+=$values->amount*$values->price;
             }
             array_push($params,$query,$total);
+        }else{
+            array_push($params,null,0);
         }
         return $params;
     }
