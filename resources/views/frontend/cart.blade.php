@@ -43,7 +43,6 @@
                                     <tbody>
                                     @isset($dataquery)
                                     @foreach ($dataquery  as $item)    
-                                    {{$item}}
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg">

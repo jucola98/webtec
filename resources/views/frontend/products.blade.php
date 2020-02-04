@@ -34,7 +34,6 @@
                     <div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">
                         <div class="sorter-bar block-inline">
                             <div class="show-result font-2">
-                                
                                 Showing {{$items->count()}} to {{$items->count()}} of {{$items->count()}} total
                             </div>
                             <div class="select-option">

@@ -81,34 +81,37 @@
                                         <ol class="cart-list">  
                                             <li>
                                                 <div class="alert">
-                                                    <a href="#" class="close icon_close" data-dismiss="alert" aria-label="close"></a>
-                                                    <a class="img" href="product-layout-1.html"> <img src="{{asset('img/home-fourteen/cart-item-1.png')}}" alt=""/> </a>
-                                                    <div class="cart-title">
-                                                        <a class="font-2" href="#">samurai t-shirt</a>
-                                                        <p class="price"> 
-                                                            <b> 45.05€ </b>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="alert">
-                                                    <a href="#" class="close icon_close" data-dismiss="alert" aria-label="close"></a>
-                                                    <a class="img" href="product-layout-1.html"> <img src=" {{asset('img/home-fourteen/cart-item-2.png')}}" alt=""/> </a>
-                                                    <div class="cart-title">
-                                                        <a class="font-2" href="#">samurai t-shirt</a>
-                                                        <p class="price"> 
-                                                            <b> 67.05€  </b> <del>102.50€ </del>
-                                                        </p>
-                                                    </div>
+                                                    
+                                                    @if(App\Http\Controllers\FrontendController::getUserCart()!=null)
+                                                        @foreach (App\Http\Controllers\FrontendController::getUserCart()[0] as $recordsCart)
+                                                        <a href="#" class="close icon_close" data-dismiss="alert" aria-label="close"></a>
+                                                            <a class="img" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}"> <img src="{{asset($recordsCart->URI)}}" alt=""/> </a>
+                                                            <div class="cart-title">
+                                                                <a class="font-2" href="#">{{$recordsCart->name}}</a>
+                                                                <p class="price"> 
+                                                                    <b> {{$recordsCart->price}}€ x {{$recordsCart->amount}}  </b>
+                                                                </p>
+                                                            </div>
+                                                        @endforeach
+                                                    @else
+                                                    Empty
+                                                    @endif
+                                                    
+                                                
                                                 </div>
                                             </li>
                                         </ol>
-                                        <div class="total">
-                                            <span class="font-2">sub total</span> <span class="total-price">210.5€</span>
-                                        </div>
                                         <div class="buttons">
-                                            <div class="left"> 
-                                                <a href="{{ route('cart') }}" class="theme-btn-1 btn small-btn">View Cart</a>
-                                            </div>
+                                        <div class="rigth"> 
+                                            <a href="{{ route('cart') }}" class="theme-btn btn small-btn buttoncheckout" >View full cart</a>
+                                        </div>
+                                    </div>
+                                        <div class="total">
+                                            <span class="font-2">sub total</span> <span class="total-price">{{App\Http\Controllers\FrontendController::getUserCart()[1]}}€</span>
+                                        </div>
+
+                                        <div class="buttons">
+                                            
                                             <div class="right"> 
                                                 <a href="{{ route('checkout') }}" class="theme-btn btn small-btn"> Checkout </a>
                                             </div>
