@@ -91,7 +91,7 @@
                                                 <a href="{{route('singleprod',[$items->macrocategory,$items->id])}}" class="img"> 
                                                     
                                                     @if($items->imgURI == null || !file_exists($items->imgURI))
-                                                        <img src="{{asset('img/common/imgnotfound.png')}}" alt="" /> </a> 
+                                                        <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else
                                                         <img src="{{asset($items->imgURI)}}" alt="" /> </a> 
                                                         <span class="product-hover">

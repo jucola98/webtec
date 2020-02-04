@@ -83,9 +83,9 @@
                             </div>
                             <hr class="divider">
                             <form>
-                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with PayPal | <a href="https://google.com"><img alt="" src="{{asset('img/common/img-6.png')}}" /> </a> </h4>
-                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with MasterCard | <a href="https://google.com"><img alt="" src="{{asset('img/common/img-3.png')}}" /> </a> </h4>
-                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with Visa | <a href="https://google.com"><img alt="" src="{{asset('img/common/img-5.png')}}" /> </a> </h4> 
+                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with PayPal | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-6.png')}}" /> </a> </h4>
+                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with MasterCard | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-3.png')}}" /> </a> </h4>
+                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with Visa | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-5.png')}}" /> </a> </h4> 
                               <br> 
                               <input class="btn small-btn btn-black" type="submit" value="submit"></input>
                             </form>

@@ -133,13 +133,13 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                         </form>
-                                        <a href="#"> <span class="icon-user icons"></span> My Accaunt </a>
+                                       
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
                                         @else
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
-                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
-                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
                                     </li>
                                     @endif
                                 </ul>

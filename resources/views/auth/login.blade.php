@@ -12,7 +12,7 @@
             <article class="page-body">
 
                 <!--Breadcrumb Section Start-->
-                <section class="breadcrumb-bg-2">                
+                <section class="breadcrumb-bg-4">                
                     <div class="container">
                         <div class="site-breadcumb">                        
                             <h1 class="title-1">login / register </h1> 
