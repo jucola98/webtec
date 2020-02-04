@@ -73,27 +73,27 @@
                     <div class="product-heading">
                         <h2 class="section-title">{{$singart->name}}</h2>                                              
                     </div>
-                    <div class="rating">                                                              
-                        @for ($i=(int)$singart->rating;$i>0;$i--)
-                        <span class="star active"></span>
-                        <!--<span class="no star"></span>-->
-                    @endfor
-                    @if($singart->rating-(int)$singart->rating==0.5)
-                        <span class="star half"></span>
-                    @endif
-                    @for ($i=(int)(5-$singart->rating);$i>0;$i--)
-                        <span class="no star"></span>
-                        <!--<span class="no star"></span>-->
-                    @endfor
-                        <span>{{$singart->rating}}/5</span>
-                    @if($singart->stock==0)
-                        <br> <span style="color:red;">Product not in stock</span>
-                    @endif
-                        <!--<div class="product-review">
-                            <ul class="list-items black-color">
-                                <li>Be the first to review this product</li>
-                            </ul>
-                        </div>-->
+                    {{$singart->rating}}/5 &nbsp;
+                    <div class="rating" id="starrating">   
+                        
+                        
+                        @for ($i = 0; $i < 5; $i++)
+                        
+                        @if ($singart->rating-->0.5)
+                            <span class="star active" name="{{$i+1}}"></span>
+                        @else
+                            
+                            @if (($singart->rating--%10==0))
+                                <span class="star half" name="{{$i+1}}"></span>
+                            @else
+                                <span class="no star" name="{{$i+1}}" ></span>
+                                
+                            @endif
+
+                        @endif
+                            
+                        @endfor
+                   
                     </div>  
                     <div class="price">
                         @if(($singart->sale)>0)
@@ -134,7 +134,7 @@
                     <div class="prod-btns">
                         @if($singart->stock>0)
                             @isset($cartamount->amount)
-                                @if($singart->stock-$cartamount->amount!=0)
+                                @if($singart->stock-$cartamount->amount>0)
                                 <div class="quantity">
                                     <a class="btn minus" onclick='productTextHandler(false,{{$singart->stock-$cartamount->amount}});'><i class="icon_minus-06"></i></a>
                                     <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
@@ -241,5 +241,7 @@
         </div>
         @endsection
         @section('js')
-            <script src={{asset("js/CartUtils.js")}}></script>         
+            <script src={{asset("js/CartUtils.js")}}></script>   
+            <script src={{asset("js/StarHandler.js")}}></script>
+
         @endsection

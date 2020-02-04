@@ -51,7 +51,7 @@
                                                 </div>
                                             </td>
                                             <td class="description">
-                                                <a href="#">{{$item->name}}</a> 
+                                                <a href="{{route('singleprod',[$item->mcat,$item->products_id])}}">{{$item->name}}</a> 
                                                 <ul>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Color :</span> <span class="gray-color">White</span> </li>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> XL </span> </li>
