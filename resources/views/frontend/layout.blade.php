@@ -61,8 +61,9 @@
                             <span class="nav-trigger open icon_menu"></span>
                             <div class="search-form-wrap">
                                 <span class="icon-magnifier search-icon"></span>
-                                <form class="search-form">
-                                    <input class="search" type="text" placeholder="Type & Hit Enter" />
+                                <form class="search-form" action="{{route('searchProduct')}}" method="post">
+                                    @csrf
+                                    <input class="search" type="text" placeholder="Type & Hit Enter" name="searchbar" />
                                     <span class="icon_close search-close"></span>
                                 </form>
                             </div>

@@ -34,6 +34,7 @@
                     <div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">
                         <div class="sorter-bar block-inline">
                             <div class="show-result font-2">
+                                
                                 Showing {{$items->count()}} to {{$items->count()}} of {{$items->count()}} total
                             </div>
                             <div class="select-option">
@@ -81,21 +82,21 @@
                             <!-- Product Grid View Starts -->
                             <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
                                 
-                                @foreach ($items as $item)
+                                @foreach ($items as $items)
                                     @if(!(($loop->index)%3))
                                     <div class="row">
                                     @endif
                                     <div class="col-sm-6 col-md-4 col-lg-4">
                                         <div class="product-item">
                                             <div class="product-image">
-                                                <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img"> 
+                                                <a href="{{route('singleprod',[$items->macrocategory,$items->id])}}" class="img"> 
                                                     
-                                                    @if($item->imgURI == null || !file_exists($item->imgURI))
+                                                    @if($items->imgURI == null || !file_exists($items->imgURI))
                                                         <img src="{{asset('img/common/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else
-                                                        <img src="{{asset($item->imgURI)}}" alt="" /> </a> 
+                                                        <img src="{{asset($items->imgURI)}}" alt="" /> </a> 
                                                         <span class="product-hover">
-                                                                <img alt="" src="{{asset($item->imgURI)}}">  
+                                                                <img alt="" src="{{asset($items->imgURI)}}">  
                                                         </span>
                                                     @endif
 
@@ -111,32 +112,32 @@
                                             <div class="product-content">
                                                 
                                                     
-                                                <h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}">{{$item->name}}</a> </h2>
-                                                @if(($item->sale)>0)
-                                                    <span class="price"> <b>{{($item->price)-($item->price)*($item->sale/100)}}€</b> <del>{{$item->price}}€</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
+                                                <h2 class="product-title"> <a href="{{route('singleprod',[$items->macrocategory,$items->id])}}">{{$items->name}}</a> </h2>
+                                                @if(($items->sale)>0)
+                                                    <span class="price"> <b>{{($items->price)-($items->price)*($items->sale/100)}}€</b> <del>{{$items->price}}€</del> </span><span class="green-color"> {{$items->sale}}% OFF</span>
                                                 @else
-                                                    <span class="price"> <b>{{$item->price}}€</b> <del></del> </span>
+                                                    <span class="price"> <b>{{$items->price}}€</b> <del></del> </span>
                                                 @endif
                                                 
                                                 <!--stellette-->
                                                 <div class="rating"> 
-                                                @for ($i=(int)$item->rating;$i>0;$i--)
+                                                @for ($i=(int)$items->rating;$i>0;$i--)
                                                     <span class="star active"></span>
                                                     <!--<span class="no star"></span>-->
                                                 @endfor
-                                                @if($item->rating-(int)$item->rating==0.5)
+                                                @if($items->rating-(int)$items->rating==0.5)
                                                     <span class="star half"></span>
                                                 @endif
-                                                @for ($i=(int)(5-$item->rating);$i>0;$i--)
+                                                @for ($i=(int)(5-$items->rating);$i>0;$i--)
                                                     <span class="no star"></span>
                                                     <!--<span class="no star"></span>-->
                                                 @endfor
-                                                @if($item->stock==0)
+                                                @if($items->stock==0)
                                                     <span style="color:red;">Product not in stock</span>
                                                 @endif                                        
                                                 </div>
                                                 <div class="product-links"> 
-                                                    @if($item->stock>0)
+                                                    @if($items->stock>0)
                                                         <a href="#" class="add-to-cart"> <span> Add To Cart </span> <i class="icon_cart_alt"></i> </a>  
                                                     @else
                                                         <del><span> Add To Cart </span></del> 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Article;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -36,5 +37,13 @@ class FrontendController extends Controller
     }
     public function getCheckout(){
         return view('frontend.checkout');
+    }
+    public function searchProduct(Request $request){
+        $query=Article::select("article.id","article.name","article.description","article.price","article.URI","article.imgURI","category.name as nomecat","category.name as nomecat","category.id as idcat","category.macrocategory","article.sale","article.price","article.rating","article.stock")->join("category","article.cat_id",'=',"category.id")->where("article.name","like","%".$request->searchbar."%")->orderBy("price","ASC")->paginate(16);
+        if($query->isEmpty()){
+            
+            return(abort(404));
+        }
+        return view('frontend.products',["items"=>$query]);
     }
 }

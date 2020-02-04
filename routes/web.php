@@ -11,8 +11,7 @@
 |
 */
 
-
-
+use App\Http\Controllers\FrontendController;
 
 Auth::routes();
 
@@ -24,3 +23,4 @@ Route::get('/singleprod/{macrocat}/{prodid}', 'ArticleController@fetchProductByI
 Route::get('/products/{macrocat}/{category}', 'CategoryController@getProductsMacroCat')->name('products');
 
 Route::post('/testroute','CartController@postTest')->name("testroute");
+Route::post('/search','FrontendController@searchProduct')->name("searchProduct");
