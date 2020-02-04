@@ -8,14 +8,13 @@
            
             
                 
-                <section class="breadcrumb-bg-2">                
-                    
-                        <div class="site-breadcumb">                        
-                            <h1 class="title-1">shopping cart</h1> 
-                            <ol class="breadcrumb breadcrumb-menubar">
-                                <li> <a href="{{ route('master') }}"> Home </a> Shopping Cart </li>                             
-                            </ol>
-                        </div>  
+                <section class="breadcrumb-bg-3">  
+                <div class="site-breadcumb">                        
+                    <h1 class="title-1">Contact</h1> 
+                        <ol class="breadcrumb breadcrumb-menubar">
+                            <li> <a href="{{ route('master') }}"> Home </a> Contact </li>                             
+                        </ol>
+                </div>  
                     
                 
                 <div class="newsletter">
@@ -49,6 +48,7 @@
                         </div>
                         </div>
                         </div>
+                        </div>   
                         </section>
 
                         

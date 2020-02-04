@@ -1661,7 +1661,7 @@ textarea:focus:-ms-input-placeholder {
 
 
 /*-------------------------- 3.5 Newsletter Starts------------------- */
-.newsletter {padding: 20px 0 60px; background-color: #f3f3f3;}
+.newsletter {padding: 20px 0 60px; background-color: rgba(255, 255, 255, 0.9);}
 .newsletter p {margin: auto;}
 .newsletter .mail-info {
     margin: 20px auto;

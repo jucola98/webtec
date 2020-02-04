@@ -117,16 +117,16 @@
 		<div class="item-img">
 			<img class="img" src="{{asset('img/home-fourteen/item-4.jpg')}}" alt="" />
 			<div class="item-content">
-			<h2 class="main-title-2">the north face nuptse 1992</h2>
-			<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="#">Grab It Now</a></div>
+			<h2 class="main-title">the north face nuptse 1992</h2>
+			<div class="read-more"> <a class="btn theme-btn small-btn" href="#">Grab It Now</a></div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-6 col-sm-12 item-wrap">
 	<img class="img" src="{{asset('img/home-fourteen/item-2.jpg')}}" alt="" />
 		<div class="item-content">
-		<h2 class="main-title">f/w 2019 nike collection</h2>
-			<div class="read-more"> <a class="btn theme-btn small-btn" href="#">Shop Now</a></div>
+		<h2 class="main-title-2">f/w 2019 nike collection</h2>
+			<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="#">Shop Now</a></div>
 			</div>
 		</div>
 	</div>                                          
