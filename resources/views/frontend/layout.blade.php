@@ -357,25 +357,17 @@
             <footer class="footer-six">
                 <div class="footer-wrap">
                     <div class="container">
-                        <div class="footer-logo">
-                            <a href="index.html"> <img src="{{asset('img/home-fourteen/main-logo.png')}}" alt="logo" title="Logo" /> </a>
-                        </div>
+                        
                         <div class="footer-share font-2">
                             <ul>
                                 <li><a href="#">facebook</a></li>   
                                 <li><a href="#">twitter</a></li>           
-                                <li><a href="#">pinterest</a></li>
-                                <li><a href="#">google+</a></li>
                                 <li><a href="#">instagram</a></li>           
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="copy-rights">
-                    <div class="container">
-                        © 2017 <a href="#"> <b> LOGANCEE </b> </a>. All Rights Reserved      
-                    </div>
-                </div>
+              
 
             </footer>
             <!-- /FOOTER -->

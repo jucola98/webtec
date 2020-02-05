@@ -60,21 +60,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="tabs-btns"> 
-                                <ul class="tabination view-tabs">
-                                    <li> View </li>
-                                    <li class="active">
-                                        <a href="#grid-view" data-toggle="tab">                                                    
-                                            <i class="fa fa-th" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="#list-view" data-toggle="tab">
-                                            <i class="fa fa-th-list"></i>
-                                        </a>
-                                    </li>
-                                </ul>                                       
-                            </div>
+                            
                         </div>     
 
                         <div class="tab-content">

@@ -25,3 +25,7 @@ Route::get('/products/{macrocat}/{category}', 'CategoryController@getProductsMac
 
 Route::post('/testroute','CartController@postTest')->name("testroute");
 Route::post('/search','FrontendController@searchProduct')->name("searchProduct");
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
