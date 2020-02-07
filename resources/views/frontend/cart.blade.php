@@ -46,7 +46,12 @@
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg">
-                                                <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{asset('img/common/recent-prod-1.png')}}" alt=""></a> 
+                                                    @if($item->imgURI == null || !file_exists($item->imgURI))
+                                                    <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt=""  /> </a> 
+                                                @else
+                                                 <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{asset($item->imgURI)}}" alt=""></a> 
+                                                @endif
+                                               
                                                 </div>
                                             </td>
                                             <td class="description">

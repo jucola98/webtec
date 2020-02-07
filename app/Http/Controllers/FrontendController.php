@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Article;
 use App\Cart;
+use App\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -49,7 +50,9 @@ class FrontendController extends Controller
         return view('frontend.cart');
     }
     public function getWish(){
-        return view('frontend.wishlist');
+        //dataquery
+        $query=Wishlist::select("product_id","imgURI","article.name","article.price","category.id as catid","category.macrocategory as mcat","article.sale")->where("user_id","=",Auth::user()->id)->join("article","article.id","=","wishlist.user_id")->join("category","article.cat_id","=","category.id")->get();
+        return view('frontend.wishlist',["wishlistdata"=>$query]);
     }
     public function getSingle(){
         return view('frontend.singleProduct');

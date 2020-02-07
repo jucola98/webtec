@@ -128,7 +128,7 @@
                                        
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
-                                        <a href="{{ route('checkout') }}"> <span class="icon-heart icons"></span>  wishlist </a>
+                                        <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  Wishlist </a>
                                         @else
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
@@ -172,7 +172,7 @@
                                         @foreach (App\Http\Controllers\FrontendController::fetchCategoriesMan() as $records)
                                             <li><a href="{{ route('products',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
                                         @endforeach    
-                                            2
+                                            
                                         </ul>
                                     </li>                                   
                                                                                                                              

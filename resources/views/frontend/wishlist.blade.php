@@ -35,34 +35,32 @@
                                             <th></th>                                
                                             <th>product name</th>  
                                             <th>price</th> 
-                                            <th>quantity</th>
-                                            <th>total</th>
                                             <th></th> 
                                         </tr>
                                     </thead>
+        
                                     <tbody>
-                                    @isset($dataquery)
-                                    @foreach ($dataquery  as $item)    
+                                        
+                                   @isset($wishlistdata)
+                                    @foreach ($wishlistdata as $item)    
                                         <tr>
                                             <td class="image">
-                                                <div class="white-bg">
-                                                <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{asset('img/common/recent-prod-1.png')}}" alt=""></a> 
+                                                <div class="white-bg" >
+                                                @if($item->imgURI == null || !file_exists($item->imgURI))
+                                                    <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt=""  /> </a> 
+                                                @else
+                                                 <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->product_id])}}"><img src="{{asset($item->imgURI)}}" alt=""></a> 
+                                                @endif
                                                 </div>
                                             </td>
                                             <td class="description">
-                                                <a href="{{route('singleprod',[$item->mcat,$item->products_id])}}">{{$item->name}}</a> 
+                                                <a href="{{route('singleprod',[$item->mcat,$item->product_id])}}">{{$item->name}}</a> 
                                                 <ul>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Color :</span> <span class="gray-color">White</span> </li>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> XL </span> </li>
                                                 </ul>                                                                                     
                                             </td>    
                                             <td class="price"> {{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€ </td> 
-                                            <td class="quantity">
-                                                <div class="qty">
-                                                    {{$item->amount}}
-                                                </div>
-                                            </td>
-                                            <td class="price"> {{number_format((($item->price)-($item->price)*($item->sale/100)) * $item->amount,2)}}€ </td>
                                             <td class="remove-edit">
                                                 <a href="#" class="icon_close fsz-24"></a> 
                                                 <a href="#" class="icon_pencil fsz-14"></a> 

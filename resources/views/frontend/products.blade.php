@@ -126,7 +126,7 @@
                                                         <del><span> Add To Cart </span></del> 
                                                     @endif
                                                     
-                                                    <a href="#" class="icon_heart_alt"></a>
+                                                    <a href="{{route("wishlistadd",$items->id)}}" class="icon_heart_alt"></a>
                                                     <a href="#" class="icon_piechart"></a>
                                                 </div>
                                             </div>
