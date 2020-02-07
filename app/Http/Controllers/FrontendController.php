@@ -35,7 +35,8 @@ class FrontendController extends Controller
         return $params;
     }
     public function getMaster(){
-        return view('frontend.master');
+        $articles=Article::select("article.id as itemid","article.name","article.price","article.stock","article.sale","article.cat_id","category.macrocategory")->orderBy("buycounter","DESC")->join("category","article.cat_id","=","category.id")->take(10)->get();
+        return view('frontend.master',["articles"=>$articles]);
     }
     public function getContact(){
         return view('frontend.contact');

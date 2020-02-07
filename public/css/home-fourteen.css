@@ -2085,7 +2085,14 @@ textarea:focus:-ms-input-placeholder {
     float: right;
     width: 100%;
 }
-
+.sliderimagewrapper{
+    width:auto;
+    height:363px;
+}
+.sliderimagewrapper img{
+    width:auto;
+    height:363px;
+}
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
 
 /******************************* 

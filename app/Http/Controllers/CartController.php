@@ -21,18 +21,16 @@ class CartController extends Controller
                 $cartrow->amount= $request->quantity;
                 $cartrow->products_id=$request->prodid;
                 $cartrow->save();
-                
             }else{
                 $toupdate=Cart::find($checkifexist->id);
                 $toupdate->amount=$toupdate->amount+$request->quantity;
                 $toupdate->save();
-                
             } 
             if(!Auth::guest()){
                 $data=Cart::select("products_id","amount","article.name","article.price","category.id","category.macrocategory as mcat","article.sale")->join("article","cart_content.products_id","=","article.id")->join("category","article.cat_id","=","category.id")->where("cart_content.user_id","=",Auth::user()->id)->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
                 $total=0;
                 foreach($data as $values){
-                    $total+=$values->amount*$values->price;
+                    $total+=$values->amount*($values->price-($values->price)*($values->sale/100));
                 }
                 return view("frontend.cart",["dataquery"=>$data,"total"=>$total]);
             }else{
@@ -47,7 +45,7 @@ class CartController extends Controller
             $data=Cart::select("products_id","amount","article.name","article.price","category.id as catid","category.macrocategory as mcat","article.sale")->join("article","cart_content.products_id","=","article.id")->join("category","article.cat_id","=","category.id")->where("cart_content.user_id","=",Auth::user()->id)->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
             $total=0;
             foreach($data as $values){
-                $total+=$values->amount*$values->price;
+                $total+=$values->amount*($values->price-($values->price)*($values->sale/100));
             }
             return view("frontend.cart",["dataquery"=>$data,"total"=>$total]);
         }else{

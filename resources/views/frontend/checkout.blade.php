@@ -31,7 +31,8 @@
                                 </div>
                                 <hr class="divider">
                                 <div class="calculate-wrap ptb-20">
-                                    <form class="calculate-form">
+                                    <form class="calculate-form" action="{{route("checkingOut")}}" method="post">
+                                        @csrf
                                         <div class="form-group">
                                             <div class="search-selectpicker selectpicker-wrapper">
                                                 <select
@@ -63,7 +64,7 @@
                                         </div>
                                         
                                         
-                                    </form>
+                                    
                                 </div>
                             </div>
                             <div class="heading chk">
@@ -82,7 +83,7 @@
                                     <h2 class="section-title"> payment  <span class="icon_minus-06"></span> </h2>                              
                             </div>
                             <hr class="divider">
-                            <form>
+                            
                               <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with PayPal | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-6.png')}}" /> </a> </h4>
                               <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with MasterCard | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-3.png')}}" /> </a> </h4>
                               <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with Visa | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-5.png')}}" /> </a> </h4> 

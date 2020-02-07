@@ -93,6 +93,7 @@
                                                 @endif
                                                 </span> </b> </li>
                                                 <li class="ptb-10"> <hr class="divider"> </li>
+                                                
                                                 <li class="slidetext"> <button class="theme-btn-1 btn submit-btn " type="submit"> <b> proceed to checkout </b> </button> </li>
                                             </ul>
                                         </div>  
