@@ -50,8 +50,7 @@ class FrontendController extends Controller
         return view('frontend.cart');
     }
     public function getWish(){
-        //dataquery
-        $query=Wishlist::select("product_id","imgURI","article.name","article.price","category.id as catid","category.macrocategory as mcat","article.sale")->where("user_id","=",Auth::user()->id)->join("article","article.id","=","wishlist.user_id")->join("category","article.cat_id","=","category.id")->get();
+        $query=Wishlist::select("product_id","imgURI","article.name","article.price","category.macrocategory as mcat","article.sale")->where("user_id","=",Auth::user()->id)->join("article","article.id","=","wishlist.product_id")->join("category","article.cat_id","=","category.id")->get();
         return view('frontend.wishlist',["wishlistdata"=>$query]);
     }
     public function getSingle(){

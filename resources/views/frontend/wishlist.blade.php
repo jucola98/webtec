@@ -42,7 +42,8 @@
                                     <tbody>
                                         
                                    @isset($wishlistdata)
-                                    @foreach ($wishlistdata as $item)    
+                                    @foreach ($wishlistdata as $item)  
+                                    
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg" >

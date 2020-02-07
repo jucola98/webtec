@@ -125,9 +125,13 @@
                                                     @else
                                                         <del><span> Add To Cart </span></del> 
                                                     @endif
+                                                    <br>
+                                                    <form action="{{route('wishlistadd')}}" method="post" class="formset">
+                                                        @csrf
+                                                        <button type="submit" value="{{$items->id}}" name="prodid" class="icon_heart buttonsizer"></button>
+                                                        <button href="#" class="icon_piechart buttonsizer"></button>
+                                                    </form>
                                                     
-                                                    <a href="{{route("wishlistadd",$items->id)}}" class="icon_heart_alt"></a>
-                                                    <a href="#" class="icon_piechart"></a>
                                                 </div>
                                             </div>
                                         </div>
