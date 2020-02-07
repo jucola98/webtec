@@ -90,9 +90,7 @@
                                                     <li> <a href="#"> <img src="{{asset('img/common/product/black.png')}}" alt="" /> </a> </li>
                                                     <li> <a href="#"> <img src="{{asset('img/common/product/blue.png')}}" alt="" /> </a> </li>
                                                 </ul>
-                                                <div class="quick-view">
-                                                    <a href="#product-preview" data-toggle="modal" class="icon_plus"> </a>
-                                                </div>
+                                                
                                             </div>
                                             <div class="product-content">
                                                 

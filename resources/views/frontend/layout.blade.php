@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 7]><html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
-<!--[if IE 8]><html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html >
     <head>
-        <!-- META TAG -->
         
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]
-        <meta name="viewport" content="width=device-width, initial-scale=1">-->
         <meta name="description" content="agency, ecommerce">
         <meta name="author" content="JthemeStudio">
 
@@ -39,10 +34,7 @@
 
         
 
-        <!--[if lt IE 9]>
-          <script src="assets/plugins.html5shiv.min.js"></script>
-          <script src="assets/plugins/respond.min.js"></script>
-        <![endif]-->
+        
     </head>
     <body class="wide">        
 
@@ -136,10 +128,12 @@
                                        
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-heart icons"></span>  wishlist </a>
                                         @else
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
+                                        
                                     </li>
                                     @endif
                                 </ul>
@@ -170,64 +164,7 @@
                                             </div>  
                                         </div>
                                     </li>  
-                                    <!--
-                                    <li class="dropdown mega-dropdown">
-                                        <a aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Shop</a>
-                                        <div class="dropdown-menu mega-dropdown-menu">
-                                            <div class="flex-item overlay">
-                                                <div class="flex-wrap">
-                                                    <div class="flex-caption middle">                                                
-                                                        <div class="menu-offer">                                                    
-                                                            <h2 class="title no-margin"> men’s shoes </h2> 
-                                                            <h3 class="title-1"> sale up to 30% off </h3>
-                                                        </div>                                                                                             
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-lg-4 menu-block">
-                                                <div class="sub-list">
-                                                    <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/mega-menu-1.jpg')}}" alt=""> </a>
-                                                    <h2 class="title-2">Suggestions</h2>
-                                                    <ul>
-                                                        <li><a href="#">New Products</a></li>
-                                                        <li><a href="#">Back To School</a></li>
-                                                        <li><a href="#">Must Have</a></li>
-                                                        <li><a href="#">Denim Collection</a></li>
-                                                        <li><a href="#">Daily Standards</a></li>
-                                                        <li><a href="#">Black Label</a></li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div> 
-                                            <div class="col-sm-12 col-lg-4 menu-block">                                                
-                                                <div class="sub-list">
-                                                    <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/mega-menu-2.jpg')}}" alt=""> </a>
-                                                    <h2 class="title-2">Collections</h2>
-                                                    <ul>
-                                                        <li><a href="#">Basics</a></li>
-                                                        <li><a href="#">Coat and Parkas</a></li>
-                                                        <li><a href="#">Shorts <span class="hot-tag-left">hot!</span> </a></li>
-                                                        <li><a href="#">T-Shirts</a></li>
-                                                        <li><a href="#">Jackets</a></li>
-                                                        <li><a href="#">Trousers</a></li>  
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-lg-4 menu-block">
-                                                <div class="sub-list">
-                                                    <a href="#"> <img class="img-responsive" src="{{asset('img/home-fourteen/mega-menu-3.jpg')}}" alt=""> </a>
-                                                    <h2 class="title-2">Accessories</h2>                                                                
-                                                    <ul>
-                                                        <li><a href="#">Accessories</a></li>
-                                                        <li><a href="#">Bags and Wallets</a></li>
-                                                        <li><a href="#">Fragrances <span class="hot-tag-left">hot!</span> </a></li>
-                                                        <li><a href="#">Caps & Hats</a></li>
-                                                        <li><a href="#">Underwear</a></li>
-                                                        <li><a href="#">Men's Footwear</a></li>  
-                                                    </ul>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </li>-->
+                                    
                                     <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Uomo <div class="bubble"> </div> </a>
                                         
@@ -235,22 +172,7 @@
                                         @foreach (App\Http\Controllers\FrontendController::fetchCategoriesMan() as $records)
                                             <li><a href="{{ route('products',[$records->macrocategory,$records->id]) }}"> {{$records->name}}</a></li><!--productsmacrocat-->
                                         @endforeach    
-                                            <!--
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Sub Menu</a>
-                                                <ul class="dropdown-menu">  
-                                                    <li><a href="#">Sub Menu 1</a></li>
-                                                    <li><a href="#">Sub Menu 2</a></li>    
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Sub Menu 3</a>
-                                                        <ul class="dropdown-menu">  
-                                                            <li><a href="#">Sub Menu 4</a></li>
-                                                            <li><a href="#">Sub Menu 5</a></li> 
-                                                            <li><a href="#">Sub Menu 6</a></li> 
-                                                        </ul>
-                                                    </li> 
-                                                </ul>
-                                            </li>-->
+                                            2
                                         </ul>
                                     </li>                                   
                                                                                                                              
@@ -269,57 +191,7 @@
                     
                 
             
-                                    <li class="dropdown mega-dropdown">
-                                       
-                                        <div class="dropdown-menu mega-dropdown-menu">
-                                            <div class="col-sm-12 col-lg-4 menu-block">
-                                                <div class="sub-list">                                                        
-                                                    <h2 class="title-2">Product Categories</h2>
-                                                    <ul>                                                           
-                                                        <li><a href="categories-2-column.html"> Category Col 2 </a></li>                                            
-                                                        <li><a href="categories-3-column.html"> Category Col 3 </a></li>
-                                                        <li><a href="categories-4-column.html"> Category Col 4 </a></li>
-                                                        <li><a href="categories-list-view.html"> Category List </a></li>                                            
-                                                        <li><a href="categories-sidebar-left.html"> Category Sidebar Left </a></li>
-                                                        <li><a href="categories-sidebar-right.html"> Category Sidebar Right </a></li>
-                                                    </ul>
-                                                </div>
-                                            </div> 
-                                            <div class="col-sm-12 col-lg-4 menu-block">                                                
-                                                <div class="sub-list">                                                       
-                                                    <h2 class="title-2"> Single Product </h2>
-                                                    <ul>
-                                                        <li><a href="product-layout-1.html"> Layout 1 </a></li>
-                                                        <li><a href="product-layout-2.html"> Layout 2 </a></li>
-                                                        <li><a href="product-layout-3.html"> Layout 3 </a></li>
-                                                        <li><a href="product-layout-4.html"> Layout 4 </a></li>
-                                                        <li><a href="product-layout-5.html"> Layout 5 </a></li>
-                                                        <li><a href="product-layout-affiliate.html"> Layout Affiliate </a></li>
-                                                        <li><a href="product-layout-bundle.html"> Layout Bundle </a></li>
-                                                        <li><a href="product-layout-configurable.html"> Layout Configurable </a></li>
-                                                        <li><a href="product-layout-groupped.html"> Layout Groupped </a></li>
-                                                        <li><a href="product-layout-tier-pricing.html"> Layout Tier Pricing </a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-lg-4 menu-block">
-                                                <div class="sub-list">                                                      
-                                                                                                                  
-                                                    <ul>
-                                                        <li> <a href="about-us.html">About Us</a> </li>                                                   
-                                                        <li> <a href="shopping-cart.html">Shopping Cart</a> </li>
-                                                        <li> <a href="checkout.html">Checkout</a> </li> 
-                                                        <li> <a href="login.html">Login</a> </li> 
-                                                        <li> <a href="shortcodes.html">Shortcodes</a> </li>                                                                 
-                                                        <li> <a href="typography.html">Typography</a> </li>
-                                                        <li> <a href="coming-soon.html">Coming Soon</a> </li>
-                                                        <li> <a href="404-error.html">Error Page</a> </li> 
-                                                        <li> <a href="my-account.html">Account Pages</a> </li> 
-                                                    </ul>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </li> 
+                                    
                                 </ul>
                             </div> 
                         </div>
