@@ -52,4 +52,8 @@ class CartController extends Controller
             return view("auth.login");
         }
     }
+    function deleteFromCart(Request $request){
+        Cart::where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->delete();
+        return redirect("cart");
+    }
 }

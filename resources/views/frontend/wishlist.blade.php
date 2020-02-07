@@ -9,7 +9,7 @@
                 <section class="breadcrumb-bg-5">                
                     <div class="container">
                         <div class="site-breadcumb">                        
-                            <h1 class="title-1"> cart</h1> 
+                            <h1 class="title-1"> Wishlist</h1> 
                             <ol class="breadcrumb breadcrumb-menubar">
                                 <li> <a href="{{ route('master') }}"> Home </a> Wishlist </li>                             
                             </ol>
@@ -21,14 +21,14 @@
                 <section class="wrapper sec-space shopping-cart">                  
                     <div class="container">
                         
-                        <h2 class="section-title"> your cart items </h2>
+                        <h2 class="section-title"> your wishlist items </h2>
                         
                                 
                             
                         
                         <!-- Shopping Cart Starts -->
                         <div class="cart-table">
-                            <form class="cart-form">
+                            
                                 <table class="product-table">
                                     <thead class="font-2">
                                         <tr>
@@ -42,8 +42,7 @@
                                     <tbody>
                                         
                                    @isset($wishlistdata)
-                                    @foreach ($wishlistdata as $item)  
-                                    
+                                    @foreach ($wishlistdata as $item) 
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg" >
@@ -63,8 +62,13 @@
                                             </td>    
                                             <td class="price"> {{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€ </td> 
                                             <td class="remove-edit">
-                                                <a href="#" class="icon_close fsz-24"></a> 
-                                                <a href="#" class="icon_pencil fsz-14"></a> 
+                                                
+                                                <form action="wishlistdelete" method="post">
+                                                    @csrf
+                                                    <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->product_id}}"></button> 
+                                                </form>
+                                                
+
                                             </td>
                                         </tr>
                                     @endforeach       
@@ -86,7 +90,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            
                         </div>
 
                         

@@ -129,7 +129,7 @@
                                                     <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                                         @csrf
                                                         <button type="submit" value="{{$items->id}}" name="prodid" class="icon_heart buttonsizer"></button>
-                                                        <button href="#" class="icon_piechart buttonsizer"></button>
+                                                        <button class="icon_piechart buttonsizer"></button>
                                                     </form>
                                                     
                                                 </div>

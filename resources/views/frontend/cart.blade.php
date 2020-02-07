@@ -28,7 +28,7 @@
                         
                         <!-- Shopping Cart Starts -->
                         <div class="cart-table">
-                            <form class="cart-form">
+                            
                                 <table class="product-table">
                                     <thead class="font-2">
                                         <tr>
@@ -69,8 +69,11 @@
                                             </td>
                                             <td class="price"> {{number_format((($item->price)-($item->price)*($item->sale/100)) * $item->amount,2)}}€ </td>
                                             <td class="remove-edit">
-                                                <a href="#" class="icon_close fsz-24"></a> 
-                                                <a href="#" class="icon_pencil fsz-14"></a> 
+                                                <form action="cartdelete" method="post">
+                                                    @csrf
+                                                    <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->products_id}}" type="submit"></button> 
+                                                </form>
+                                                <a href="#" class="icon_pencil fsz-14 "></a> 
                                             </td>
                                         </tr>
                                     @endforeach       
@@ -115,7 +118,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            
                         </div>
 
                         
