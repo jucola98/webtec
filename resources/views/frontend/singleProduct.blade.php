@@ -24,7 +24,12 @@
             <div class="col-lg-4 col-md-5 col-sm-6 prod-slider-wrap">                                    
                 <div class="owl-carousel prod-slider sync1">
                     <div class="item popup-gallery"> 
-                        <img src="{{asset('img/common/prod-layout/layout-1.jpeg')}}" alt="">
+                        @if($singart->imgURI == null || !file_exists($singart->imgURI))
+                        <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
+                         @else
+                         <img src="{{asset($singart->imgURI)}}" alt="">
+                        @endif
+                        
                         <a href="{{asset('img/common/prod-layout/layout-1.jpeg')}}" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
                     </div>
                   <!--<div class="item popup-gallery"> 
@@ -50,8 +55,13 @@
                 </div>
 
                 <div  class="owl-carousel sync2">
-                    
-                    <div class="item"> <img src="{{asset('img/common/prod-layout/thumb-1.jpeg')}}" alt=""> </div>
+                    <div class="item">
+                        @if($singart->imgURI == null || !file_exists($singart->imgURI))
+                        <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
+                         @else
+                         <img src="{{asset($singart->imgURI)}}" alt="">
+                        @endif     
+                    </div>
                     <!--<div class="item"> <img src="{{asset('img/common/prod-layout/thumb-2.jpeg')}}" alt=""> </div>
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-3.jpeg" alt=""> </div>
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div>  
