@@ -22,14 +22,6 @@
         <div class="row">
             <!-- Products Categories Starts --> 
             <div class="col-md-12 col-sm-12 categories">
-                <!--
-                <ul class="theme-tabs font-2">
-                    <li class="active"> <a href="#prod-tab-1"  data-toggle="tab"> men </a> </li>
-                    <li class=""> <a href="#prod-tab-2"  data-toggle="tab"> women </a> </li>
-                    <li class=""> <a href="#prod-tab-3"  data-toggle="tab"> accessories </a> </li>
-                    <li class=""> <a href="#prod-tab-4"  data-toggle="tab"> shoes </a> </li>
-                    <li class=""> <a href="#prod-tab-5"  data-toggle="tab"> bags </a> </li>
-                </ul>-->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">
                         <div class="sorter-bar block-inline">

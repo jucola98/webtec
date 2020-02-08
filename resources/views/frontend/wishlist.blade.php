@@ -93,6 +93,7 @@
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< Updated upstream
                             
                         </div>
 
@@ -102,6 +103,8 @@
                             
                                 
                             
+=======
+>>>>>>> Stashed changes
                         </div>
                         <!-- / Shopping Cart Ends -->
                     </div>

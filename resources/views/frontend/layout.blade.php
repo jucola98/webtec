@@ -128,7 +128,11 @@
                                        
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
+<<<<<<< Updated upstream
                                         <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  Wishlist </a>
+=======
+                                        <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  wishlist </a>
+>>>>>>> Stashed changes
                                         @else
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
