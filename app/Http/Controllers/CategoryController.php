@@ -20,7 +20,7 @@ class CategoryController extends Controller
             
             return(abort(404));
         }else{
-            return view('frontend.products',["items"=>$query]);
+            return view('frontend.products',["items"=>$query,"orderby"=>$request->orderby]);
         }
     }
 }

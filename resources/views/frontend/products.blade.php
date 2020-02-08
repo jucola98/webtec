@@ -40,10 +40,11 @@
                                 <form action="#" class="form-sorter">
                                     <label> Sort by </label>
                                     <div class="search-selectpicker selectpicker-wrapper">
+                                        
                                         <select class="selectpicker"  data-width="100%"  onchange="location=this.value;">
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"name"])}}">Latest</option>
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"priceasc"])}}">Price ASC</option>
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"pricedesc"])}}">Price DESC</option>
+                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"name"])}}" @empty($orderby)selected="selected"@endempty>Latest</option>
+                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"priceasc"])}}" @if($orderby=="priceasc")selected="selected"@endif>Price ASC</option>
+                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"pricedesc"])}}" @if($orderby=="pricedesc")selected="selected"@endif>Price DESC</option>
                                         </select>
                                     </div>
                                 </form>

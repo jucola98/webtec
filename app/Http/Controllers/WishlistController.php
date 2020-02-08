@@ -22,4 +22,8 @@ class WishlistController extends Controller
         Wishlist::where("product_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->delete();
         return redirect("wishlist");
     }
+    function clearWishlist(Request $request){
+        Wishlist::where("user_id","=",Auth::user()->id)->delete();
+        return redirect("wishlist");
+    }
 }

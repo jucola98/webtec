@@ -56,4 +56,8 @@ class CartController extends Controller
         Cart::where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->delete();
         return redirect("cart");
     }
+    function clearCart(Request $request){
+        Cart::where("user_id","=",Auth::user()->id)->delete();
+        return redirect("cart");
+    }
 }

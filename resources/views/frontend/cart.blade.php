@@ -110,7 +110,10 @@
                                 <div class="row">
                                     <div class="continue-shopping">
                                         <div class="shp-btn col-sm-8">
-                                            <button class="theme-btn btn"> clear shopping cart </button>
+                                        <form action="clearcart" method="post">
+                                            @csrf
+                                            <button type=submit class="theme-btn btn"> clear shopping cart </button>
+                                        </form>
                                             <button class="theme-btn btn"> update shopping cart </button>
                                         </div>
                                         <div class="continue-shp col-sm-4">

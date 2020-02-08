@@ -26,8 +26,10 @@ Route::get('/products/{macrocat}/{category}', 'CategoryController@getProductsMac
 
 Route::post('/wishlistadd', 'WishlistController@addToWishlist')->name('wishlistadd');
 Route::post('/wishlistdelete', 'WishlistController@deleteFromWishlist')->name('wishlistdelete');
+Route::post('/clearwishlist', 'WishlistController@clearWishlist')->name('clearwishlist');
 
 Route::post('/cartdelete', 'CartController@deleteFromCart')->name('cartdelete');
+Route::post('/clearcart', 'CartController@clearCart')->name('clearcart');
 Route::post('/testroute','CartController@postTest')->name("testroute");
 Route::post('/search','FrontendController@searchProduct')->name("searchProduct");
 Route::post('/checkingout', 'CheckOutController@checkOutOperations')->name('checkingOut');
