@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Input;
 class CartController extends Controller
 {
     function postTest(Request $request){
-        
         if(!Auth::guest()){
             //query cart
             $checkifexist=Cart::select("id","products_id")->where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->first();
@@ -32,7 +31,7 @@ class CartController extends Controller
                 foreach($data as $values){
                     $total+=$values->amount*($values->price-($values->price)*($values->sale/100));
                 }
-                return view("frontend.cart",["dataquery"=>$data,"total"=>$total]);
+                return redirect("cart");//view("frontend.cart",["dataquery"=>$data,"total"=>$total]);
             }else{
                 return view("auth.login");
             }

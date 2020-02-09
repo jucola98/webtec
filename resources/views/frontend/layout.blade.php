@@ -74,14 +74,14 @@
                                             <li>
                                                 <div class="alert">
                                                     
-                                                    @if(App\Http\Controllers\FrontendController::getUserCart()[0]!=null)
-                                                        @foreach (App\Http\Controllers\FrontendController::getUserCart()[0] as $recordsCart)
+                                                    @if($cart_items!=null)
+                                                        @foreach ($cart_items as $recordsCart)
                                                         
                                                             <a class="img" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}"> <img src="{{asset($recordsCart->URI)}}" alt=""/> </a>
                                                             <div class="cart-title">
                                                                 <a class="font-2" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}">{{$recordsCart->name}}</a>
                                                                 <p class="price"> 
-                                                                    <b> {{$recordsCart->price}}€ x {{$recordsCart->amount}}  </b>
+                                                                    <b> {{($recordsCart->price-($recordsCart->price)*($recordsCart->sale/100))}}€ x {{$recordsCart->amount}}  </b>
                                                                 </p>
                                                             </div>
                                                         @endforeach
@@ -99,7 +99,7 @@
                                         </div>
                                     </div>
                                         <div class="total">
-                                            <span class="font-2">sub total</span> <span class="total-price">{{App\Http\Controllers\FrontendController::getUserCart()[1]}}€</span>
+                                            <span class="font-2">sub total</span> <span class="total-price">{{$cart_total}}€</span>
                                         </div>
 
                                         <div class="buttons">

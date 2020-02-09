@@ -19,6 +19,7 @@ class FrontendController extends Controller
         $query=Category::all()->where("macrocategory",0);
         return $query;
     }*/
+    /*
     public static function getUserCart(){
         $query=null;
         $params=[];
@@ -34,7 +35,7 @@ class FrontendController extends Controller
             array_push($params,null,0);
         }
         return $params;
-    }
+    }*/
     public function getMaster(){
         $articles=Article::select("article.id as itemid","article.name","article.price","article.stock","article.sale","article.cat_id","category.macrocategory")->orderBy("buycounter","DESC")->join("category","article.cat_id","=","category.id")->take(10)->get();
         return view('frontend.master',["articles"=>$articles]);
