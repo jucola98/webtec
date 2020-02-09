@@ -11,14 +11,14 @@ use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
-    public static function fetchCategoriesMan(){
+    /*public static function fetchCategoriesMan(){
         $query=Category::all()->where("macrocategory",1);
         return $query;
     }
     public static function fetchCategoriesWoman(){
         $query=Category::all()->where("macrocategory",0);
         return $query;
-    }
+    }*/
     public static function getUserCart(){
         $query=null;
         $params=[];
