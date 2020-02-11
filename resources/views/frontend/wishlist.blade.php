@@ -1,3 +1,4 @@
+
 @extends('frontend/layout')
 
 
@@ -6,7 +7,7 @@
 @section('content')
             <article class="page-body">
             <!--Breadcrumb Section Start-->
-                <section class="breadcrumb-bg-5">                
+                <section class="breadcrumb-bg-5" style="background-image:url({{Voyager::image('banners/cartbanner.jpg')}})">                
                     <div class="container">
                         <div class="site-breadcumb">                        
                             <h1 class="title-1"> Wishlist</h1> 
@@ -47,7 +48,7 @@
                                             <td class="image">
                                                 <div class="white-bg" >
                                                 @if($item->imgURI == null || !file_exists($item->imgURI))
-                                                    <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt=""  /> </a> 
+                                                    <img src="{{asset('img/home-fourteen/imgnotfound.png')}}"  class="imgcart" alt=""  /> </a> 
                                                 @else
                                                  <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->product_id])}}"><img src="{{asset($item->imgURI)}}" alt=""></a> 
                                                 @endif
@@ -65,7 +66,9 @@
                                                 
                                                 <form action="wishlistdelete" method="post">
                                                     @csrf
-                                                    <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->product_id}}"></button> 
+
+
+<button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->product_id}}"></button> 
                                                 </form>
                                                 
 

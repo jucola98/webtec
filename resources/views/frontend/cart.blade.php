@@ -6,7 +6,7 @@
 @section('content')
             <article class="page-body">
             <!--Breadcrumb Section Start-->
-                <section class="breadcrumb-bg-5">                
+                <section class="breadcrumb-bg-5" style="background-image:url({{Voyager::image('banners/cartbanner.jpg')}})">                
                     <div class="container">
                         <div class="site-breadcumb">                        
                             <h1 class="title-1"> cart</h1> 
@@ -47,9 +47,9 @@
                                             <td class="image">
                                                 <div class="white-bg">
                                                     @if($item->imgURI == null || !file_exists($item->imgURI))
-                                                    <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt=""  /> </a> 
+                                                    <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" class="imgcart" alt=""  /> </a> 
                                                 @else
-                                                 <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{asset($item->imgURI)}}" alt=""></a> 
+                                                 <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{Voyager::image($item->imgURI)}}"   class="imgcart" alt=""></a> 
                                                 @endif
                                                
                                                 </div>

@@ -185,6 +185,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="{{ route ('contact') }}">Contact</a></li>
+                                    <li><a href="#bottom">About Us</a></li>
                                     <div class="flex-center position-ref full-height">
                                     
                         
@@ -202,7 +203,7 @@
 			
 			
                 @yield("content");
-			<!-- Newsletter Starts-->
+			<!-- Newsletter Starts
 			<section class="section-five newsletter">
                     <div class="container">
                         <div class="title-wrap">
@@ -220,28 +221,42 @@
                         </form>                        
                     </div>
                 </section>
-                <!-- / Newsletter Ends -->  
+                 -->  
 
             </article>
             <!-- / CONTENT AREA -->
 
             <!-- FOOTER -->
-            <footer class="footer-six">
+            
+            
+                <footer class="footer-six" id="bottom">
                 <div class="footer-wrap">
                     <div class="container">
+                        <div class="footer-logo">
                         
+                        <li><a href="{{ route ('shipping') }}">SHIPPING INFO</a></li>
+                        <li><a href="{{ route ('contact') }}">CONTACT US</a></li>
+                        
+                            
+                            
+                        </div>
                         <div class="footer-share font-2">
                             <ul>
-                                <li><a href="#">facebook</a></li>   
+                                follow us on our social
+                                  
                                 <li><a href="#">twitter</a></li>           
+                                <li><a href="#">pinterest</a></li>
+                                <li><a href="#">google+</a></li>
                                 <li><a href="#">instagram</a></li>           
                             </ul>
                         </div>
                     </div>
                 </div>
-              
+               
+                </div>
 
             </footer>
+            
             <!-- /FOOTER -->
             <script src={{asset("plugins/jquery-2.1.3.js")}}></script>        
             <script src={{asset("plugins/bootstrap.min.js")}}></script>

@@ -17,6 +17,7 @@ Auth::routes();
 
 Route::get('/', 'FrontendController@getMaster')->name('master');
 Route::get('/contact', 'FrontendController@getContact')->name('contact');
+Route::get('/shipping', 'FrontendController@getShipping')->name('shipping');
 Route::get('/cart', 'CartController@cartGet')->name('cart');
 Route::get('/wishlist', 'FrontendController@getWish')->name('wishlist');
 Route::get('/checkout', 'FrontendController@getCheckout')->name('checkout');

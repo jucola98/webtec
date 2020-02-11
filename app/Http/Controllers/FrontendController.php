@@ -6,6 +6,7 @@ use App\Category;
 use App\Article;
 use App\Cart;
 use App\Wishlist;
+use App\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,6 +44,10 @@ class FrontendController extends Controller
     public function getContact(){
         return view('frontend.contact');
     }
+    public function getShipping(){
+        $query=Country::all(); 
+        return view('frontend.shipping', ["shippingdata"=> $query]);
+    }
     public function getProducts(){
         return view('frontend.products');
     }
@@ -65,6 +70,6 @@ class FrontendController extends Controller
         if($query->isEmpty()){
             return(abort(404));
         }
-        return view('frontend.products',["items"=>$query]);
+        return view('frontend.products',["items"=>$query, "orderby"=>$request->orderby]);
     }
 }

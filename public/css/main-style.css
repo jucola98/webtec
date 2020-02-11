@@ -1268,10 +1268,10 @@ textarea:focus:-ms-input-placeholder {
 
 
 /*--------------------- Breadcrumbs Starts ------------------------- */
-.breadcrumb-bg-2 {background-image:url(../img/home-fourteen/banner.jpg); padding: 80px 0 100px; text-align: center; color: #000;}
+.breadcrumb-bg-2 { padding: 80px 0 100px; text-align: center; color: #000;}
 .breadcrumb-bg-4 {background-image:url(../img/home-fourteen/banner1.jpg); padding: 80px 0 100px; text-align: center; color: #000;}
-.breadcrumb-bg-3 {background-image:url(../img/home-fourteen/item-7.jpg); padding: 80px 0 100px; text-align: center; color: #000;}
-.breadcrumb-bg-5 {background-image:url(../img/home-fourteen/cartbanner.jpg); padding: 80px 0 100px; text-align: center; color: #000;}
+.breadcrumb-bg-3 { padding: 80px 0 100px; text-align: center; color: #000;}
+.breadcrumb-bg-5 { padding: 80px 0 100px; text-align: center; color: #000;}
 .breadcrumb-bg-6 {background-image:url(../img/home-fourteen/bannersing.jpg); padding: 80px 0 100px; text-align: center; color: #000;}
 .breadcrumb-bg-2-left {background: #f2f2f2; padding: 10px 0px 100px 0px; text-align: right; color: #000;}
 .slidetext {background: #f2f2f2; padding: 0px 220px 0px 0px; text-align: right; color: #000;}

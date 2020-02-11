@@ -8,7 +8,7 @@
     
     
 <!--Breadcrumb Section Start-->
-<section class="breadcrumb-bg-2">  
+<section class="breadcrumb-bg-2" style="background-image:url({{Voyager::image('banners/skatebanner.jpg')}})">  
                 <div class="site-breadcumb">                        
                     <h1 class="title-1">Products</h1> 
                         <ol class="breadcrumb breadcrumb-menubar">
@@ -34,7 +34,6 @@
                                 <form action="#" class="form-sorter">
                                     <label> Sort by </label>
                                     <div class="search-selectpicker selectpicker-wrapper">
-                                        
                                         <select class="selectpicker"  data-width="100%"  onchange="location=this.value;">
                                             
                                             <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"name"])}}" @empty($orderby)selected="selected"@endempty>Latest</option>
@@ -77,21 +76,32 @@
                                             <div class="product-image">
                                                 <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img"> 
                                                     
+<<<<<<< Updated upstream
                                                     @if($item->imgURI == null || !file_exists($item->imgURI))
                                                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else
                                                         <img src="{{asset($item->imgURI)}}" alt="" /> </a> 
+=======
+                                                    @if($items->imgURI == null )
+                                                        <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
+                                                    @else
+                                                        <img src="{{Voyager::image($items->imgURI)}}" alt="" /> </a> 
+>>>>>>> Stashed changes
                                                         <span class="product-hover">
                                                                 <img alt="" src="{{asset($item->imgURI)}}">  
                                                         </span>
                                                     @endif
 
                                                 </a>
+<<<<<<< Updated upstream
                                                 <ul class="color-swatch-item">
                                                     @foreach ( explode(",",$item->colorlist) as $color)                                                   
                                                         <li> <a href="#" class="dot" style="background-color:{{$color}};"> </span> </a> </li>
                                                     @endforeach
                                                 </ul>
+=======
+                                                
+>>>>>>> Stashed changes
                                                 
                                             </div>
                                             <div class="product-content">
@@ -130,8 +140,13 @@
                                                     <br>
                                                     <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                                         @csrf
+<<<<<<< Updated upstream
                                                         <button type="submit" value="{{$item->id}}" name="prodid" class="icon_heart buttonsizer"></button>
                                                         <button class="icon_piechart buttonsizer"></button>
+=======
+                                                        <button type="submit" value="{{$items->id}}" name="prodid" class="icon_heart buttonsizer"></button>
+                                                       
+>>>>>>> Stashed changes
                                                     </form>
                                                     
                                                 </div>
