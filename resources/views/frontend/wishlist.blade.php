@@ -47,10 +47,10 @@
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg" >
-                                                @if($item->imgURI == null || !file_exists($item->imgURI))
+                                                @if($item->imgURI == null)
                                                     <img src="{{asset('img/home-fourteen/imgnotfound.png')}}"  class="imgcart" alt=""  /> </a> 
                                                 @else
-                                                 <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->product_id])}}"><img src="{{asset($item->imgURI)}}" alt=""></a> 
+                                                 <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->product_id])}}"><img src="{{Voyager::image($item->imgURI)}}" class="imgcart" alt=""></a> 
                                                 @endif
                                                 </div>
                                             </td>
@@ -68,7 +68,7 @@
                                                     @csrf
 
 
-<button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->product_id}}"></button> 
+                                                <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->product_id}}"></button> 
                                                 </form>
                                                 
 

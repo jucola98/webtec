@@ -24,7 +24,7 @@
             <div class="col-lg-4 col-md-5 col-sm-6 prod-slider-wrap">                                    
                 <div class="owl-carousel prod-slider sync1">
                     <div class="item popup-gallery"> 
-                        @if($singart->imgURI == null || !file_exists($singart->imgURI))
+                        @if($singart->imgURI == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
                          <img src="{{Voyager::image($singart->imgURI)}}" alt="">
@@ -56,7 +56,7 @@
 
                 <div  class="owl-carousel sync2">
                     <div class="item">
-                        @if($singart->imgURI == null || !file_exists($singart->imgURI))
+                        @if($singart->imgURI == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
                          <img src="{{Voyager::image($singart->imgURI)}}" alt="">
