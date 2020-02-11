@@ -76,7 +76,7 @@
                                             <div class="product-image">
                                                 <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img"> 
                                                     
-                                                    @if($item->imgURI == null  || !file_exists($item->imgURI))
+                                                    @if($item->imgURI == null )
                                                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else
                                                         <img src="{{Voyager::image($item->imgURI)}}" alt="" /> </a> 
