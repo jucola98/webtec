@@ -135,8 +135,8 @@
                     <hr class="divider-2">   
 
                     <div class="product-description">
-                        <p>{{$singart->description}}</p>
-                    </div>
+                        <p>{{$singart->detail}}</p>
+                    </div>desc
 
                     <hr class="divider-2">   
                     <form action="{{route("testroute",["prodid"=>$singart->id])}}" method="post">
@@ -153,7 +153,7 @@
                                 </div>
                                 <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                                         @csrf
-                                                        <button type="submit" value="{{$singart->id}}" name="prodid" class="icon_heart buttonsizer"></button>
+                                                        <button type="submit" value="{{$singart->id}}" name="prodid" id="heart"></button>
                                                        
                                                     </form>
                                 <div class="add-to-cart">
@@ -196,16 +196,7 @@
                     </form> 
                     <div class="prod-code upper-case">
                         <p> <b>SKU : </b> <b class="black-color">11F25A3678</b> </p>
-                        <div class="prod-social"> 
-                            <b>Share : </b>
-                            <ul class="list-items">
-                                <li><a class="facebook" href="#"><i class="social_facebook"></i></a></li>
-                                <li><a class="twitter" href="#"><i class="social_twitter"></i></a></li>
-                                <li><a class="instagram" href="#"><i class="social_googleplus"></i></a></li>
-                                <li><a class="pinterest" href="#"><i class="social_pinterest"></i></a></li>
-                                <li><a class="pinterest" href="#"><i class="social_instagram"></i></a></li>
-                            </ul> 
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -216,61 +207,13 @@
         <div class="tabs-wrap ptb-70">
             <div class="tabs  text-center">
                 <ul id="tabs" class="nav font-2 prod-tabs">                                         
-                    <li class="active"><a href="#prod-tab-1" data-toggle="tab"> Product Description </a></li>
-                    <li class=""><a href="#prod-tab-2" data-toggle="tab"> Reviews </a></li>
-                    <li class=""><a href="#prod-tab-3" data-toggle="tab"> Tags </a></li>
-                    <li class=""><a href="#prod-tab-4" data-toggle="tab"> additional information </a></li>
-                    <li class=""><a href="#prod-tab-5" data-toggle="tab"> custom tab info </a></li>
-                    <li class=""><a href="#prod-tab-6" data-toggle="tab"> custom tab video </a></li>                                
+                    <li class="active"><a > Product Description </a></li><br>
+                    {{$singart->description}}                 
                 </ul>
             </div>
-            <div class="tab-content prod-tab-content">
-                <div id="prod-tab-1" class="tab-pane fade in active">
-                    <p>Coupling a blended linen construction with tailored style, the River Island HR Jasper Blazer will imprint a touch of 
-                        dapper charm into your after-dark wardrobe. Our model wearing a size medium blazer, and usually takes a size medium/38L 
-                        fshirt. He is 6’2 1/2” (189cm) tall with a 38” (96 cm) chest and a 31” (78 cm) waist. </p>
-                    <ul>
-                        <li> <span class="des"> Length: 74cm </span> </li>
-                        <li> <span class="des"> Regular fit </span> </li>
-                        <li> <span class="des"> Notched lapels </span> </li>
-                        <li> <span class="des"> Twin button front fastening </span> </li>
-                        <li> <span class="des"> Front patch pockets; chest pocket </span> </li>
-                        <li> <span class="des"> Internal pockets </span> </li>
-                        <li> <span class="des"> Centre-back vent </span> </li>
-                        <li> <span class="des"> Please refer to the garment for care instructions. </span> </li>
-                        <li> <span class="des"> Length: 74cm </span> </li>
-                        <li> <span class="des"> Material: Outer: 50% Linen & 50% Polyamide; Body Lining: 100% Cotton; Lining: 100% Acetate </span> </li>
-                    </ul>
-                </div>
-                <div id="prod-tab-2" class="tab-pane fade">
-                    <p> <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit !</b> </p>
-                    <p> Suspendisse ultricies scelerisque turpis, elementum ornare arcu posuere mollis. Donec vitae tempor ante, ut tempus augue. Maecenas aliquam, ante quis egestas molestie, ipsum sapien faucibus lorem, ac placerat magna purus id quam. Proin id felis sapien.</p>
-                    <p> Mauris metus eros, finibus et eros eget, vehicula tincidunt ex. Integer dictum turpis felis, at gravida lectus vestibulum et. Mauris vitae massa pellentesque, rutrum lacus sit amet, dictum massa. </p>
-                </div>
-                <div id="prod-tab-3" class="tab-pane fade">
-                    <p> <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit !</b> </p>
-                    <p> Suspendisse ultricies scelerisque turpis, elementum ornare arcu posuere mollis. Donec vitae tempor ante, ut tempus augue. Maecenas aliquam, ante quis egestas molestie, ipsum sapien faucibus lorem, ac placerat magna purus id quam. Proin id felis sapien.</p>
-                    <p> Mauris metus eros, finibus et eros eget, vehicula tincidunt ex. Integer dictum turpis felis, at gravida lectus vestibulum et. Mauris vitae massa pellentesque, rutrum lacus sit amet, dictum massa. </p>
-                </div>
-                <div id="prod-tab-4" class="tab-pane fade">
-                    <p> <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit !</b> </p>
-                    <p> Suspendisse ultricies scelerisque turpis, elementum ornare arcu posuere mollis. Donec vitae tempor ante, ut tempus augue. Maecenas aliquam, ante quis egestas molestie, ipsum sapien faucibus lorem, ac placerat magna purus id quam. Proin id felis sapien.</p>
-                    <p> Mauris metus eros, finibus et eros eget, vehicula tincidunt ex. Integer dictum turpis felis, at gravida lectus vestibulum et. Mauris vitae massa pellentesque, rutrum lacus sit amet, dictum massa. </p>
-                </div>
-                <div id="prod-tab-5" class="tab-pane fade">
-                    <p> <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit !</b> </p>
-                    <p> Suspendisse ultricies scelerisque turpis, elementum ornare arcu posuere mollis. Donec vitae tempor ante, ut tempus augue. Maecenas aliquam, ante quis egestas molestie, ipsum sapien faucibus lorem, ac placerat magna purus id quam. Proin id felis sapien.</p>
-                    <p> Mauris metus eros, finibus et eros eget, vehicula tincidunt ex. Integer dictum turpis felis, at gravida lectus vestibulum et. Mauris vitae massa pellentesque, rutrum lacus sit amet, dictum massa. </p><i class="icon_stop"></i> <span class="des"> Material: Outer: 50% Linen & 50% Polyamide; Body Lining: 100% Cotton; Lining: 100% Acetate </span> </li>
-                    </ul>
-                </div>
-                <div id="prod-tab-6" class="tab-pane fade">
-                    <p> <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit !</b> </p>
-                    <p> Suspendisse ultricies scelerisque turpis, elementum ornare arcu posuere mollis. Donec vitae tempor ante, ut tempus augue. Maecenas aliquam, ante quis egestas molestie, ipsum sapien faucibus lorem, ac placerat magna purus id quam. Proin id felis sapien.</p>
-                    <p> Mauris metus eros, finibus et eros eget, vehicula tincidunt ex. Integer dictum turpis felis, at gravida lectus vestibulum et. Mauris vitae massa pellentesque, rutrum lacus sit amet, dictum massa. </p>
-                </div>
-            </div>
-
         </div>
+
+        
         @endsection
         @section('js')
             <script src={{asset("js/CartUtils.js")}}></script>   

@@ -43,6 +43,13 @@
 /******************************* 
     1 - GENERAL CSS STARTS 
 ********************************/
+#heart {
+    width: 20px;
+    height: 20px;
+    align-items: center
+    ;
+    
+}
 .dot {
     height: 25px;
     width: 25px;
@@ -3494,12 +3501,13 @@ table {
         background-color: rgba(255, 255, 255, 0.9);
         z-index: -1;
     }
+    
 }
 @media (max-width: 767px){
     .subscribe-wrap {
         padding: 45px 0 15px;
     } 
-}
+    .
 
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
 
