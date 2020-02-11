@@ -30,6 +30,7 @@
                          <img src="{{asset($singart->imgURI)}}" alt="">
                         @endif
                         
+                        
                         <a href="{{asset('img/common/prod-layout/layout-1.jpeg')}}" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
                     </div>
                   <!--<div class="item popup-gallery"> 
@@ -62,6 +63,8 @@
                          <img src="{{asset($singart->imgURI)}}" alt="">
                         @endif     
                     </div>
+                    <br>
+            
                     <!--<div class="item"> <img src="{{asset('img/common/prod-layout/thumb-2.jpeg')}}" alt=""> </div>
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-3.jpeg" alt=""> </div>
                     <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div>  
@@ -139,6 +142,7 @@
                     <hr class="divider-2">   
                     <form action="{{route("testroute",["prodid"=>$singart->id])}}" method="post">
                     @csrf
+                    
                     <div class="prod-btns">
                         @if($singart->stock>0)
                             @isset($cartamount->amount)
@@ -149,10 +153,27 @@
                                     <a class="btn plus" onclick='productTextHandler(true,{{$singart->stock-$cartamount->amount}});'><i class="icon_plus"></i></a>
                                 </div>
                                 <div class="add-to-cart">
+                                 
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
+                                    
                                 </div>
+                                
                                 @endif
+                                
                             @endisset   
+                            <ul class="color-swatch-item">
+                                        @foreach ( explode(",",$singart->colorlist) as $color)                                                   
+                                            <li class="dot" style="background-color:{{$color}};"> <input href="#" type="radio" name="an" value=""/> </li>
+                                        @endforeach
+                                        
+
+                                        <select class="selectpicker"  data-width="25%"  >
+                                            @foreach ( explode(",",$singart->sizelist) as $sizes)                                                   
+                                            <option value="$sizes">{{$sizes}}</option>
+                                            @endforeach
+                                            </select>
+                                    </ul>
+                                    
                             @empty($cartamount->amount)
                                 <div class="quantity">
                                     <a class="btn minus" onclick='productTextHandler(false,{{$singart->stock}});'><i class="icon_minus-06"></i></a>

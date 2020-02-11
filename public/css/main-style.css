@@ -43,7 +43,27 @@
 /******************************* 
     1 - GENERAL CSS STARTS 
 ********************************/
-
+.dot {
+    height: 25px;
+    width: 25px;
+    
+    border-radius: 50%;
+    display: inline-block;
+    border:none;
+    text-align: center;
+    
+  }
+  .dot >input {
+   
+    
+    border:none;
+    align-content: center;
+    
+    
+  }
+  #selectpadder{
+      padding-top:20px;
+  }
 /*---------------- 1.1 Preloader Starts ------------------*/
 #loading {  
     height: 100%;
