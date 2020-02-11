@@ -76,32 +76,17 @@
                                             <div class="product-image">
                                                 <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img"> 
                                                     
-<<<<<<< Updated upstream
-                                                    @if($item->imgURI == null || !file_exists($item->imgURI))
+                                                    @if($item->imgURI == null  || !file_exists($item->imgURI))
                                                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else
-                                                        <img src="{{asset($item->imgURI)}}" alt="" /> </a> 
-=======
-                                                    @if($items->imgURI == null )
-                                                        <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
-                                                    @else
-                                                        <img src="{{Voyager::image($items->imgURI)}}" alt="" /> </a> 
->>>>>>> Stashed changes
+                                                        <img src="{{Voyager::image($item->imgURI)}}" alt="" /> </a> 
                                                         <span class="product-hover">
                                                                 <img alt="" src="{{asset($item->imgURI)}}">  
                                                         </span>
                                                     @endif
 
                                                 </a>
-<<<<<<< Updated upstream
-                                                <ul class="color-swatch-item">
-                                                    @foreach ( explode(",",$item->colorlist) as $color)                                                   
-                                                        <li> <a href="#" class="dot" style="background-color:{{$color}};"> </span> </a> </li>
-                                                    @endforeach
-                                                </ul>
-=======
                                                 
->>>>>>> Stashed changes
                                                 
                                             </div>
                                             <div class="product-content">
@@ -140,13 +125,8 @@
                                                     <br>
                                                     <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                                         @csrf
-<<<<<<< Updated upstream
                                                         <button type="submit" value="{{$item->id}}" name="prodid" class="icon_heart buttonsizer"></button>
-                                                        <button class="icon_piechart buttonsizer"></button>
-=======
-                                                        <button type="submit" value="{{$items->id}}" name="prodid" class="icon_heart buttonsizer"></button>
                                                        
->>>>>>> Stashed changes
                                                     </form>
                                                     
                                                 </div>

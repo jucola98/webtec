@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Input;
 class CartController extends Controller
 {
     function postTest(Request $request){
+        dd($request);
         if(!Auth::guest()){
             //query cart
-            $checkifexist=Cart::select("id","products_id")->where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->first();
+            $checkifexist=Cart::select("id","products_id","variant.id")->where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->first();
             if(!$checkifexist){
                 $cartrow=new Cart();
                 $cartrow->user_id= Auth::user()->id;

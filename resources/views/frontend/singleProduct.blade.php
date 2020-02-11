@@ -24,17 +24,13 @@
             <div class="col-lg-4 col-md-5 col-sm-6 prod-slider-wrap">                                    
                 <div class="owl-carousel prod-slider sync1">
                     <div class="item popup-gallery"> 
-                        @if($singart->imgURI == null )
+                        @if($singart->imgURI == null || !file_exists($singart->imgURI))
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
                          <img src="{{Voyager::image($singart->imgURI)}}" alt="">
                         @endif
                         
                         
-<<<<<<< Updated upstream
-                        <a href="{{asset('img/common/prod-layout/layout-1.jpeg')}}" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-=======
->>>>>>> Stashed changes
                     </div>
                   <!--<div class="item popup-gallery"> 
                         <img src="{{asset('img/common/prod-layout/layout-2.jpeg')}}" alt=""> 
@@ -60,7 +56,7 @@
 
                 <div  class="owl-carousel sync2">
                     <div class="item">
-                        @if($singart->imgURI == null )
+                        @if($singart->imgURI == null || !file_exists($singart->imgURI))
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
                          <img src="{{Voyager::image($singart->imgURI)}}" alt="">
@@ -166,13 +162,13 @@
                             @endisset   
                             <ul class="color-swatch-item">
                                         @foreach ( explode(",",$singart->colorlist) as $color)                                                   
-                                            <li class="dot" style="background-color:{{$color}};"> <input href="#" type="radio" name="an" value=""/> </li>
+                                            <li class="dot" style="background-color:{{$color}};"> <input href="#" type="radio" name="an" value="{{$color}}"/> </li>
                                         @endforeach
                                         
 
-                                        <select class="selectpicker"  data-width="25%"  >
+                                        <select class="selectpicker"  data-width="25%" name="sizeselect" >
                                             @foreach ( explode(",",$singart->sizelist) as $sizes)                                                   
-                                            <option value="$sizes">{{$sizes}}</option>
+                                            <option value="{{$sizes}}">{{$sizes}}</option>
                                             @endforeach
                                             </select>
                                     </ul>
