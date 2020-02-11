@@ -151,24 +151,28 @@
                                     <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
                                     <a class="btn plus" onclick='productTextHandler(true,{{$singart->stock-$cartamount->amount}});'><i class="icon_plus"></i></a>
                                 </div>
+                                <form action="{{route('wishlistadd')}}" method="post" class="formset">
+                                                        @csrf
+                                                        <button type="submit" value="{{$singart->id}}" name="prodid" class="icon_heart buttonsizer"></button>
+                                                       
+                                                    </form>
                                 <div class="add-to-cart">
                                  
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                                     
                                 </div>
+                               
                                 
                                 @endif
                                 
                             @endisset   
                             <ul class="color-swatch-item">
-                                        @foreach ( explode(",",$singart->colorlist) as $color)                                                   
-                                            <li class="dot" style="background-color:{{$color}};"> <input href="#" type="radio" name="an" value="{{$color}}"/> </li>
-                                        @endforeach
+                                       
                                         
 
                                         <select class="selectpicker"  data-width="25%" name="sizeselect" >
-                                            @foreach ( explode(",",$singart->sizelist) as $sizes)                                                   
-                                            <option value="{{$sizes}}">{{$sizes}}</option>
+                                            @foreach ( $details as $sizes)                                                   
+                                                <option value="{{$sizes->id}}">{{$sizes->catsize}}</option>
                                             @endforeach
                                             </select>
                                     </ul>

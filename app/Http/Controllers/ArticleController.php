@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Cart;
+use App\Variant;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -60,7 +61,6 @@ class ArticleController extends Controller
                         "article.rating",
                         "article.stock",
                         "variant.id as varid",
-                        DB::raw("GROUP_CONCAT(variant.color SEPARATOR ',') as colorlist"),
                         DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
 
                         where("article.id","=",$id)->
@@ -68,8 +68,8 @@ class ArticleController extends Controller
                         where("category.macrocategory","=","$macrocat")->
                         join("variant","variant.product_id","=","article.id")->
                         first();
-        $fetchjson=json_decode($articlesingle["details"],true);
-        return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchjson,"cartamount"=>$usercart]);
+        $fetchvariant=Variant::all()->where("product_id","=",$id);
+        return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"cartamount"=>$usercart]);
         }else{
             
             $articlesingle=Article::select(
@@ -84,14 +84,14 @@ class ArticleController extends Controller
                             "article.sale",
                             "article.rating",
                             "article.stock",
-                            DB::raw("GROUP_CONCAT(variant.color SEPARATOR ',') as colorlist"))->
+                            DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
                             where("article.id","=",$id)->
                             join("category","article.cat_id","=","category.id")->
                             where("category.macrocategory","=","$macrocat")->
                             join("variant","variant.product_id","=","article.id")->
                             first();
-            $fetchjson=json_decode($articlesingle["details"],true);
-            return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchjson]);
+            $fetchvariant=Variant::all()->where("product_id","=",$id);
+            return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant]);
         }
     }
 }

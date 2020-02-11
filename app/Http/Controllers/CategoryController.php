@@ -31,7 +31,6 @@ class CategoryController extends Controller
                                   "article.price",
                                   "article.rating",
                                   "article.stock",
-                                  DB::raw("GROUP_CONCAT(variant.color SEPARATOR ',') as colorlist"),
                                   DB::raw("article.price-article.sale*article.price/100 as saledprice")
                                   )->
                                   join("category","article.cat_id",'=',"category.id")->
@@ -57,7 +56,6 @@ class CategoryController extends Controller
                                 "article.price",
                                 "article.rating",
                                 "article.stock",
-                                DB::raw("GROUP_CONCAT(variant.color SEPARATOR ',') as colorlist"),
                                 DB::raw("article.price-article.sale*article.price/100 as saledprice")
                                 )->
                                 join("category","article.cat_id",'=',"category.id")->
@@ -80,7 +78,6 @@ class CategoryController extends Controller
                                 "article.price",
                                 "article.rating",
                                 "article.stock",
-                                DB::raw("GROUP_CONCAT(variant.color SEPARATOR ',') as colorlist"),
                                 DB::raw("article.price-article.sale*article.price/100 as saledprice"))->
                                 
                                 join("category","article.cat_id",'=',"category.id")->

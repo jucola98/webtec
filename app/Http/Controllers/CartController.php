@@ -11,15 +11,16 @@ use Illuminate\Support\Facades\Input;
 class CartController extends Controller
 {
     function postTest(Request $request){
-        dd($request);
+        
         if(!Auth::guest()){
             //query cart
-            $checkifexist=Cart::select("id","products_id","variant.id")->where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->first();
+            $checkifexist=Cart::select("id","products_id","variant_id")->where("products_id","=",$request->prodid)->where("user_id","=",Auth::user()->id)->first();
             if(!$checkifexist){
                 $cartrow=new Cart();
                 $cartrow->user_id= Auth::user()->id;
                 $cartrow->amount= $request->quantity;
                 $cartrow->products_id=$request->prodid;
+                $cartrow->variant_id=$request->sizeselect;
                 $cartrow->save();
             }else{
                 $toupdate=Cart::find($checkifexist->id);
@@ -42,7 +43,7 @@ class CartController extends Controller
     }
     function cartGet(){
         if(!Auth::guest()){
-            $data=Cart::select("products_id","amount","article.name","article.price","category.id as catid","category.macrocategory as mcat","article.sale")->join("article","cart_content.products_id","=","article.id")->join("category","article.cat_id","=","category.id")->where("cart_content.user_id","=",Auth::user()->id)->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
+            $data=Cart::select("products_id","article.amount","article.name","article.price","category.id as catid","category.macrocategory as mcat","article.sale","variant.size as catsize")->join("article","cart_content.products_id","=","article.id")->join("variant","variant.id","=","article.variant_id")->join("category","article.cat_id","=","category.id")->where("cart_content.user_id","=",Auth::user()->id)->get();//->where("cat_id",$category)->where("macrocategory",$macro)->paginate(16);
             $total=0;
             foreach($data as $values){
                 $total+=$values->amount*($values->price-($values->price)*($values->sale/100));

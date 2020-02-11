@@ -13,7 +13,7 @@ class AddVariantToCartTable extends Migration
      */
     public function up()
     {
-        Schema::table('cart_content', function (Blueprint $table) {
+        Schema::table('cart_content', function ($table) {
             $table->bigInteger('variant_id')->unsigned();
             $table->foreign('variant_id')->references('id')->on('variant');
         });

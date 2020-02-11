@@ -58,7 +58,7 @@
                                                 <a href="{{route('singleprod',[$item->mcat,$item->products_id])}}">{{$item->name}}</a> 
                                                 <ul>
                                                     <li> <i class="arrow_carrot-right"></i> <span>Color :</span> <span class="gray-color">White</span> </li>
-                                                    <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> XL </span> </li>
+                                                    <li> <i class="arrow_carrot-right"></i> <span>Size :</span> <span class="gray-color"> {{$item->catsize}} </span> </li>
                                                 </ul>                                                                                     
                                             </td>    
                                             <td class="price"> {{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€ </td> 
