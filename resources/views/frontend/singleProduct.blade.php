@@ -23,27 +23,25 @@
             <!-- Single Products Slider Starts --> 
             <div class="col-lg-4 col-md-5 col-sm-6 prod-slider-wrap">                                    
                 <div class="owl-carousel prod-slider sync1">
-                    <div class="item popup-gallery"> 
+                    <div class="item popup-gallery" id="imageSingleProduct"> 
                         @if($singart->imgURI == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
                          <img src="{{Voyager::image($singart->imgURI)}}" class="imgcart2"  alt="">
                         @endif
-                        
-                        
                     </div>
                 </div>
                 <div  class="owl-carousel sync2">
-                    
+
                         @if($images->get() == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
-                         
+                         <div class="item" onclick="changeImage('{{Voyager::image($singart->imgURI)}}');">
+                            <img src="{{Voyager::image($singart->imgURI)}}" class="imgcart3"  alt="">
+                         </div>
                          @foreach ($images->get() as $pic)
-                         <div class="item">
-                         
-                         <img src="{{Voyager::image($pic->image)}}" class="imgcart3"alt="">
-                        
+                         <div class="item" onclick="changeImage('{{Voyager::image($pic->image)}}');">
+                             <img src="{{Voyager::image($pic->image)}}" class="imgcart3" alt="" >
                         </div>
                          @endforeach
                          
