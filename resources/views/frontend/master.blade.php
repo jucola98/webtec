@@ -150,21 +150,18 @@
 				<div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">					
 					<div class="prod-slider-1 owl-carousel owl-nav-2">
 						@foreach ($articles as $item)
+						
 							
 						
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
 									<div class="sliderimagewrapper"> 
-										@if($item->imgURI == null || !file_exists($item->imgURI))
+										@if($item->imgURI == null )
 										<img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a>
 										@else  
-										<img src="{{asset($item->imgURI)}}" alt="" /> </a> 
-										<span class="product-hover">
-											
-											<img src="{{asset($item->imgURI)}}" alt="" /> </a>
+										<img src="{{Voyager::image($item->imgURI)}}" class="imgcart1" alt="" /> </a> 
 										
-										</span>
 										@endif         
 									</div>
 									</a>

@@ -38,7 +38,7 @@ class FrontendController extends Controller
         return $params;
     }*/
     public function getMaster(){
-        $articles=Article::select("article.id as itemid","article.name","article.price","article.stock","article.sale","article.cat_id","category.macrocategory")->orderBy("buycounter","DESC")->join("category","article.cat_id","=","category.id")->take(10)->get();
+        $articles=Article::select("article.id as itemid","article.name","article.price","article.stock","article.sale","article.cat_id","category.macrocategory","imgURI")->orderBy("buycounter","DESC")->join("category","article.cat_id","=","category.id")->take(10)->get();
         return view('frontend.master',["articles"=>$articles]);
     }
     public function getContact(){

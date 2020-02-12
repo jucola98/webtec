@@ -28,46 +28,46 @@
                     <div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">
                         <div class="sorter-bar block-inline">
                             <div class="show-result font-2">
-                               
                             </div>
                             
-                            <div class="select-option">
-                                <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post">
+                            <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post" class="filtro">
                                     @csrf
-                                    <div class="form-sorter">
-                                    <label> Sort by </label>
-                                    <div class="search-selectpicker selectpicker-wrapper">
-                                        <select class="selectpicker"  data-width="100%"  name="orderby">
+                                    
+                                    <label class="pad"> Sort by </label>
+                                    
+                                        <select  data-width="100%"  name="orderby">
                                             <option value="latest" @isset($orderby)@if($orderby=="latest")selected="selected"@endif @endisset >Latest</option>
                                             <option value="asc"    @isset($orderby)@if($orderby=="asc")selected="selected"@endif @endisset>Price ASC</option>
                                             <option value="desc"   @isset($orderby)@if($orderby=="desc")selected="selected"@endif @endisset>Price DESC</option>
                                         </select>
-                                    </div>
-                                </div>
+                                    
+                                
                             
                                 
-                                <div class="form-sorter">
+                                
                                     
-                                    <div class="search-selectpicker selectpicker-wrapper">
-                                        
-                                        <select class="selectpicker"  data-width="100%" data-toggle="tooltip" name="pagingform">
+                                    
+                                        <label class="pad"> Show </label>
+                                        <select   data-width="100%" data-toggle="tooltip" name="pagingform">
                                             <option value="9" @isset($pagingnumber)@if($pagingnumber=="9")selected="selected"@endif @endisset>9</option>
                                             <option value="6" @isset($pagingnumber)@if($pagingnumber=="6")selected="selected"@endif @endisset>6</option>
                                             <option value="3" @isset($pagingnumber)@if($pagingnumber=="2")selected="selected"@endif @endisset>3</option>
                                         </select>
-                                        
-                                        <label> Show </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="submit">
-                        </form>
-                        
-                    </div>
+                                     
+                                    
+                                
                             
-                </div>     
-
-                        <div class="tab-content">
+                            <input type="submit" class="pad">
+                            
+                        </form>
+                        </div>   
+                    
+                            
+                                
+                                
+                            
+                            </div>     
+                            <div class="tab-content">
                             <!-- Product Grid View Starts -->
                             <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
                                
@@ -105,28 +105,9 @@
                                                     <span class="price"> <b>{{$item->price}}€</b> <del></del> </span>
                                                 @endif
                                                 <!--stellette-->
-                                                <div class="rating"> 
-                                                @for ($i=(int)$item->rating;$i>0;$i--)
-                                                    <span class="star active"></span>
-                                                    <!--<span class="no star"></span>-->
-                                                @endfor
-                                                @if($item->rating-(int)$item->rating==0.5)
-                                                    <span class="star half"></span>
-                                                @endif
-                                                @for ($i=(int)(5-$item->rating);$i>0;$i--)
-                                                    <span class="no star"></span>
-                                                    <!--<span class="no star"></span>-->
-                                                @endfor
-                                                @if($item->stock==0)
-                                                    <span style="color:red;">Product not in stock</span>
-                                                @endif                                        
-                                                </div>
+                                               
                                                 <div class="product-links"> 
-                                                    @if($item->stock>0)
-                                                        <a href="#" class="add-to-cart"> <span> Add To Cart </span> <i class="icon_cart_alt"></i> </a>  
-                                                    @else
-                                                        <del><span> Add To Cart </span></del> 
-                                                    @endif
+                                                    
                                                     <br>
                                                     <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                                         @csrf

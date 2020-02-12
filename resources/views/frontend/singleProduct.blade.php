@@ -63,20 +63,7 @@
                     <div class="product-heading">
                         <h2 class="section-title">{{$singart->name}}</h2>                                              
                     </div>
-                    {{$singart->rating}}/5 &nbsp;
-                    <div class="rating" id="starrating">   
-                        @for ($i = 0; $i < 5; $i++)
-                        @if ($singart->rating-->0.5)
-                            <span class="star active" name="{{$i+1}}"></span>
-                        @else
-                            @if (($singart->rating--%10==0))
-                                <span class="star half" name="{{$i+1}}"></span>
-                            @else
-                                <span class="no star" name="{{$i+1}}" ></span>
-                            @endif
-                        @endif
-                        @endfor
-                    </div>  
+                   
                     <div class="price">
                         @if(($singart->sale)>0)
                             <b>{{($singart->price)-($singart->price)*($singart->sale/100)}}€</b> <del>{{$singart->price}}€</del><span class="green-color"> {{$singart->sale}}%</span>

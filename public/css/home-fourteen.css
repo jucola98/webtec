@@ -2149,7 +2149,14 @@ textarea:focus:-ms-input-placeholder {
     display: block;
     
 }
-
+.filtro{
+    display: flex;
+    flex-direction: row;
+}
+.pad{
+    margin-right: 20px;
+    margin-left: 50px;
+}
 
 
 
