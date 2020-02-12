@@ -7,7 +7,7 @@
 
            
             
-                <section class="breadcrumb-bg-3">  
+                <section class="breadcrumb-bg-3"  style="background-image:url({{Voyager::image('banners/contactbanner.jpg')}})">  
                 <div class="site-breadcumb">                        
                     <h1 class="title-1">SHIPPING INFO</h1> 
                         <ol class="breadcrumb breadcrumb-menubar">
@@ -25,23 +25,25 @@
                                 <div class="ptb-50">
                                     <i class="icon_mobile"></i>
                                     <h3 class="title-1">Phone</h3>
-                                    <p>Phone 01: (0091) 8547 632521</p>
-                                    <p>Phone 02: (084) 965 4788</p>
+                                    <p>Phone 01: (39) 3489567342</p>
+                                    <p>Phone 02: (39) 3331009084</p>
                                 </div>
                             </div>
                             <div class="col-sm-4 contact-box text-center">
                                 <div class="ptb-50">
                                     <i class="icon_pin_alt"></i>
                                     <h3 class="title-1">address</h3>
-                                    <p>5th Floor, AH Building, 756 New Design St Melbourne, Australia.</p>
+                                    <p>Via Roma n 5, L'Aquila, AQ 67100.</p>
                                 </div>
                             </div>
                             <div class="col-sm-4 contact-box text-center">
                                 <div class="ptb-50">
                                     <i class="icon_mail_alt"></i>
                                     <h3 class="title-1">email</h3>
-                                    <p>support@yourdomain.com</p>
-                                    <p>hello@yourdomain.com</p>
+                                    <p>support@commercemail.com</p>
+                                    <p>cozystore@commerceamail.com</p>
+
+                                    
                                 </div>
                             </div>
                         </div>
