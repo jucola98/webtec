@@ -31,3 +31,8 @@ function checkIfCartExists(cart,details){
     return cart!=undefined?details-cart:details;
 
 }
+function changeImage(imagePath){
+    console.log(imagePath);
+    $("#imageSingleProduct").html("");
+    $("#imageSingleProduct").append("<img src="+imagePath+" class=\"imgcart2\" alt=\"\"/>");
+}
