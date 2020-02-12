@@ -6,7 +6,7 @@
 <article class="page-body">
 
 <!--Breadcrumb Section Start-->
-<section class="breadcrumb-bg-6">  
+<section class="breadcrumb-bg-6" style="background-image:url({{Voyager::image('banners/singbanner.jpg')}})">  
                 <div class="site-breadcumb">                        
                     <h1 class="title-1">SingleProduct</h1> 
                         <ol class="breadcrumb breadcrumb-menubar">
@@ -32,26 +32,7 @@
                         
                         
                     </div>
-                  <!--<div class="item popup-gallery"> 
-                        <img src="{{asset('img/common/prod-layout/layout-2.jpeg')}}" alt=""> 
-                        <a href="{{asset('img/common/prod-layout/layout-2.jpeg')}}" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-                    </div>
-                    <div class="item popup-gallery"> 
-                        <img src="assets/img/common/prod-layout/layout-3.jpeg" alt=""> 
-                        <a href="assets/img/common/prod-layout/layout-3.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-                    </div>
-                    <div class="item popup-gallery"> 
-                        <img src="assets/img/common/prod-layout/layout-4.jpeg" alt=""> 
-                        <a href="assets/img/common/prod-layout/layout-4.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-                    </div>
-                    <div class="item popup-gallery"> 
-                        <img src="assets/img/common/prod-layout/layout-2.jpeg" alt=""> 
-                        <a href="assets/img/common/prod-layout/layout-2.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-                    </div>
-                    <div class="item popup-gallery"> 
-                        <img src="assets/img/common/prod-layout/layout-4.jpeg" alt=""> 
-                        <a href="assets/img/common/prod-layout/layout-4.jpeg" title="Product" class="caption-link popup"><i class="arrow_expand"></i></a>
-                    </div>-->
+                  
                 </div>
 
                 <div  class="owl-carousel sync2">
@@ -64,11 +45,7 @@
                     </div>
                     <br>
             
-                    <!--<div class="item"> <img src="{{asset('img/common/prod-layout/thumb-2.jpeg')}}" alt=""> </div>
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-3.jpeg" alt=""> </div>
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div>  
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-2.jpeg" alt=""> </div>
-                    <div class="item"> <img src="assets/img/common/prod-layout/thumb-4.jpeg" alt=""> </div>--> 
+                   
                 </div>
             </div>
             <!-- Single Products Slider Ends --> 
@@ -138,8 +115,8 @@
                     <hr class="divider-2">   
 
                     <div class="product-description">
-                        <p>{{$singart->detail}}</p>
-                    </div>desc
+                        {{$singart->description}}
+                    </div>
 
                     <hr class="divider-2">   
                     <form action="{{route("testroute",["prodid"=>$singart->id])}}" method="post">
@@ -208,7 +185,7 @@
             <div class="tabs  text-center">
                 <ul id="tabs" class="nav font-2 prod-tabs">                                         
                     <li class="active"><a > Product Description </a></li><br>
-                    {{$singart->description}}                 
+                    {{$singart->details}}                 
                 </ul>
             </div>
         </div>

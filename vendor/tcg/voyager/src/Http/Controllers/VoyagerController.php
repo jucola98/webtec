@@ -16,7 +16,16 @@ class VoyagerController extends Controller
 {
     public function index()
     {
-        return Voyager::view('voyager::index');
+        $route = '';
+        $dataType = Voyager::model('DataType')->where('model_name', Auth::guard(app('VoyagerGuard'))->getProvider()->getModel())->first();
+        if (!$dataType && app('VoyagerGuard') == 'web') {
+            $route = route('voyager.users.edit', Auth::user()->getKey());
+        } elseif ($dataType) {
+            $route = route('voyager.'.$dataType->slug.'.edit', Auth::user()->getKey());
+        }
+
+        return Voyager::view('voyager::profile', compact('route'));
+    
     }
 
     public function logout()

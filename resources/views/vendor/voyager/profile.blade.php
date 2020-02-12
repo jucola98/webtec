@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-    <div style="background-size:cover; background-image: url({{ Voyager::image( Voyager::setting('admin.bg_image'), voyager_asset('/images/bg.jpg')) }}); background-position: center center;position:absolute; top:0; left:0; width:100%; height:300px;"></div>
+    <div style="background-size:cover;  background-position: center center;position:absolute; top:0; left:0; width:100%; height:300px;"></div>
     <div style="height:160px; display:block; width:100%"></div>
     <div style="position:relative; z-index:9; text-align:center;">
       
