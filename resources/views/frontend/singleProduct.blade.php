@@ -6,6 +6,7 @@
 <article class="page-body">
 
 <!--Breadcrumb Section Start-->
+
 <section class="breadcrumb-bg-6" style="background-image:url({{Voyager::image('banners/singbanner.jpg')}})">  
                 <div class="site-breadcumb">                        
                     <h1 class="title-1">SingleProduct</h1> 
@@ -26,28 +27,31 @@
                         @if($singart->imgURI == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
-<<<<<<< Updated upstream
-                         <img src="{{Voyager::image($singart->imgURI)}}" alt="">
-                        @endif  
-=======
                          <img src="{{Voyager::image($singart->imgURI)}}" class="imgcart2"  alt="">
                         @endif
                         
                         
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div  class="owl-carousel sync2">
-                    <div class="item">
-                        @if($singart->imgURI == null )
+                    
+                        @if($images->get() == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
-                         <img src="{{Voyager::image($singart->imgURI)}}" class="imgcart3"alt="">
+                         
+                         @foreach ($images->get() as $pic)
+                         <div class="item">
+                         
+                         <img src="{{Voyager::image($pic->image)}}" class="imgcart3"alt="">
+                        
+                        </div>
+                         @endforeach
+                         
                         @endif     
-                    </div>
+                </div>
                     <br>
                 </div>
-            </div>
+            
             <!-- Single Products Slider Ends --> 
             <!-- Products Description Starts --> 
             <div class="col-lg-8 col-md-7 col-sm-6">
