@@ -113,8 +113,16 @@
                     <div class="product-description">
                         {{$singart->description}}
                     </div>
-                    <hr class="divider-2">   
+                    <hr class="divider-2">
+                    <span> ADD TO WISHLIST</span> 
+                    <form action="{{route('wishlistadd')}}" method="post" class="formset">
+                                @csrf
+                                <button type="submit" value="{{$singart->id}}" name="prodid" class="icon_heart buttonsizer"></button>
+                                                       
+                    </form>
+                      
                     <form action="{{route("testroute",["prodid"=>$singart->id])}}" method="post">
+                    <br>   
                     @csrf
                     <ul class="color-swatch-item">
                         <select class="selectpicker"  id="selsizes" data-width="25%" name="sizeselect" onchange="changeAmounts({{$details}},{{$cartamount->get()}});"  >
@@ -123,6 +131,7 @@
                             @endforeach
                         </select>
                     </ul>
+                    
                     <div class="prod-btns" id="visibilityCheck"  @if($details->first()->amount<=0) style="display:none;"@endif>
                                 <div class="quantity" id="amountselector">
                                     <a class="btn minus" onclick='productTextHandler(false,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_minus-06"></i></a>
@@ -130,16 +139,14 @@
                                     <a class="btn plus" onclick='productTextHandler(true,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_plus"></i></a>
                                 </div>
                                 
-                                <form action="{{route('wishlistadd')}}" method="post" class="formset">
-                                    @csrf
-                                    <button type="submit" value="{{$singart->id}}" name="prodid" id="heart"class="icon_heart buttonsizer"></button>                   
-                                </form>
+                                
                                 
                                 <div class="add-to-cart"> 
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                                 </div>
             <!-- Products Description Starts --> 
-        </div>
+                    </div>
+                    
         <!-- Products Description Tabination Starts -->  
         <div class="tabs-wrap ptb-70">
             <div class="tabs  text-center">

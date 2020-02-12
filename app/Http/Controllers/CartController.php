@@ -57,7 +57,8 @@ class CartController extends Controller
                                 "category.macrocategory as mcat",
                                 "article.sale",
                                 "variant.size as catsize",
-                                "cart_content.variant_id")->
+                                "cart_content.variant_id",
+                                "article.imgURI")->
                                 join("article","cart_content.products_id","=","article.id")->
                                 join("variant","variant.id","=","cart_content.variant_id")->
                                 join("category","article.cat_id","=","category.id")->

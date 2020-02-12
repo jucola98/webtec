@@ -42,11 +42,12 @@
                                     </thead>
                                     <tbody>
                                     @isset($dataquery)
-                                    @foreach ($dataquery  as $item)    
+                                    @foreach ($dataquery  as $item)  
+                                    
                                         <tr>
                                             <td class="image">
                                                 <div class="white-bg">
-                                                    @if($item->imgURI == null || !file_exists($item->imgURI))
+                                                    @if($item->imgURI == null )
                                                     <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" class="imgcart" alt=""  /> </a> 
                                                 @else
                                                  <a class="media-link" href="{{route('singleprod',[$item->mcat,$item->products_id])}}"><img src="{{Voyager::image($item->imgURI)}}"   class="imgcart" alt=""></a> 
