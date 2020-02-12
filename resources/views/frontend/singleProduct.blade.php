@@ -90,7 +90,8 @@
                                 <li class=""> <i class="icon-layers icons"></i> <span> Only <b><span id="stock">{{$details->first()->amount}}</span></b> Left </span> <i class="arrow_carrot-down"></i> </li>
                                     <li class=""> <i class="icon-handbag icons"></i> <span> You have <b><span id="inCart">
                                         
-                                        @if(!$cartamount->get()->isEmpty())
+                                        @if($cartamount!=null && !$cartamount->get()->isEmpty())
+                                            
                                             {{$cartamount->get()[0]->amount}}
                                         @else
                                             no
@@ -125,7 +126,7 @@
                     <br>   
                     @csrf
                     <ul class="color-swatch-item">
-                        <select class="selectpicker"  id="selsizes" data-width="25%" name="sizeselect" onchange="changeAmounts({{$details}},{{$cartamount->get()}});"  >
+                        <select class="selectpicker"  id="selsizes" data-width="25%" name="sizeselect" onchange="changeAmounts({{$details}},{{$cartamount?$cartamount->get():null}});"  >
                             @foreach ( $details as $sizes)                                                   
                                 <option value="{{$sizes->id}}">{{$sizes->size}}</option>
                             @endforeach
@@ -134,9 +135,9 @@
                     
                     <div class="prod-btns" id="visibilityCheck"  @if($details->first()->amount<=0) style="display:none;"@endif>
                                 <div class="quantity" id="amountselector">
-                                    <a class="btn minus" onclick='productTextHandler(false,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_minus-06"></i></a>
-                                    <input type="number" title="Qty" value="0" name="quantity" min="1" max="{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'>
-                                    <a class="btn plus" onclick='productTextHandler(true,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_plus"></i></a>
+                                    <a class="btn minus" onclick='productTextHandler(false,{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}});'><i class="icon_minus-06"></i></a>
+                                    <input type="number" title="Qty" value="0" name="quantity" min="1" max="{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}});'>
+                                    <a class="btn plus" onclick='productTextHandler(true,{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}});'><i class="icon_plus"></i></a>
                                 </div>
                                 
                                 

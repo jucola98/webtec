@@ -47,9 +47,9 @@ class ArticleController extends Controller
                         first();
         $fetchvariant=Variant::all()->where("product_id","=",$id);
         $images=ArticleImg::select("image")-> where("product_id","=",$id);
+        
         return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"cartamount"=>$usercart,"images"=>$images]);
         }else{
-            
             $articlesingle=Article::select(
                             "article.id",
                             "article.name",
@@ -70,7 +70,8 @@ class ArticleController extends Controller
                             first();
             $fetchvariant=Variant::all()->where("product_id","=",$id);
             $images=ArticleImg::select("image")-> where("product_id","=",$id);
-            return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"images"=>$images]);
+
+            return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"images"=>$images,"cartamount"=>null]);
         }
     }
 }

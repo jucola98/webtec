@@ -4,20 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Cart;
+use App\Variant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CheckOutController extends Controller
 {
     function checkOutOperations(Request $request){
-        $cartContent=Cart::select("id","products_id","amount")->where("user_id","=",Auth::user()->id)->get();
+        $cartContent=Cart::select("id","products_id","amount as camount","variant_id as variantid")->where("user_id","=",Auth::user()->id)->get();
         foreach($cartContent as $singleproduct){
-            $article=Article::find($singleproduct->products_id);
-            $article->stock=$article->stock-$singleproduct->amount;
-            $article->buycounter+=$singleproduct->amount;
+            $article=Variant::find($singleproduct->variantid);
+            $article->amount=$article->amount-$singleproduct->camount;
             $article->save();
-            Cart::find($singleproduct->id)->delete();
+
             
+        }
+        $articletotal=Article::find($cartContent->first()->products_id);
+        
+        $articletotal->buycounter+=$cartContent->first()->camount;
+        $articletotal->save();
+        foreach($cartContent as $cdelete) {
+        $cdelete->delete();
         }
         return redirect("/");
 
