@@ -47,7 +47,7 @@
             <header class=" container header-wrap header-two "> 
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
-                        <a class="logo" href="{{ route('master') }}"> <img src="{{asset('img/home-fourteen/CozyStore.png')}}" alt="logo" title="Logo"> </a>
+                        <a class="logo" href="{{ route('master') }}"> <img src="{{Voyager::image('home images/logo.jpg')}}" alt="logo" title="Logo"> </a>
                     </div>
                     <div class="col-md-10 col-sm-10 col-xs-12">       
                         <div class="top-elements">

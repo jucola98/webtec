@@ -156,14 +156,14 @@
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
-									<div class="sliderimagewrapper"> 
+									 
 										@if($item->imgURI == null )
 										<img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a>
 										@else  
 										<img src="{{Voyager::image($item->imgURI)}}" class="imgcart1" alt="" /> </a> 
 										
 										@endif         
-									</div>
+									
 									</a>
 								</div>
 								<div class="product-content">
