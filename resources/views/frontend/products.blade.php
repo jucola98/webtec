@@ -30,34 +30,42 @@
                             <div class="show-result font-2">
                                
                             </div>
+                            
                             <div class="select-option">
-                                <form action="#" class="form-sorter">
+                                <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post">
+                                    @csrf
+                                    <div class="form-sorter">
                                     <label> Sort by </label>
                                     <div class="search-selectpicker selectpicker-wrapper">
-                                        <select class="selectpicker"  data-width="100%"  onchange="location=this.value;">
-                                            
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"name"])}}" @empty($orderby)selected="selected"@endempty>Latest</option>
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"priceasc"])}}" @if($orderby=="priceasc")selected="selected"@endif>Price ASC</option>
-                                            <option value="{{route("products",[$items->first()->macrocategory,$items->first()->idcat,"orderby"=>"pricedesc"])}}" @if($orderby=="pricedesc")selected="selected"@endif>Price DESC</option>
+                                        <select class="selectpicker"  data-width="100%"  name="orderby">
+                                            <option value="latest" @isset($orderby)@if($orderby=="latest")selected="selected"@endif @endisset >Latest</option>
+                                            <option value="asc"    @isset($orderby)@if($orderby=="asc")selected="selected"@endif @endisset>Price ASC</option>
+                                            <option value="desc"   @isset($orderby)@if($orderby=="desc")selected="selected"@endif @endisset>Price DESC</option>
                                         </select>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
                             
-                            <div class="select-option">
-                                <form action="#" class="form-wrap">
-                                    <label> Show </label>
+                                
+                                <div class="form-sorter">
+                                    
                                     <div class="search-selectpicker selectpicker-wrapper">
-                                        <select class="selectpicker"  data-width="100%" data-toggle="tooltip">
-                                            <option>9</option>
-                                            <option>6</option>
-                                            <option>3</option>
+                                        
+                                        <select class="selectpicker"  data-width="100%" data-toggle="tooltip" name="pagingform">
+                                            <option value="9" @isset($pagingnumber)@if($pagingnumber=="9")selected="selected"@endif @endisset>9</option>
+                                            <option value="6" @isset($pagingnumber)@if($pagingnumber=="6")selected="selected"@endif @endisset>6</option>
+                                            <option value="3" @isset($pagingnumber)@if($pagingnumber=="2")selected="selected"@endif @endisset>3</option>
                                         </select>
+                                        
+                                        <label> Show </label>
                                     </div>
-                                </form>
+                                </div>
                             </div>
+                            <input type="submit">
+                        </form>
+                        
+                    </div>
                             
-                        </div>     
+                </div>     
 
                         <div class="tab-content">
                             <!-- Product Grid View Starts -->
@@ -89,16 +97,13 @@
                                                 
                                                 
                                             </div>
-                                            <div class="product-content">
-                                                
-                                                    
+                                            <div class="product-content">   
                                                 <h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}">{{$item->name}}</a> </h2>
                                                 @if(($item->sale)>0)
                                                     <span class="price"> <b>{{($item->price)-($item->price)*($item->sale/100)}}€</b> <del>{{$item->price}}€</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
                                                 @else
                                                     <span class="price"> <b>{{$item->price}}€</b> <del></del> </span>
                                                 @endif
-                                                
                                                 <!--stellette-->
                                                 <div class="rating"> 
                                                 @for ($i=(int)$item->rating;$i>0;$i--)
@@ -137,7 +142,7 @@
                                     </div><!--termina row-->
                                     @endif
                                     @endforeach
-                                
+                                    {{ $items->links() }}
                             </div>
                         </div>
                     </div>

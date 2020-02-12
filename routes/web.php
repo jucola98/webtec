@@ -34,7 +34,7 @@ Route::post('/clearcart', 'CartController@clearCart')->name('clearcart');
 Route::post('/testroute','CartController@postTest')->name("testroute");
 Route::post('/search','FrontendController@searchProduct')->name("searchProduct");
 Route::post('/checkingout', 'CheckOutController@checkOutOperations')->name('checkingOut');
-
+Route::post('/products/{macrocat}/{category}', 'CategoryController@productsMacroCatFilter')->name('productsPost');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

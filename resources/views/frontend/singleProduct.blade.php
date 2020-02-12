@@ -15,7 +15,6 @@
                 </div>  
 </section>
 <!--Breadcrumb Section End-->
-
 <section class="wrapper sec-space single-product layout-simple">
     <!-- Single Product Starts -->
     <div class="container">
@@ -28,13 +27,9 @@
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
                          <img src="{{Voyager::image($singart->imgURI)}}" alt="">
-                        @endif
-                        
-                        
+                        @endif  
                     </div>
-                  
                 </div>
-
                 <div  class="owl-carousel sync2">
                     <div class="item">
                         @if($singart->imgURI == null )
@@ -44,12 +39,9 @@
                         @endif     
                     </div>
                     <br>
-            
-                   
                 </div>
             </div>
             <!-- Single Products Slider Ends --> 
-
             <!-- Products Description Starts --> 
             <div class="col-lg-8 col-md-7 col-sm-6">
                 <div class="product-detail">
@@ -62,25 +54,17 @@
                     </div>
                     {{$singart->rating}}/5 &nbsp;
                     <div class="rating" id="starrating">   
-                        
-                        
                         @for ($i = 0; $i < 5; $i++)
-                        
                         @if ($singart->rating-->0.5)
                             <span class="star active" name="{{$i+1}}"></span>
                         @else
-                            
                             @if (($singart->rating--%10==0))
                                 <span class="star half" name="{{$i+1}}"></span>
                             @else
                                 <span class="no star" name="{{$i+1}}" ></span>
-                                
                             @endif
-
                         @endif
-                            
                         @endfor
-                   
                     </div>  
                     <div class="price">
                         @if(($singart->sale)>0)
@@ -89,13 +73,10 @@
                             <b>{{($singart->price)}}€</b><!--forse va aggiunto un campo per gestire i saldi-->
                         @endif
                     </div>
-
                     <div class="product-availability">
                         <ul class="stock-detail list-items black-color">  
                             @if($singart->stock>0)                                    
                                 <li class=""> <i class="icon-layers icons"></i> <span> Only <b><span id="stock">{{$details->first()->amount}}</span></b> Left </span> <i class="arrow_carrot-down"></i> </li>
-                                
-                                
                                     <li class=""> <i class="icon-handbag icons"></i> <span> You have <b><span id="inCart">
                                         
                                         @if(!$cartamount->get()->isEmpty())
@@ -106,9 +87,6 @@
                                     </span></b> products in your cart </span> <i class="arrow_carrot-down"></i> </li>
                                 
                                 <li>
-                               
-                            
-                                
                             @endif
                             <div id="availwrapper"> 
                                 @if($details->first()->amount>0)
@@ -120,13 +98,10 @@
                             </li>
                         </ul>                                                                             
                     </div>
-
                     <hr class="divider-2">   
-
                     <div class="product-description">
                         {{$singart->description}}
                     </div>
-
                     <hr class="divider-2">   
                     <form action="{{route("testroute",["prodid"=>$singart->id])}}" method="post">
                     @csrf
@@ -138,12 +113,7 @@
                         </select>
                     </ul>
                     <div class="prod-btns" id="visibilityCheck"  @if($details->first()->amount<=0) style="display:none;"@endif>
-                        
-                         {{-- @if($details->first()->amount>0) --}}
-                         {{--   @isset($cartamount->amount) --}}
-                         {{--       @if($singart->stock-$cartamount->amount>0) --}}
                                 <div class="quantity" id="amountselector">
-                                    
                                     <a class="btn minus" onclick='productTextHandler(false,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_minus-06"></i></a>
                                     <input type="number" title="Qty" value="0" name="quantity" min="1" max="{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'>
                                     <a class="btn plus" onclick='productTextHandler(true,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_plus"></i></a>
@@ -155,33 +125,8 @@
                                 <div class="add-to-cart"> 
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                                 </div>
-                             {{--   @endif--}}
-                            {{--@endisset   --}}
-                           
-                                {{--@empty($cartamount->amount)--}}
-                                    <!--<div class="quantity">
-                                        <a class="btn minus" onclick='productTextHandler(false,{{$singart->stock}});'><i class="icon_minus-06"></i></a>
-                                        <input type="number" title="Qty" value="1" name="quantity" min="1" max="{{$singart->stock}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$singart->stock}});'>
-                                        <a class="btn plus" onclick='productTextHandler(true,{{$singart->stock}});'><i class="icon_plus"></i></a>
-                                    </div>
-                                    <div class="add-to-cart">   
-                                        <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
-                                    </div>
-                                {{-- @endempty --}}
-                            {{-- @else --}}
-                        {{--@endif --}}
-                                                     
-                    </div>
-                    </form> 
-                    <div class="prod-code upper-case">
-                        <p> <b>SKU : </b> <b class="black-color">11F25A3678</b> </p>
-                        
-                    </div>
-                </div>
-            </div>
             <!-- Products Description Starts --> 
         </div>
-
         <!-- Products Description Tabination Starts -->  
         <div class="tabs-wrap ptb-70">
             <div class="tabs  text-center">

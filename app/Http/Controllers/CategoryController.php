@@ -9,7 +9,36 @@ use SebastianBergmann\Environment\Console;
 
 class CategoryController extends Controller
 {
-    public function getProductsMacroCat($macro,$category,Request $request){
+    public function getProductsMacroCat($macro,$category){
+        $query=Article::select("article.id",
+                               "article.name",
+                                "article.description",
+                                "article.price",
+                                "article.URI",
+                                "article.imgURI",
+                                "category.name as nomecat",
+                                "category.id as idcat",
+                                "category.macrocategory",
+                                "article.sale",
+                                "article.price",
+                                "article.rating",
+                                "article.stock",
+                                DB::raw("article.price-article.sale*article.price/100 as saledprice"))->
+                                join("category","article.cat_id",'=',"category.id")->
+                                where("cat_id",$category)->
+                                where("macrocategory",$macro)->
+                                join("variant","variant.product_id","=","article.id")->
+                                groupBy("variant.product_id")->paginate(9);
+                                
+        if($query->isEmpty()){
+            
+            return(abort(404));
+        }else{
+            
+            return view('frontend.products',["items"=>$query]);
+        }
+    }
+    public function productsMacroCatFilter($macro,$category,Request $request){
         //SELECT *,group_concat(concat(`variant.color`,',',`colors`) SEPARATOR ",") from article INNER JOIN variant on article.id = variant.product_id;ù
         /*
             $items = DB::table('item')
@@ -17,7 +46,9 @@ class CategoryController extends Controller
             ->groupBy('item_id','item_color')
             ->get();
         */ 
-        if($request->has("orderby")&&$request->orderby=="priceasc"){
+        
+        if($request->has("orderby")&&$request->orderby=="asc"){
+
             $query=Article::select("article.id",
                                   "article.name",
                                   "article.description",
@@ -38,11 +69,11 @@ class CategoryController extends Controller
                                   where("macrocategory",$macro)->
                                   join("variant","variant.product_id","=","article.id")->
                                   groupBy("variant.product_id")->
-                                  orderBy("saledprice","ASC")->get();
+                                  orderBy("saledprice","ASC")->paginate($request->pagingform);
             
             
             
-        }else if($request->has("orderby")&&$request->orderby=="pricedesc"){
+        }else if($request->has("orderby")&&$request->orderby=="desc"){
                                 $query=Article::select("article.id",
                                 "article.name",
                                 "article.description",
@@ -63,7 +94,8 @@ class CategoryController extends Controller
                                 where("macrocategory",$macro)->
                                 join("variant","variant.product_id","=","article.id")->
                                 groupBy("variant.product_id")->
-                                orderBy("saledprice","DESC")->get();
+                                orderBy("saledprice","DESC")->paginate($request->pagingform);
+                                
         }else{
                                 $query=Article::select("article.id",
                                 "article.name",
@@ -84,14 +116,15 @@ class CategoryController extends Controller
                                 where("cat_id",$category)->
                                 where("macrocategory",$macro)->
                                 join("variant","variant.product_id","=","article.id")->
-                                groupBy("variant.product_id")->get();
+                                groupBy("variant.product_id")->paginate($request->pagingform);
+                                
         }
         if($query->isEmpty()){
             
             return(abort(404));
         }else{
             
-            return view('frontend.products',["items"=>$query,"orderby"=>$request->orderby]);
+            return view('frontend.products',["items"=>$query,"orderby"=>$request->orderby,"pagingnumber"=>$request->pagingform]);
         }
     }
 }
