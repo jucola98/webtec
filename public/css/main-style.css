@@ -43,11 +43,13 @@
 /******************************* 
     1 - GENERAL CSS STARTS 
 ********************************/
+
+
 #heart {
-    width: 20px;
-    height: 20px;
-    align-items: center
-    ;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    margin-top:50px;
     
 }
 .dot {
@@ -1633,6 +1635,7 @@ textarea:focus:-ms-input-placeholder {
     z-index: 1;
     transition:  all 0.4s ease-in-out 0s;
     -webkit-transition:  all 0.4s ease-in-out 0s;
+    
 }
 .product-item .product-image .product-hover{
     left: 0;
@@ -3511,7 +3514,7 @@ table {
     .subscribe-wrap {
         padding: 45px 0 15px;
     } 
-    .
+}
 
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
 

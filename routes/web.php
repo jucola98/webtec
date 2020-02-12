@@ -37,4 +37,6 @@ Route::post('/checkingout', 'CheckOutController@checkOutOperations')->name('chec
 Route::post('/products/{macrocat}/{category}', 'CategoryController@productsMacroCatFilter')->name('productsPost');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    
+
 });

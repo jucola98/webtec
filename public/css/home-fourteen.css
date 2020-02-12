@@ -2127,6 +2127,34 @@ textarea:focus:-ms-input-placeholder {
 .imgcart{
     max-width: 25%;
 }
+.imgcart1{
+    height: 300px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+.imgcart2{
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+.imgcart3{
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+
+
+
+
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;

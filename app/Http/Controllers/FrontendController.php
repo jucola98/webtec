@@ -72,4 +72,5 @@ class FrontendController extends Controller
         }
         return view('frontend.products',["items"=>$query, "orderby"=>$request->orderby]);
     }
+    
 }

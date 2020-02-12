@@ -26,8 +26,15 @@
                         @if($singart->imgURI == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
+<<<<<<< Updated upstream
                          <img src="{{Voyager::image($singart->imgURI)}}" alt="">
                         @endif  
+=======
+                         <img src="{{Voyager::image($singart->imgURI)}}" class="imgcart2"  alt="">
+                        @endif
+                        
+                        
+>>>>>>> Stashed changes
                     </div>
                 </div>
                 <div  class="owl-carousel sync2">
@@ -35,7 +42,7 @@
                         @if($singart->imgURI == null )
                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                          @else
-                         <img src="{{Voyager::image($singart->imgURI)}}" alt="">
+                         <img src="{{Voyager::image($singart->imgURI)}}" class="imgcart3"alt="">
                         @endif     
                     </div>
                     <br>
@@ -118,10 +125,12 @@
                                     <input type="number" title="Qty" value="0" name="quantity" min="1" max="{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'>
                                     <a class="btn plus" onclick='productTextHandler(true,{{$details->first()->amount-($cartamount->first()!=null?$cartamount->first()->amount:0)}});'><i class="icon_plus"></i></a>
                                 </div>
+                                
                                 <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                     @csrf
-                                    <button type="submit" value="{{$singart->id}}" name="prodid" id="heart"></button>                   
+                                    <button type="submit" value="{{$singart->id}}" name="prodid" id="heart"class="icon_heart buttonsizer"></button>                   
                                 </form>
+                                
                                 <div class="add-to-cart"> 
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                                 </div>

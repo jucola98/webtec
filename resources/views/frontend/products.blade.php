@@ -81,13 +81,13 @@
                                     @endif
                                     <div class="col-sm-6 col-md-4 col-lg-4">
                                         <div class="product-item">
-                                            <div class="product-image">
+                                            <div class="product-image1">
                                                 <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img"> 
                                                     
                                                     @if($item->imgURI == null )
                                                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else
-                                                        <img src="{{Voyager::image($item->imgURI)}}" alt="" /> </a> 
+                                                        <img src="{{Voyager::image($item->imgURI)}}" class="imgcart1" alt="" /> </a> 
                                                         <span class="product-hover">
                                                                 <img alt="" src="{{asset($item->imgURI)}}">  
                                                         </span>

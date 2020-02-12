@@ -43,6 +43,7 @@
                   
 
             <!-- HEADER -->
+            
             <header class=" container header-wrap header-two "> 
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
@@ -115,7 +116,9 @@
                                 <a href="#" class="icon-settings icons">  </a> 
                                 <ul class="settings-popup">
                                  <li class="additional-page font-2">   
-                                 @if(Auth::check())                                       
+                                 @if ( (Auth::check()) &&  ((Auth::user()->role_id) == 2)) 
+                                
+                                                                  
                                         <a href="{{ route('logout') }}" 
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -129,12 +132,30 @@
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
                                         <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  Wishlist </a>
+                                        @elseif ( (Auth::check()) &&  ((Auth::user()->role_id) == 1))
+                                        <a href="{{ route('logout') }}" 
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            <span class="icon-lock icons"></span>
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                        </form>
+                                       
+                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  Wishlist </a>
+                                        <a href="{{ url('/admin/profile') }}"> <span class="icon-note icons"></span>  Backoffice </a>
+
                                         @else
+                                    
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
                                         
                                     </li>
+                                    
                                     @endif
                                 </ul>
                             </div>                            
@@ -150,7 +171,7 @@
                                            
                                             <div class="col-sm-12 col-lg-4 menu-block">
                                                 <div class="flex-item overlay">
-                                                    <img alt="" src="{{asset('img/home-fourteen/mega_images_1.jpg')}}" />
+                                                    
                                                     <div class="flex-wrap">
                                                         <div class="flex-caption middle">                                                
                                                             <div class="menu-offer">                                                    
