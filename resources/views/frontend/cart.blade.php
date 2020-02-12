@@ -71,6 +71,7 @@
                                             <td class="remove-edit">
                                                 <form action="cartdelete" method="post">
                                                     @csrf
+                                                    <input type="hidden" value="{{$item->variant_id}}" name="variant">
                                                     <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->products_id}}" type="submit"></button> 
                                                 </form>
                                                 <a href="#" class="icon_pencil fsz-14 "></a> 

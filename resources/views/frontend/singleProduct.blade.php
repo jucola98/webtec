@@ -115,16 +115,19 @@
 
                     <div class="product-availability">
                         <ul class="stock-detail list-items black-color">  
-                            @if($singart->stock>0)                                     
-                                <li class=""> <i class="icon-layers icons"></i> <span> Only <b>{{$singart->stock}}</b> Left </span> <i class="arrow_carrot-down"></i> </li>
-                                @isset($cartamount)
-                                    <li class=""> <i class="icon-handbag icons"></i> <span> You have <b>{{$cartamount->amount}}</b> products in your cart </span> <i class="arrow_carrot-down"></i> </li>
-                                @endisset
-                               
+                            @if($singart->stock>0)                                    
+                                <li class=""> <i class="icon-layers icons"></i> <span> Only <b><span id="stock">{{$singart->stock}}</span></b> Left </span> <i class="arrow_carrot-down"></i> </li>
+                                
+                                
+                                    <li class=""> <i class="icon-handbag icons"></i> <span> You have <b><span id="inCart">
+                                        
+                                        @if(!$cartamount->get()->isEmpty()))
+                                            {{$cartamount->get()[0]->amount}}
+                                        @endif
+                                    </span></b> products in your cart </span> <i class="arrow_carrot-down"></i> </li>
+                                
                                 <li>
-                                
                                 <b>Available:</b> <span class="green-color"> In Stock </span>  
-                                
                             @else
                                 <b>Available:</b> <span class="red-color"> Not In Stock </span>  
                             @endif
@@ -167,16 +170,13 @@
                                 
                             @endisset   
                             <ul class="color-swatch-item">
-                                       
-                                        
-
-                                        <select class="selectpicker"  data-width="25%" name="sizeselect" >
+                                
+                                        <select class="selectpicker"  id="selsizes" data-width="25%" name="sizeselect" onchange="changeAmounts({{$details}},{{$cartamount->get()}});"  >
                                             @foreach ( $details as $sizes)                                                   
-                                                <option value="{{$sizes->id}}">{{$sizes->catsize}}</option>
+                                                <option value="{{$sizes->id}}">{{$sizes->size}}</option>
                                             @endforeach
-                                            </select>
-                                    </ul>
-                                    
+                                        </select>
+                            </ul>
                             @empty($cartamount->amount)
                                 <div class="quantity">
                                     <a class="btn minus" onclick='productTextHandler(false,{{$singart->stock}});'><i class="icon_minus-06"></i></a>
@@ -217,6 +217,7 @@
         @endsection
         @section('js')
             <script src={{asset("js/CartUtils.js")}}></script>   
+            <script src={{asset("js/singleProductUtils.js")}}></script>   
             <script src={{asset("js/StarHandler.js")}}></script>
 
         @endsection

@@ -21,10 +21,9 @@ class ArticleController extends Controller
 
     public function fetchProductById($macrocat,$id){
         if(!Auth::guest()){
-        $usercart=Cart::select("amount")->
+        $usercart=Cart::select("variant_id","amount")->
                   where("products_id","=",$id)->
-                  where("user_id","=",Auth::user()->id)->
-                  first();
+                  where("user_id","=",Auth::user()->id);
                   /*
                   $query=Article::select("article.id",
                                 "article.name",
@@ -62,7 +61,6 @@ class ArticleController extends Controller
                         "article.stock",
                         "variant.id as varid",
                         DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
-
                         where("article.id","=",$id)->
                         join("category","article.cat_id","=","category.id")->
                         where("category.macrocategory","=","$macrocat")->
