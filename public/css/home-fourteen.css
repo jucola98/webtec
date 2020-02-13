@@ -2152,10 +2152,26 @@ textarea:focus:-ms-input-placeholder {
 .filtro{
     display: flex;
     flex-direction: row;
+    width: 2000px;
 }
 .pad{
     margin-right: 20px;
     margin-left: 40px;
+    
+}
+.pad2{
+    margin-right: 20px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    
+    
+    
+}
+
+.border{
+    border:1px rgba(255,255,255,0) solid 
+    
 }
 
 

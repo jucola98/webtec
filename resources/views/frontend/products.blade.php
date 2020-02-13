@@ -42,34 +42,50 @@
                                             <option value="asc"    @isset($orderby)@if($orderby=="asc")selected="selected"@endif @endisset>Price ASC</option>
                                             <option value="desc"   @isset($orderby)@if($orderby=="desc")selected="selected"@endif @endisset>Price DESC</option>
                                         </select>
+                                    </div>
                                     
                                 
                             
                                 
                                 
                                     
-                                    
+                                    <div>
                                         <label class="pad"> Show </label>
                                         <select   data-width="100%" data-toggle="tooltip" name="pagingform">
                                             <option value="9" @isset($pagingnumber)@if($pagingnumber==9)selected="selected"@endif @endisset>9</option>
                                             <option value="6" @isset($pagingnumber)@if($pagingnumber==6)selected="selected"@endif @endisset>6</option>
                                             <option value="3" @isset($pagingnumber)@if($pagingnumber==3)selected="selected"@endif @endisset>3</option>
                                         </select>
-                                        <hr/>
-                                        <div >
-                                            
-                                            <label> Sort By Size </label><br>
+                                    </div>
+                                        
+                                        
+                                    <div class="pad">
+                                            <label class="pad2"> Sort By Size  
+                                            <div class="pad2">
                                             @foreach ($sizesdistinct  as $itemvariant)
+                                            @if($loop->index%2==0)
+                                            
+                                            <div class="pad2">
+                                            </div> 
+                                             @endif
+                                             <br>
+                                                <span><input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span></span>
+                                                @if($loop->index%2==1) @endif
                                                 
-                                                <span><input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span></span>@if($loop->index%2!=0)<br>@endif
                                            @endforeach
+                                           
+                                           
+                                    
+                                    </label>
+                                    </div
+                                           
                                             
                                             
-                                        </div>
+                                        
                                         <div style="float:right;">
                                             <input type="submit" class="pad">
                                         </div>
-                                    </div>
+                                    
                                     
                                         
                                      

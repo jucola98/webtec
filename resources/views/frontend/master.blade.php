@@ -29,7 +29,7 @@
 			<div class="slide-info">
 				<div class="caption">
 					
-				<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN! </h2>
+				<h2 class="main-title" data-animation-in="fadeInDown">  CARHARTT F/W 20 </h2>
 					<form class="search-form" action="{{route('searchProduct')}}" method="post">
                                     @csrf
                                     <input class="search" type="hidden" value="" name="searchbar" />
@@ -43,10 +43,10 @@
 			<div class="slide-info">
 				<div class="caption">
 					
-					<<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN! </h2>
+					<<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN!</h2>
 					<form class="search-form" action="{{route('searchProduct')}}" method="post">
                                     @csrf
-                                    <input class="search" type="hidden" value="skate" name="searchbar" />
+                                    <input class="search" type="hidden" value="carhartt" name="searchbar" />
                                     <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
                                 </form>
 				</div>
