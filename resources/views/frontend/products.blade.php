@@ -61,22 +61,18 @@
                                         
                                     <div class="pad">
                                             <label class="pad2"> Sort By Size  
-                                            <div class="pad2">
-                                            @foreach ($sizesdistinct  as $itemvariant)
-                                            @if($loop->index%2==0)
                                             
-                                            <div class="pad2">
-                                            </div> 
-                                             @endif
-                                             <br>
-                                                <span><input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span></span>
-                                                @if($loop->index%2==1) @endif
+                                            @foreach ($sizesdistinct  as $itemvariant)
+                                           
+                                             
+                                                <span><input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span>
+                                                @if(($loop->index+1)%3==0)<br>@endif
                                                 
                                            @endforeach
                                            
                                            
                                     
-                                    </label>
+                                        </label>
                                     </div
                                            
                                             

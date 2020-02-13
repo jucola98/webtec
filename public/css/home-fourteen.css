@@ -2163,11 +2163,20 @@ textarea:focus:-ms-input-placeholder {
     margin-right: 20px;
     margin-left: 40px;
     display: flex;
-    flex-direction: row;
     
-    
+    flex-flow: row wrap;
     
 }
+.pad3{
+    margin-right: 20px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.pad2:nth-child(2n) {
+    
+    break-after: always; /* New syntax */
+  }
 
 .border{
     border:1px rgba(255,255,255,0) solid 
