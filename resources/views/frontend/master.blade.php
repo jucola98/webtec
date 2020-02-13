@@ -174,9 +174,7 @@
 									<span class="price"> <b>{{number_format((($item->price)-($item->price)*($item->sale/100)),2)}}€</b> <del></del> </span>
 									@endif
 									<div class="product-links"> 
-										@if($item->stock==0)
-											<span class="red-color">Not in stock</span>
-										@endif
+										
 										<br>
 										<a href="{{route('singleprod',[$item->macrocategory,$item->itemid])}}" class="add-to-cart">Item page </a>
 									</div>

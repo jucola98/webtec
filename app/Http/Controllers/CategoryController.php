@@ -14,15 +14,14 @@ class CategoryController extends Controller
                                "article.name",
                                 "article.description",
                                 "article.price",
-                                "article.URI",
+                                
                                 "article.imgURI",
                                 "category.name as nomecat",
                                 "category.id as idcat",
                                 "category.macrocategory",
                                 "article.sale",
                                 "article.price",
-                                "article.rating",
-                                "article.stock",
+                               
                                 DB::raw("article.price-article.sale*article.price/100 as saledprice"))->
                                 join("category","article.cat_id",'=',"category.id")->
                                 where("cat_id",$category)->
@@ -53,15 +52,13 @@ class CategoryController extends Controller
                                   "article.name",
                                   "article.description",
                                   "article.price",
-                                  "article.URI",
                                   "article.imgURI",
                                   "category.name as nomecat",
                                   "category.id as idcat",
                                   "category.macrocategory",
                                   "article.sale",
                                   "article.price",
-                                  "article.rating",
-                                  "article.stock",
+                                  
                                   DB::raw("article.price-article.sale*article.price/100 as saledprice")
                                   )->
                                   join("category","article.cat_id",'=',"category.id")->
@@ -78,15 +75,13 @@ class CategoryController extends Controller
                                 "article.name",
                                 "article.description",
                                 "article.price",
-                                "article.URI",
                                 "article.imgURI",
                                 "category.name as nomecat",
                                 "category.id as idcat",
                                 "category.macrocategory",
                                 "article.sale",
                                 "article.price",
-                                "article.rating",
-                                "article.stock",
+                                
                                 DB::raw("article.price-article.sale*article.price/100 as saledprice")
                                 )->
                                 join("category","article.cat_id",'=',"category.id")->
@@ -101,15 +96,13 @@ class CategoryController extends Controller
                                 "article.name",
                                 "article.description",
                                 "article.price",
-                                "article.URI",
                                 "article.imgURI",
                                 "category.name as nomecat",
                                 "category.id as idcat",
                                 "category.macrocategory",
                                 "article.sale",
                                 "article.price",
-                                "article.rating",
-                                "article.stock",
+                               
                                 DB::raw("article.price-article.sale*article.price/100 as saledprice"))->
                                 
                                 join("category","article.cat_id",'=',"category.id")->
