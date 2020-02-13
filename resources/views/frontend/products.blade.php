@@ -29,7 +29,7 @@
                         <div class="sorter-bar block-inline">
                             <div class="show-result font-2">
                             </div>
-                            
+                            @isset($sizesdistinct)
                             <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post" class="filtro">
                                     @csrf
                                     
@@ -94,6 +94,7 @@
                            
                             
                         </form>
+                        @endisset
                         </div>    
                             </div>     
                             <div class="tab-content">
