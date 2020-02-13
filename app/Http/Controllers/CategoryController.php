@@ -78,10 +78,9 @@ class CategoryController extends Controller
             $array=[];
             $variantst=Article::select("variant.size")->
                                     join("category","article.cat_id",'=',"category.id")->
-                                    where("cat_id",$category)->
-                                    where("macrocategory",$macro)->
-                                    join("variant","variant.product_id","=","article.id")->
-                                    groupBy("variant.product_id");
+                                    where("category.macrocategory","=",$macro)->
+                                    where("cat_id","=",$category)->
+                                    join("variant","variant.product_id","=","article.id");
             foreach($variantst->get() as $sizeget){
                 array_push($array,$sizeget->size);
                 
@@ -193,8 +192,7 @@ class CategoryController extends Controller
                                     join("category","article.cat_id",'=',"category.id")->
                                     where("cat_id",$category)->
                                     where("macrocategory",$macro)->
-                                    join("variant","variant.product_id","=","article.id")->
-                                    groupBy("variant.product_id");
+                                    join("variant","variant.product_id","=","article.id");
             foreach($variantst->get() as $sizeget){
                 array_push($array,$sizeget->size);
                 
