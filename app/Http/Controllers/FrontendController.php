@@ -9,6 +9,7 @@ use App\Wishlist;
 use App\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Shop;
 
 class FrontendController extends Controller
 {
@@ -42,7 +43,8 @@ class FrontendController extends Controller
         return view('frontend.master',["articles"=>$articles]);
     }
     public function getContact(){
-        return view('frontend.contact');
+        $shop=Shop::select("adress","phone_number","email");
+        return view('frontend.contact', ["shops"=>$shop->get()]);
     }
     public function getShipping(){
         $query=Country::all(); 

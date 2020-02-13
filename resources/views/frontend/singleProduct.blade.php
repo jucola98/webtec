@@ -130,8 +130,10 @@
                                 <div class="add-to-cart"> 
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                                 </div>
+                            </div>
+                        </div>
             <!-- Products Description Starts --> 
-                    </div>
+                    </div> <br>
                     
         <!-- Products Description Tabination Starts -->  
         <div class="tabs-wrap ptb-70">
@@ -142,6 +144,7 @@
                 </ul>
             </div>
         </div>
+
 
         
         @endsection

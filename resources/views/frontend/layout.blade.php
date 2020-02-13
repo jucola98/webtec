@@ -224,25 +224,26 @@
 			
 			
                 @yield("content");
-			<!-- Newsletter Starts
+			<!-- Newsletter Starts-->
 			<section class="section-five newsletter">
                     <div class="container">
                         <div class="title-wrap">
-                            <h2 class="section-title text-center pt-10">get the latest from logancee</h2>
+                            <h2 class="section-title text-center pt-10">get the latest from CozyStore</h2>
                             <p class="sub-title">Sign up for our Newsletter !</p>
                         </div>
-                        <form id="subscribe-form" method="post" action="#" class="newsletter-form">
+                        <form id="subscribe-form" method="post" action="{{route('postnews')}}" class="newsletter-form">
+                            @csrf
                             <div class="form-group col-sm-12 form-alert"></div>
                             <div class="form-group">
                                 <div class="mail-info">
-                                    <input placeholder="youremail@domain.com" class="form-control text" type="text">
+                                    <input name="email" placeholder="youremail@domain.com" class="form-control text" type="text">
                                     <button class="btn small-btn btn-black">Subscribe</button>
                                 </div>
                             </div>                                       
                         </form>                        
                     </div>
                 </section>
-                 -->  
+                 <!-- new end -->
 
             </article>
             <!-- / CONTENT AREA -->

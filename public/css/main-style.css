@@ -2052,7 +2052,7 @@ textarea:focus:-ms-input-placeholder {
 }
 .product-detail .prod-social li a:hover { color: #000; }
 .prod-tabs {border-bottom: 1px solid #cccccc; }
-.prod-tabs li{display: inline-block; font-weight: 600; text-transform: uppercase; font-size: 16px;}
+.prod-tabs li{display: inline-block; font-weight: 600; text-transform: uppercase; font-size: 16px;margin-top: 100px;}
 .prod-tabs li a{ color: #ccc; padding: 15px; position: relative; }
 .prod-tabs li a:hover, .prod-tabs li a:focus, .prod-tabs li.active a{
     background-color: transparent;
@@ -2524,13 +2524,7 @@ table {
     margin-top: 50px;
     
 
-.chk-total .submit-btn {
-    display: block;
-    width: 100%;
-}
-.chk-total li span {
-    margin-left: 20px;
-}
+
 
 @media (min-width:768px) and (max-width: 991px) {
     .continue-shopping .btn {min-width: 200px; padding: 0 5px;}
