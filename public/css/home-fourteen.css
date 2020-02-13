@@ -2160,9 +2160,14 @@ textarea:focus:-ms-input-placeholder {
     
     
 }
+#padsort{
+    margin-left: 5px;
+    margin-right: 5px;
+}
 #sortbyborder{
-    border: 1px black solid;
+    border: 1px rgba(150,150,150,0.7) solid;
     margin-left: 15px;
+    border
 }
 .pad2{
     margin-right: 20px;

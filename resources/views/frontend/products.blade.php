@@ -45,6 +45,7 @@
                                     <div class="pad">
                                             <label class="pad2"> Sort By Size  
                                             <div id="sortbyborder">
+                                                <div id="padsort">
                                             @foreach ($sizesdistinct  as $itemvariant)
                                            
                                              
@@ -53,6 +54,7 @@
                                                 
                                            @endforeach
                                             </div>
+                                        </div>
                                            
                                     
                                         </label>
@@ -128,6 +130,7 @@
                                     </div><!--termina row-->
                                     @endif
                                     @endforeach
+                                    {{$items->links()}}
                                     
                                     
                             </div>
