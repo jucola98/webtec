@@ -100,13 +100,13 @@
                                             <div class="product-content">   
                                                 <h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}">{{$item->name}}</a> </h2>
                                                 @if(($item->sale)>0)
-                                                    <span class="price"> <b>{{($item->price)-($item->price)*($item->sale/100)}}€</b> <del>{{$item->price}}€</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
+                                                    <span class="price"> <b>{{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€</b> <del>{{number_format($item->price,2)}}€</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
                                                 @else
-                                                    <span class="price"> <b>{{$item->price}}€</b> <del></del> </span>
+                                                    <span class="price"> <b>{{number_format($item->price ,2 )}}€</b> <del></del> </span>
                                                 @endif
                                                 <!--stellette-->
                                                
-                                                <div class="product-links"> 
+                                                
                                                     
                                                     <br>
                                                     <form action="{{route('wishlistadd')}}" method="post" class="formset">
@@ -115,7 +115,7 @@
                                                        
                                                     </form>
                                                     
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -123,6 +123,7 @@
                                     </div><!--termina row-->
                                     @endif
                                     @endforeach
+                                    
                                     {{ $items->links() }}
                             </div>
                         </div>

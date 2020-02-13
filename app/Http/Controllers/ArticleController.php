@@ -35,11 +35,7 @@ class ArticleController extends Controller
                         "category.name as nomecat",
                         "article.details",
                         "article.sale",
-<<<<<<< Updated upstream
-                        "article.rating",
-=======
                         
->>>>>>> Stashed changes
                         "variant.id as varid",
                         DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
                         where("article.id","=",$id)->
@@ -61,12 +57,8 @@ class ArticleController extends Controller
                             "category.name as nomecat",
                             "article.details",
                             "article.sale",
-<<<<<<< Updated upstream
-                            "article.rating",
-=======
                             
                             
->>>>>>> Stashed changes
                             DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
                             where("article.id","=",$id)->
                             join("category","article.cat_id","=","category.id")->

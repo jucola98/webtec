@@ -26,9 +26,8 @@
                                                              
                                 </div>
                             </div>
-                            <div class="heading chk">
-                                    <h2 class="section-title"> shipping details <span class="icon_minus-06"></span> </h2>                              
-                                </div>
+                            
+                           <h3> SHIPPING DETAILS </h3>
                                 <hr class="divider">
                                 <div class="calculate-wrap ptb-20">
                                     <form class="calculate-form" action="{{route("checkingOut")}}" method="post">
@@ -37,10 +36,12 @@
                                             <div class="search-selectpicker selectpicker-wrapper">
                                                 <select
                                                     class="selectpicker input-price" data-live-search="true" data-width="100%"
-                                                    data-toggle="tooltip" title="United Kingdom (UK)">
-                                                    <option>United Kingdom (UK)</option>
-                                                    <option>United State (US)</option>
-                                                    <option>United Arab Emirates (UAE)</option>
+                                                    data-toggle="tooltip" title="Select Country">
+                                                    
+                                                    @foreach ($shippingdata as $country)
+                                                    <option>{{$country->name}} </option>
+                                                
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -67,11 +68,11 @@
                                     
                                 </div>
                             </div>
-                            <div class="heading chk">
-                                <h2 class="section-title"> shipping method <span class="icon_minus-06"></span> </h2>                              
-                            </div>
-                                <hr class="divider">
-                                    <p> DHL Express delivery: £4.50
+                            
+                            <div class="col-sm-12-2 contact-box text-center">
+                                
+                                    <p> <h3> SHIPPING METHOD </h3> DHL Express delivery: £4.50
+                                         DHL Express delivery: £4.50
                                         Next day delivery is offered for express delivery orders placed before 2 pm (Mon-Fri, excluding public holidays)
                                         The delivery date is included at checkout and in the shipping confirmation email
                                         Select 'Express delivery' on the final order confirmation page after you've selected the home delivery option
@@ -79,14 +80,13 @@
                                         Once your order is shipped, we'll send a confirmation email with the expected delivery date. This date is also displayed at the checkout.
                                         All orders from Zalando.co.uk can be delivered to an address located in the UK only. We do not offer international shipping.
                                     </p>
-                            <div class="heading chk">
-                                    <h2 class="section-title"> payment  <span class="icon_minus-06"></span> </h2>                              
-                            </div>
-                            <hr class="divider">
+                            <h3>PAYMENT</h3>                              
                             
-                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with PayPal | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-6.png')}}" /> </a> </h4>
-                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with MasterCard | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-3.png')}}" /> </a> </h4>
-                              <h4> <input type="radio" name="payment" class="paymentradio"></input>  Pay with Visa | <a href="https://google.com"><img alt="" src="{{asset('img/home-fourteen/img-5.png')}}" /> </a> </h4> 
+                            
+                            
+                              <p> <input type="radio" name="payment" class="paymentradio"></input>  Pay with PayPal | <a href="https://google.com"><img alt="" src="{{Voyager::image('home images/pp.png')}}" /> </a> </p>
+                              <p> <input type="radio" name="payment" class="paymentradio"></input>  Pay with MasterCard | <a href="https://google.com"><img alt="" src="{{Voyager::image('home images/mastercard.png')}}" /> </a> </p>
+                              <p> <input type="radio" name="payment" class="paymentradio"></input>  Pay with Visa | <a href="https://google.com"><img alt="" src="{{Voyager::image('home images/visa.png')}}" /> </a> </p> 
                               <br> 
                               <input class="btn small-btn btn-black" type="submit" value="submit"></input>
                             </form>

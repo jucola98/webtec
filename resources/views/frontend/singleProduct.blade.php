@@ -71,11 +71,7 @@
                     </div>
                     <div class="product-availability">
                         <ul class="stock-detail list-items black-color">  
-<<<<<<< Updated upstream
-                                                            
-=======
                                                               
->>>>>>> Stashed changes
                                 <li class=""> <i class="icon-layers icons"></i> <span> Only <b><span id="stock">{{$details->first()->amount}}</span></b> Left </span> <i class="arrow_carrot-down"></i> </li>
                                     <li class=""> <i class="icon-handbag icons"></i> <span> You have <b><span id="inCart">
                                         
@@ -88,11 +84,7 @@
                                     </span></b> products in your cart </span> <i class="arrow_carrot-down"></i> </li>
                                 
                                 <li>
-<<<<<<< Updated upstream
-                            
-=======
                            
->>>>>>> Stashed changes
                             <div id="availwrapper"> 
                                 @if($details->first()->amount>0)
                                 <b>Available:</b> <span class="green-color"> In Stock </span> 
