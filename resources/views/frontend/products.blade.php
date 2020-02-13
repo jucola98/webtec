@@ -33,8 +33,10 @@
                             <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post" class="filtro">
                                     @csrf
                                     
-                                    <label class="pad"> Sort by </label>
+                                    
                                     <div>
+                                        <label class="pad"> Sort by </label>
+                                        
                                         <select  data-width="100%"  name="orderby">
                                             <option value="latest" @isset($orderby)@if($orderby=="latest")selected="selected"@endif @endisset >Latest</option>
                                             <option value="asc"    @isset($orderby)@if($orderby=="asc")selected="selected"@endif @endisset>Price ASC</option>
@@ -53,24 +55,27 @@
                                             <option value="6" @isset($pagingnumber)@if($pagingnumber==6)selected="selected"@endif @endisset>6</option>
                                             <option value="3" @isset($pagingnumber)@if($pagingnumber==3)selected="selected"@endif @endisset>3</option>
                                         </select>
-                                        
-                                    </div>
-                                    <label class="pad"> Sort By Size </label><br>
-                                        <div id="checkboxsizes">
-                                           
+                                        <hr/>
+                                        <div >
+                                            
+                                            <label> Sort By Size </label><br>
                                             @foreach ($sizesdistinct  as $itemvariant)
-                                        <input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span><br>
+                                                
+                                                <span><input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span></span>@if($loop->index%2!=0)<br>@endif
                                            @endforeach
                                             
                                             
                                         </div>
+                                        <div style="float:right;">
+                                            <input type="submit" class="pad">
+                                        </div>
+                                    </div>
+                                    
                                         
                                      
                                     
                                 
-                            <div>
-                            <input type="submit" class="pad">
-                            </div>
+                           
                             
                         </form>
                         </div>    

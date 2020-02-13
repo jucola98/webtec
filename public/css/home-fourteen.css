@@ -2168,8 +2168,10 @@ table, th, td {
   }
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
 #checkboxsizes{
-    overflow: scroll;
+    overflow-y: scroll;
     height:100px;
+    width: 30%;
+    float: right;
     border:1px rgba(115,115,155,0.5) solid;
 }
 
