@@ -68,7 +68,25 @@
                                                 <div class="qty"style="margin:auto;" id="qtyhide{{$item->variant_id}}">
                                                     {{$item->amount}}
                                                 </div>
-                                                
+
+                                                <div class="col col-qty layout-inline">
+                                                <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
+                                                <p> <input type="text"  class="qty" placeholder="3"/>
+                                                </form>
+
+                                                    <!--
+                                                <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
+                                                @csrf
+                                                <a class="icon_close fsz-24 " onclick="closeEditForm({{$item->variant_id}});"></a>
+                                                <input type="hidden" value="{{$item->variant_id}}"  name="variantid"/>
+                                                <input type="hidden" value="{{$item->id}}"  name="cartid"/>
+                                                <input type="hidden" value="{{$item->maxvariant}}" name="maxvariant">
+                                                    <a href="#" class="qty qty-minus">-</a>
+                                                        <input type="numeric" value="{{$item->amount}}" name="editnumber" />
+                                                    <a href="#" class="qty qty-plus">+</a>
+                                                </div>
+                                                </form>-->
+                                                    <!--                 
                                                     <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
                                                         @csrf
                                                         
@@ -79,7 +97,7 @@
                                                         <input type="submit">
                                                         <a class="icon_close fsz-24 " onclick="closeEditForm({{$item->variant_id}});"></a>
                                                         </div>
-                                                    </form>
+                                                    </form>-->
                                                 
                                                     </div>
                                                 

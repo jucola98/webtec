@@ -31,3 +31,25 @@ function closeEditForm(varid){
    variant="#formshow"+varid;
    $(variant).hide();
 }
+
+  
+                    
+  
+  
+    
+  
+  // RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
+  $('input').on('blur', function(){
+  
+      var input = $(this);
+      var value = parseInt($(this).val());
+      var inputmax = input.closest('div').find('input[name="maxvariant"]').val();
+      console.log(inputmax);
+  
+          if (value < 0 || isNaN(value)) {
+              input.val(0);
+          } else if
+              (value > inputmax) {
+              input.val(inputmax);
+          }
+  });
