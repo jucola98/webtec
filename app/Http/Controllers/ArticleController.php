@@ -37,7 +37,6 @@ class ArticleController extends Controller
                         "article.details",
                         "article.sale",
                         "article.rating",
-                        "article.stock",
                         "variant.id as varid",
                         DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
                         where("article.id","=",$id)->
@@ -61,7 +60,6 @@ class ArticleController extends Controller
                             "article.details",
                             "article.sale",
                             "article.rating",
-                            "article.stock",
                             DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
                             where("article.id","=",$id)->
                             join("category","article.cat_id","=","category.id")->

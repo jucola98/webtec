@@ -51,7 +51,7 @@
                                         <select   data-width="100%" data-toggle="tooltip" name="pagingform">
                                             <option value="9" @isset($pagingnumber)@if($pagingnumber=="9")selected="selected"@endif @endisset>9</option>
                                             <option value="6" @isset($pagingnumber)@if($pagingnumber=="6")selected="selected"@endif @endisset>6</option>
-                                            <option value="3" @isset($pagingnumber)@if($pagingnumber=="2")selected="selected"@endif @endisset>3</option>
+                                            <option value="3" @isset($pagingnumber)@if($pagingnumber=="3")selected="selected"@endif @endisset>3</option>
                                         </select>
                                      
                                     

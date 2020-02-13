@@ -88,6 +88,7 @@
     padding:0;
 }
 .loader {
+    
     background-position: center center;
     background-image:url(../img/common/loadding-page.gif);
     background-repeat:no-repeat;
