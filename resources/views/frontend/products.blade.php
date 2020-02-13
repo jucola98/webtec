@@ -61,7 +61,7 @@
                                         
                                     <div class="pad">
                                             <label class="pad2"> Sort By Size  
-                                            
+                                            <div id="sortbyborder">
                                             @foreach ($sizesdistinct  as $itemvariant)
                                            
                                              
@@ -69,7 +69,7 @@
                                                 @if(($loop->index+1)%3==0)<br>@endif
                                                 
                                            @endforeach
-                                           
+                                            </div>
                                            
                                     
                                         </label>
@@ -79,7 +79,9 @@
                                             
                                         
                                         <div style="float:right;">
+                                            <div>
                                             <input type="submit" class="pad">
+                                            </div>
                                         </div>
                                     
                                     

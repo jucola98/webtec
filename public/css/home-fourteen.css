@@ -2158,6 +2158,11 @@ textarea:focus:-ms-input-placeholder {
     margin-right: 20px;
     margin-left: 40px;
     
+    
+}
+#sortbyborder{
+    border: 1px black solid;
+    margin-left: 15px;
 }
 .pad2{
     margin-right: 20px;
