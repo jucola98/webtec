@@ -34,7 +34,7 @@
                                     @csrf
                                     
                                     <label class="pad"> Sort by </label>
-                                    
+                                    <div>
                                         <select  data-width="100%"  name="orderby">
                                             <option value="latest" @isset($orderby)@if($orderby=="latest")selected="selected"@endif @endisset >Latest</option>
                                             <option value="asc"    @isset($orderby)@if($orderby=="asc")selected="selected"@endif @endisset>Price ASC</option>
@@ -49,41 +49,43 @@
                                     
                                         <label class="pad"> Show </label>
                                         <select   data-width="100%" data-toggle="tooltip" name="pagingform">
-                                            <option value="9" @isset($pagingnumber)@if($pagingnumber=="9")selected="selected"@endif @endisset>9</option>
-                                            <option value="6" @isset($pagingnumber)@if($pagingnumber=="6")selected="selected"@endif @endisset>6</option>
-                                            <option value="3" @isset($pagingnumber)@if($pagingnumber=="3")selected="selected"@endif @endisset>3</option>
+                                            <option value="9" @isset($pagingnumber)@if($pagingnumber==9)selected="selected"@endif @endisset>9</option>
+                                            <option value="6" @isset($pagingnumber)@if($pagingnumber==6)selected="selected"@endif @endisset>6</option>
+                                            <option value="3" @isset($pagingnumber)@if($pagingnumber==3)selected="selected"@endif @endisset>3</option>
                                         </select>
+                                        
+                                    </div>
+                                    <label class="pad"> Sort By Size </label><br>
+                                        <div id="checkboxsizes">
+                                           
+                                            @foreach ($sizesdistinct  as $itemvariant)
+                                        <input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span><br>
+                                           @endforeach
+                                            
+                                            
+                                        </div>
+                                        
                                      
                                     
                                 
-                            
+                            <div>
                             <input type="submit" class="pad">
+                            </div>
                             
                         </form>
-                        </div>   
-                    
-                            
-                                
-                                
-                            
+                        </div>    
                             </div>     
                             <div class="tab-content">
                             <!-- Product Grid View Starts -->
                             <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
-                               
-                                
-                                    
-                                
                                 @foreach ($items as $item)
-
                                     @if(!(($loop->index)%3))
                                     <div class="row">
                                     @endif
                                     <div class="col-sm-6 col-md-4 col-lg-4">
                                         <div class="product-item">
                                             <div class="product-image1">
-                                                <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img"> 
-                                                    
+                                                <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}" class="img">
                                                     @if($item->imgURI == null )
                                                         <img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a> 
                                                     @else

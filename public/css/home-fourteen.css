@@ -2167,7 +2167,11 @@ table, th, td {
     border-collapse: collapse;
   }
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
-
+#checkboxsizes{
+    overflow: scroll;
+    height:100px;
+    border:1px rgba(115,115,155,0.5) solid;
+}
 
 
 
