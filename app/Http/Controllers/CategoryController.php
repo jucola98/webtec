@@ -29,6 +29,7 @@ class CategoryController extends Controller
                                 return view('frontend.products',["items"=>$query]);
 
     }
+    
     public function getProdLike($category_name){
         $query=Article::select("article.id",
                                 "article.name",

@@ -13,14 +13,12 @@
 			<img alt="slider" src="{{Voyager::image('home images/slideshow_1.jpg')}}" />
 			<div class="slide-info">
 				<div class="caption">
-					
 					<h2 class="main-title" data-animation-in="fadeInDown"> LOOK AT NEW NIKE COLLECTION! </h2>
 						<form class="search-form" action="{{route('searchProduct')}}" method="post">
                         	@csrf
                         	<input class="search" type="hidden" value="nike" name="searchbar" />
                     		<div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
                 		</form>
-					
 				</div>
 			</div>
 		</div>
@@ -123,7 +121,7 @@
 			
 			<div class="item-content">
 			<h2 class="main-title">Woman's accessories</h2>
-			<div class="read-more"> <a class="btn theme-btn small-btn" href="#">Grab It Now</a></div>
+			<div class="read-more"> <a class="btn theme-btn small-btn" href="{{route('likeprod',["accessories"])}}">Grab It Now</a></div>
 		</div>
 		</div>
 	</div>  
