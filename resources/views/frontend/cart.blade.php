@@ -111,24 +111,20 @@
                                     <div class="container">
                                         <div class="site-breadcumb">                        
                                         <ul class="font-2" >
-                                                <li class="title-2 slidetext"> sub total    <span> 
+
                                                 
-                                               {{number_format($total,2)}}
                                                 
-                                                </span> </li>
-                                                
-                                                <li class="title-2 slidetext"> shipping    <span> €7,00 </span> </li>
                                             
-                                                <li class="section-title pt-20 slidetext"> <b> grand total  <span class="red-color">
+                                                <li class="section-title pt-20 slidetext"> <b> sub total  <span class="red-color">
                                                 @if ($total>0)
-                                                €{{number_format($total+7,2)}}
+                                                €{{number_format($total,2)}}
                                                 @else
                                                     €0.00    
                                                 @endif
                                                 </span> </b> </li>
                                                 <li class="ptb-10"> <hr class="divider"> </li>
                                                 
-                                                <li class="slidetext"> <button class="theme-btn-1 btn submit-btn " type="submit"> <b> proceed to checkout </b> </button> </li>
+                                                <li class="slidetext"> <a href="{{route('checkout')}}"> <button class="theme-btn-1 btn submit-btn" > <b> proceed to checkout </b> </button> </a></li>
                                             </ul>
                                         </div>  
                                     </div>

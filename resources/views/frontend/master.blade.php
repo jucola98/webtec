@@ -14,9 +14,13 @@
 			<div class="slide-info">
 				<div class="caption">
 					
-					<h2 class="main-title" data-animation-in="fadeInDown"> red wing shoes COLLECTION  </h2>
+					<h2 class="main-title" data-animation-in="fadeInDown"> LOOK AT NEW NIKE COLLECTION! </h2>
+					<form class="search-form" action="{{route('searchProduct')}}" method="post">
+                                    @csrf
+                                    <input class="search" type="hidden" value="nike" name="searchbar" />
+                                    <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
+                                </form>
 					
-					<div class="buttons" data-animation-in="rotateIn"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
 				</div>
 			</div>
 		</div>
@@ -25,9 +29,12 @@
 			<div class="slide-info">
 				<div class="caption">
 					
-					<h2 class="main-title" data-animation-in="slideInUp"> Lookbook 2017  </h2>
-					
-					<div class="buttons" data-animation-in="rotateIn"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
+				<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN! </h2>
+					<form class="search-form" action="{{route('searchProduct')}}" method="post">
+                                    @csrf
+                                    <input class="search" type="hidden" value="" name="searchbar" />
+                                    <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
+                                </form>
 				</div>
 			</div>
 		</div>
@@ -36,9 +43,12 @@
 			<div class="slide-info">
 				<div class="caption">
 					
-					<h2 class="main-title" data-animation-in="slideInUp"> Lookbook 2017  </h2>
-					
-					<div class="buttons" data-animation-in="rotateIn"><a class="btn btn-black small-btn" href="#">Shop Now !</a></div>
+					<<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN! </h2>
+					<form class="search-form" action="{{route('searchProduct')}}" method="post">
+                                    @csrf
+                                    <input class="search" type="hidden" value="skate" name="searchbar" />
+                                    <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
+                                </form>
 				</div>
 			</div>
 		</div>
