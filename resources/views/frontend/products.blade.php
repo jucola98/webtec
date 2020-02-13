@@ -36,29 +36,12 @@
                                     
                                     <div>
                                         <label class="pad"> Sort by </label>
-                                        
                                         <select  data-width="100%"  name="orderby">
                                             <option value="latest" @isset($orderby)@if($orderby=="latest")selected="selected"@endif @endisset >Latest</option>
                                             <option value="asc"    @isset($orderby)@if($orderby=="asc")selected="selected"@endif @endisset>Price ASC</option>
                                             <option value="desc"   @isset($orderby)@if($orderby=="desc")selected="selected"@endif @endisset>Price DESC</option>
                                         </select>
                                     </div>
-                                    
-                                
-                            
-                                
-                                
-                                    
-                                    <div>
-                                        <label class="pad"> Show </label>
-                                        <select   data-width="100%" data-toggle="tooltip" name="pagingform">
-                                            <option value="9" @isset($pagingnumber)@if($pagingnumber==9)selected="selected"@endif @endisset>9</option>
-                                            <option value="6" @isset($pagingnumber)@if($pagingnumber==6)selected="selected"@endif @endisset>6</option>
-                                            <option value="3" @isset($pagingnumber)@if($pagingnumber==3)selected="selected"@endif @endisset>3</option>
-                                        </select>
-                                    </div>
-                                        
-                                        
                                     <div class="pad">
                                             <label class="pad2"> Sort By Size  
                                             <div id="sortbyborder">
@@ -73,7 +56,7 @@
                                            
                                     
                                         </label>
-                                    </div
+                                    </div>
                                            
                                             
                                             

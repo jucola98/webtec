@@ -35,15 +35,21 @@ class CategoryController extends Controller
             return(abort(404));
         }else{
             $array=[];
-            
-            foreach($query as $sizeget){
+            $variantst=Article::select("variant.size")->
+                                    join("category","article.cat_id",'=',"category.id")->
+                                    where("cat_id",$category)->
+                                    where("macrocategory",$macro)->
+                                    join("variant","variant.product_id","=","article.id")->
+                                    groupBy("variant.product_id");
+            foreach($variantst->get() as $sizeget){
                 array_push($array,$sizeget->size);
+                
             }
-            $uniq=array_unique($array);
-            arsort($uniq);
             
+            $arraynodup=array_unique($array);
+            arsort($arraynodup);
 
-            return view('frontend.products',["items"=>$query,"sizesdistinct"=>$uniq]);
+            return view('frontend.products',["items"=>$query,"sizesdistinct"=>$arraynodup]);
         }
     }
     public function productsMacroCatFilter($macro,$category,Request $request){
@@ -79,9 +85,9 @@ class CategoryController extends Controller
                                   
                                   orderBy("saledprice","ASC");
             if($variantvar!=null){
-                $query=$query->whereIn("variant.size",$variantvar)->paginate($request->pagingform);
+                $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
             }else{
-                $query=$query->paginate($request->pagingform);
+                $query=$query->paginate(9);
             }
             
             //"variant.size",
@@ -106,9 +112,9 @@ class CategoryController extends Controller
                                 groupBy("variant.product_id")->
                                 orderBy("saledprice","DESC");
                                 if($variantvar!=null){
-                                    $query=$query->whereIn("variant.size",$variantvar)->paginate($request->pagingform)->onEachSide($request->pagingform);
+                                    $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
                                 }else{
-                                    $query=$query->paginate($request->pagingform)->onEachSide($request->pagingform);
+                                    $query=$query->paginate(9);
                                 }     
         }else{
                                 $query=Article::select("article.id",
@@ -130,9 +136,9 @@ class CategoryController extends Controller
                                 join("variant","variant.product_id","=","article.id")->
                                 groupBy("variant.product_id");
                                 if($variantvar!=null){
-                                    $query=$query->whereIn("variant.size",$variantvar)->paginate($request->pagingform)->onEachSide($request->pagingform);
+                                    $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
                                 }else{
-                                    $query=$query->paginate($request->pagingform)->onEachSide($request->pagingform);
+                                    $query=$query->paginate(9);
                                 }
         }
         if($query->isEmpty()){
@@ -146,7 +152,6 @@ class CategoryController extends Controller
                                     join("category","article.cat_id",'=',"category.id")->
                                     where("cat_id",$category)->
                                     where("macrocategory",$macro)->
-                                    
                                     join("variant","variant.product_id","=","article.id")->
                                     groupBy("variant.product_id");
             foreach($variantst->get() as $sizeget){
