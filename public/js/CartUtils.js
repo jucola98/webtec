@@ -31,14 +31,7 @@ function closeEditForm(varid){
    variant="#formshow"+varid;
    $(variant).hide();
 }
-
-  
-                    
-  
-  
-    
-  
-  // RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
+  /* RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
   $('input').on('blur', function(){
   
       var input = $(this);
@@ -52,4 +45,14 @@ function closeEditForm(varid){
               (value > inputmax) {
               input.val(inputmax);
           }
-  });
+  });*/
+  
+  function formCheckMaxVal(formshow){
+      var idtocheck="#"+formshow;
+      
+      if(parseInt($(idtocheck).closest("form").find("input[name='editnumber']").val())>parseInt($(idtocheck).closest("form").find("input[name='maxvariant']").val())|| parseInt($(idtocheck).closest("form").find("input[name='editnumber']").val())<=0){
+          alert(parseInt($(idtocheck).closest("form").find("input[name='editnumber']").val())>parseInt($(idtocheck).closest("form").find("input[name='maxvariant']").val()));
+          return false;
+      }
+      
+  }

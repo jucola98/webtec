@@ -70,8 +70,13 @@
                                                 </div>
 
                                                 <div class="col col-qty layout-inline">
-                                                <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
-                                                <p> <input type="text"  class="qty" placeholder="3"/>
+                                                <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;" onsubmit="return formCheckMaxVal('formshow{{$item->variant_id}}');">
+                                                    @csrf
+                                                    <input type="hidden" value="{{$item->variant_id}}"  name="variantid"/>
+                                                    <input type="hidden" value="{{$item->id}}"  name="cartid"/>
+                                                    <input type="hidden" value="{{$item->maxvariant}}" name="maxvariant">
+                                                    <p> <input type="text" name="editnumber" class="qty" value="{{$item->amount}}"/></p>
+                                                    <input type="submit" >
                                                 </form>
 
                                                     <!--
