@@ -15,11 +15,11 @@
 				<div class="caption">
 					
 					<h2 class="main-title" data-animation-in="fadeInDown"> LOOK AT NEW NIKE COLLECTION! </h2>
-					<form class="search-form" action="{{route('searchProduct')}}" method="post">
-                                    @csrf
-                                    <input class="search" type="hidden" value="nike" name="searchbar" />
-                                    <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
-                                </form>
+						<form class="search-form" action="{{route('searchProduct')}}" method="post">
+                        	@csrf
+                        	<input class="search" type="hidden" value="nike" name="searchbar" />
+                    		<div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
+                		</form>
 					
 				</div>
 			</div>
@@ -31,10 +31,10 @@
 					
 				<h2 class="main-title" data-animation-in="fadeInDown">  CARHARTT F/W 20 </h2>
 					<form class="search-form" action="{{route('searchProduct')}}" method="post">
-                                    @csrf
-                                    <input class="search" type="hidden" value="" name="searchbar" />
-                                    <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
-                                </form>
+                         @csrf
+                        <input class="search" type="hidden" value="carhartt" name="searchbar" />
+                        <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
+                    </form>
 				</div>
 			</div>
 		</div>
@@ -43,12 +43,12 @@
 			<div class="slide-info">
 				<div class="caption">
 					
-					<<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN!</h2>
+					<h2 class="main-title" data-animation-in="fadeInDown"> NEW SKATES IN!</h2>
 					<form class="search-form" action="{{route('searchProduct')}}" method="post">
-                                    @csrf
-                                    <input class="search" type="hidden" value="carhartt" name="searchbar" />
-                                    <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
-                                </form>
+                         @csrf
+                        <input class="search" type="hidden" value="skate" name="searchbar"/>
+                        <div class="buttons" data-animation-in="rotateIn"><input type="submit" value="Shop now!" class="btn btn-black small-btn" ></input></div>
+                    </form>
 				</div>
 			</div>
 		</div>
@@ -110,8 +110,11 @@
 	<div class="col-md-6 col-sm-12 item-wrap">
 		<img class="img" src="{{Voyager::image('home images/fast1.jpg')}}" alt="" />
 		<div class="item-content">
+			
 			<h2 class="main-title-2">Shop our premium sneakers</h2>
-			<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="#">Grab It Now</a></div>
+			
+				
+				<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="{{route('likeprod',["sneakers"])}}">Grab It Now</a></div>
 		</div>
 	</div>  
 	<div class="col-md-6 col-sm-12 item-wrap">
@@ -129,7 +132,7 @@
 			<img class="img" src="{{Voyager::image('home images/fast3.jpg')}}" alt="" />
 			<div class="item-content">
 			<h2 class="main-title">the north face nuptse 1992</h2>
-			<div class="read-more"> <a class="btn theme-btn small-btn" href="#">Grab It Now</a></div>
+			<div class="read-more"> <a class="btn theme-btn small-btn" href="{{route('saleprod')}}">Grab It Now</a></div>
 		</div>
 		</div>
 	</div>
@@ -137,7 +140,12 @@
 	<img class="img" src="{{Voyager::image('home images/fast4.jpg')}}" alt="" />
 		<div class="item-content">
 		<h2 class="main-title-2">f/w 2019 nike collection</h2>
-			<div class="read-more"> <a class="btn theme-btn-3 small-btn" href="#">Shop Now</a></div>
+		<form class="search-form" action="{{route('searchProduct')}}" method="post">
+                        	@csrf
+                        	<input class="search" type="hidden" value="nike" name="searchbar" />
+                    		<div class="buttons" ><input type="submit" value="Shop now!" class="btn theme-btn-3 small-btn" ></input></div>
+                		</form>
+			
 			</div>
 		</div>
 	</div>                                          
@@ -151,18 +159,10 @@
 			<h2 class="main-title">  our best products <span class="text-bg">B</span> </h2>                        
 		</div>
 		<div class="prod-block">  
-		
-		
-		
-		
-			
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade active in" id="prod-tab-1">					
 					<div class="prod-slider-1 owl-carousel owl-nav-2">
 						@foreach ($articles as $item)
-						
-							
-						
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
@@ -187,13 +187,13 @@
 										
 										<br>
 										<a href="{{route('singleprod',[$item->macrocategory,$item->itemid])}}" class="add-to-cart">Item page </a>
-									</div>
 								</div>
 							</div>
 						</div>
-						@endforeach
 					</div>
+						@endforeach
 				</div>
+			</div>
 		</div>
 </section>
 <!-- / Our Products Ends -->

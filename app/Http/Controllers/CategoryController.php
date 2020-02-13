@@ -10,6 +10,46 @@ use SebastianBergmann\Environment\Console;
 
 class CategoryController extends Controller
 {
+    public function getSaleProd(){
+        $query=Article::select("article.id",
+                                "article.name",
+                                "article.description",
+                                "article.price",
+                                
+                                "article.imgURI",
+                                "category.name as nomecat",
+                                "category.id as idcat",
+                                "category.macrocategory",
+                                "article.sale",
+                                "article.price"
+                                )->where(
+                                "article.sale" ,'>', "0"
+                                )->join("category","article.cat_id",'=',"category.id")->paginate(9);
+
+                                return view('frontend.products',["items"=>$query]);
+
+    }
+    public function getProdLike($category_name){
+        $query=Article::select("article.id",
+                                "article.name",
+                                "article.description",
+                                "article.price",
+                                
+                                "article.imgURI",
+                                "category.name as nomecat",
+                                "category.id as idcat",
+                                "category.macrocategory",
+                                "article.sale",
+                                "article.price",
+                                "variant.size",)->
+                                join("category","article.cat_id",'=',"category.id")->
+                                
+                                where("category.name","like","%".$category_name."%")-> 
+                                join("variant","variant.product_id","=","article.id")->paginate(9);
+        return view('frontend.products',["items"=>$query]);
+
+
+    }
     public function getProductsMacroCat($macro,$category){
         $query=Article::select("article.id",
                                "article.name",

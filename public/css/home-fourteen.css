@@ -2168,7 +2168,6 @@ textarea:focus:-ms-input-placeholder {
     margin-right: 20px;
     margin-left: 40px;
     display: flex;
-    
     flex-flow: row wrap;
     
 }

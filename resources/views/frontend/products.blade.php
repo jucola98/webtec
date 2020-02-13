@@ -129,7 +129,7 @@
                                     @endif
                                     @endforeach
                                     
-                                    {{ $items->links() }}
+                                    
                             </div>
                         </div>
                     </div>
