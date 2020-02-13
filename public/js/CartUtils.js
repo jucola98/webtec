@@ -19,3 +19,15 @@ function changeValueInput(input,stock){
         //$("#quant").val(parseInt($("#quant").attr("value")));
     }
 }
+function openEditForm(varid){
+   var variant="#qtyhide"+varid;
+   $(variant).hide();
+   variant="#formshow"+varid;
+   $(variant).show();
+}
+function closeEditForm(varid){
+   var variant="#qtyhide"+varid;
+   $(variant).show();
+   variant="#formshow"+varid;
+   $(variant).hide();
+}

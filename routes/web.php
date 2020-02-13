@@ -31,6 +31,7 @@ Route::post('/clearwishlist', 'WishlistController@clearWishlist')->name('clearwi
 
 Route::post('/cartdelete', 'CartController@deleteFromCart')->name('cartdelete');
 Route::post('/clearcart', 'CartController@clearCart')->name('clearcart');
+Route::post('/editcartarticle', 'CartController@editCartArticle')->name('editCartArticle');
 Route::post('/testroute','CartController@postTest')->name("testroute");
 Route::post('/search','FrontendController@searchProduct')->name("searchProduct");
 Route::post('/checkingout', 'CheckOutController@checkOutOperations')->name('checkingOut');

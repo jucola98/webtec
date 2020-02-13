@@ -67,8 +67,8 @@ class ArticleController extends Controller
                             first();
             $fetchvariant=Variant::all()->where("product_id","=",$id);
             $images=ArticleImg::select("image")-> where("product_id","=",$id);
-
             return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"images"=>$images,"cartamount"=>null]);
         }
     }
+
 }

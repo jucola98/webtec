@@ -49,7 +49,8 @@ class CartController extends Controller
     }
     function cartGet(){
         if(!Auth::guest()){
-            $data=Cart::select("products_id",
+            $data=Cart::select("cart_content.id",
+                                "products_id",
                                 "cart_content.amount",
                                 "article.name",
                                 "article.price",
@@ -57,6 +58,7 @@ class CartController extends Controller
                                 "category.macrocategory as mcat",
                                 "article.sale",
                                 "variant.size as catsize",
+                                "variant.amount as maxvariant",
                                 "cart_content.variant_id",
                                 "article.imgURI")->
                                 join("article","cart_content.products_id","=","article.id")->
@@ -83,6 +85,25 @@ class CartController extends Controller
     function clearCart(Request $request){
         Cart::where("user_id","=",Auth::user()->id)->
               delete();
+        return redirect("cart");
+    }
+    /*
+    
+            <form action="{{route("editCartArticle")}}" method="post">
+            @csrf
+            <input name="editnumber" type="number" title="Qty" value="0" name="quantity" min="1" max="10"step="1" class="form-control qty" text="1" id="quant" style="width:25%; margin:auto;"/>
+            <div  style="margin:auto;">
+            <input type="submit">
+            </div>
+            </form>
+    */
+    function editCartArticle(Request $request){
+        //"_token" => "UrEEzND2LzPLGlujPpy3BwTUnLop4iBw2UUFb1G3"
+        //"variantid" => "1"
+        //"editnumber" => "1"
+        $cart=Cart::find($request->cartid);
+        $cart->amount=$request->editnumber;
+        $cart->save();
         return redirect("cart");
     }
 }

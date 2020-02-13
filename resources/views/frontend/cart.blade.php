@@ -64,9 +64,33 @@
                                             </td>    
                                             <td class="price"> {{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€ </td> 
                                             <td class="quantity">
-                                                <div class="qty">
+                                                
+                                                <div class="qty"style="margin:auto;" id="qtyhide{{$item->variant_id}}">
                                                     {{$item->amount}}
                                                 </div>
+                                                
+                                                    <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
+                                                        @csrf
+                                                        
+                                                        <input type="hidden" value="{{$item->variant_id}}"  name="variantid"/>
+                                                        <input type="hidden" value="{{$item->id}}"  name="cartid"/>
+                                                        <input type="number" title="Qty" value="{{$item->amount}}" min="1" max="{{$item->maxvariant}}"step="1" class="form-control qty" text="1" id="quant" style="width:50%; margin:auto;" name="editnumber"/>
+                                                        <div  style="margin:auto;">
+                                                        <input type="submit">
+                                                        <a class="icon_close fsz-24 " onclick="closeEditForm({{$item->variant_id}});"></a>
+                                                        </div>
+                                                    </form>
+                                                
+                                                    </div>
+                                                
+                                                    
+                                                
+                                                    
+                                                    
+                                                    
+                                <!-- Products Description Starts --> 
+                                        </div>
+                                        
                                             </td>
                                             <td class="price"> {{number_format((($item->price)-($item->price)*($item->sale/100)) * $item->amount,2)}}€ </td>
                                             <td class="remove-edit">
@@ -75,7 +99,7 @@
                                                     <input type="hidden" value="{{$item->variant_id}}" name="variant">
                                                     <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->products_id}}" type="submit"></button> 
                                                 </form>
-                                                <a href="#" class="icon_pencil fsz-14 "></a> 
+                                                <a class="icon_pencil fsz-14 " onclick="openEditForm({{$item->variant_id}});"></a> 
                                             </td>
                                         </tr>
                                     @endforeach       
@@ -140,3 +164,6 @@
 
             </article>
             @endsection
+            @section('js')
+            <script src={{asset("js/CartUtils.js")}}></script>   
+        @endsection

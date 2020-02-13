@@ -3516,6 +3516,9 @@ table {
         padding: 45px 0 15px;
     } 
 }
+.formsetup{
+    display:none;
+}
 
 /*---------------- 5.3 - Subscribe Popup Ends------------------------ */
 
