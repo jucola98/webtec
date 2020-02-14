@@ -53,23 +53,23 @@
                                             </div>
                                         </label>
                                     </div>
-<<<<<<< Updated upstream
+                                    
+
                                     <div>
-                                    <input type="checkbox" name="salesonly"/> Sales only 
+                                        <label class="pad2"> Show sales only
+                                            <div class="pad4"><input type="checkbox" name="salesonly" /> </div>
+                                        </label>
+                                    
                                     </div>
-                                            
-                                            
-                                        
-                                        <div style="float:right;">
-                                            <div>
-=======
-                                    <div style="float:right;">
+
+                                    <div style="float:left;" class="pad2">
                                         <div>
->>>>>>> Stashed changes
-                                            <input type="submit" class="pad">
+                                            <input type="submit" class="">
                                         </div>
-                                     </div>
+                                    </div>
+                                    
                             </form>
+                            
                             <!-- fine form -->
                         @endisset
                         </div>    

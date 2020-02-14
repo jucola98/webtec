@@ -129,7 +129,7 @@
 		<div class="item-img">
 			<img class="img" src="{{Voyager::image('home images/fast3.jpg')}}" alt="" />
 			<div class="item-content">
-			<h2 class="main-title">the north face nuptse 1992</h2>
+			<h2 class="main-title">Sales up </br>to 50%!</h2>
 			<div class="read-more"> <a class="btn theme-btn small-btn" href="{{route('saleprod')}}">Grab It Now</a></div>
 		</div>
 		</div>

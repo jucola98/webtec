@@ -2153,6 +2153,7 @@ textarea:focus:-ms-input-placeholder {
     display: flex;
     flex-direction: row;
     width: 2000px;
+    
 }
 .pad{
     margin-right: 20px;
@@ -2162,6 +2163,13 @@ textarea:focus:-ms-input-placeholder {
 }
 #cont{
     margin-top: 20px;
+}
+#margin{
+    margin-top: 0px;
+    margin-bottom: auto;
+    margin-left: 800px;padding-top: 0px;
+    padding-bottom: 50px;
+
 }
 #bg00{
     background-color: #e6e6e6e5;
@@ -2173,7 +2181,7 @@ textarea:focus:-ms-input-placeholder {
 #sortbyborder{
     border: 1px rgba(150,150,150,0.7) solid;
     margin-left: 15px;
-    border
+    
 }
 .pad2{
     margin-right: 20px;
@@ -2187,6 +2195,9 @@ textarea:focus:-ms-input-placeholder {
     margin-left: 40px;
     display: flex;
     flex-direction: row;
+}
+.pad4{
+    padding-left: 10px;
 }
 .pad2:nth-child(2n) {
     

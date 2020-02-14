@@ -191,6 +191,7 @@ img{max-width: 100%; height: auto; transition: all 250ms ease-in-out 0s; -webkit
     width: 100%;
     vertical-align: middle;
     position: relative;
+   
 }
 .list-items li{
     display: inline-block;
