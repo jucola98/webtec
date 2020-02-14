@@ -55,12 +55,12 @@
                                     </div>
 
                                     <div>
-                                    <label class="pad2"> Select your size
+                                    <label class="pad2"> Show product on sale
                                         <input type="checkbox" id="mar1"/> 
                                     </div>
                                     <div style="float:right;">
                                         <div>
-                                            <input type="submit" class="pad">
+                                            <input type="submit" class="pad" value="submit">
                                         </div>
                                     </div>
                                     

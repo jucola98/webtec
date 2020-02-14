@@ -2208,13 +2208,16 @@ textarea:focus:-ms-input-placeholder {
     border:1px rgba(255,255,255,0) solid 
     
 }
-.email{
+.email1{
     margin-top: 50px;
     margin-left: 200px;
 }
 #mar{
     margin-top:15px;
     
+}
+#weed{
+    width: 250px;
 }
 #left{
     margin-left: 230px;

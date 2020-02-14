@@ -6,11 +6,7 @@
                         <div class="site-breadcumb">                        
                             <h1 class="title-1">Reset your password </h1> 
                             <ol class="breadcrumb breadcrumb-menubar">
-<<<<<<< Updated upstream
-                                <li> <a href="#"> Home  /</a>Reset your password  </li>                             
-=======
                                 <li> <a href="#"> Home </a> Reset your password  </li>                             
->>>>>>> Stashed changes
                             </ol>
                         </div>  
                     </div>
@@ -26,22 +22,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                <div class="email">
+                <div class="email1">
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
-<<<<<<< Updated upstream
-                        <div class="form-group row" >
-                                    <label for="email" id="left1" class="col-md-6 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                                    <div class="col-md-6" id="stop">
-=======
                         <div class="form-group row" id="left1">
-                                    <label for="email" id="mar" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                    <label form="email" id="mar" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                                     <div class="col-md-6">
->>>>>>> Stashed changes
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="E-mail" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                        <input id="weed" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="E-mail" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -52,11 +41,7 @@
                         </div>
                     
 
-<<<<<<< Updated upstream
-                        <div class="form-group row mb-0" id="left2">
-=======
                         <div class="form-group row mb-0" id="left">
->>>>>>> Stashed changes
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Send Password Reset Link') }}
