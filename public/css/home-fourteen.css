@@ -2209,6 +2209,10 @@ textarea:focus:-ms-input-placeholder {
     
 }
 .email{
+<<<<<<< Updated upstream
+    margin-right: 20px;
+=======
+>>>>>>> Stashed changes
     margin-top: 50px;
     margin-left: 200px;
 }
@@ -2220,7 +2224,19 @@ textarea:focus:-ms-input-placeholder {
     margin-left: 230px;
 }
 #left1{
+<<<<<<< Updated upstream
+    margin-left:20px;
+    width: 900px;
+}
+#left2{
+    margin-left:6px;
+    width: 900px;
+}
+#stop{
+    margin-left: 20px;
+=======
     margin-left: 130px;
+>>>>>>> Stashed changes
 }
 
 
