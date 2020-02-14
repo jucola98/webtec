@@ -132,6 +132,7 @@
                                 </div>
                             </div>
                         </div>
+                    </form>
             <!-- Products Description Starts --> 
                     </div> <br>
                     
