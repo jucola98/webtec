@@ -152,9 +152,8 @@
                                         @else
                                     
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
-                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
-                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
-                                        <a href="{{ route('orders') }}"> <span class="icon-note icons"></span>  My Orders </a>
+                                        
+                                        
                                         
                                     </li>
                                     

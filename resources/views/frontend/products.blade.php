@@ -29,11 +29,10 @@
                         <div class="sorter-bar block-inline">
                             <div class="show-result font-2">
                             </div>
+                            <!-- form per il filtraggio dei prodotti tramite prezzo,size e saldi -->
                             @isset($sizesdistinct)
                             <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post" class="filtro">
                                     @csrf
-                                    
-                                    
                                     <div>
                                         <label class="pad"> Sort by </label>
                                         <select  data-width="100%"  name="orderby">
@@ -43,22 +42,18 @@
                                         </select>
                                     </div>
                                     <div class="pad">
-                                            <label class="pad2"> Sort By Size  
+                                        <label class="pad2"> Select your size  
                                             <div id="sortbyborder">
                                                 <div id="padsort">
                                             @foreach ($sizesdistinct  as $itemvariant)
-                                           
-                                             
                                                 <span><input type="checkbox" name="variant[]" value="{{$itemvariant}}"/> <span style="padding:4px;">{{$itemvariant}}</span>
                                                 @if(($loop->index+1)%3==0)<br>@endif
-                                                
-                                           @endforeach
+                                                @endforeach
+                                                </div>
                                             </div>
-                                        </div>
-                                           
-                                    
                                         </label>
                                     </div>
+<<<<<<< Updated upstream
                                     <div>
                                     <input type="checkbox" name="salesonly"/> Sales only 
                                     </div>
@@ -67,28 +62,25 @@
                                         
                                         <div style="float:right;">
                                             <div>
+=======
+                                    <div style="float:right;">
+                                        <div>
+>>>>>>> Stashed changes
                                             <input type="submit" class="pad">
-                                            </div>
                                         </div>
-                                    
-                                    
-                                        
-                                     
-                                    
-                                
-                           
-                            
-                        </form>
+                                     </div>
+                            </form>
+                            <!-- fine form -->
                         @endisset
                         </div>    
-                            </div>     
-                            <div class="tab-content">
-                            <!-- Product Grid View Starts -->
-                            <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
-                                @foreach ($items as $item)
-                                    @if(!(($loop->index)%3))
-                                    <div class="row">
-                                    @endif
+                    </div>     
+                    <div class="tab-content">
+                    <!-- Product Grid View Starts -->
+                        <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
+                            @foreach ($items as $item)
+                            @if(!(($loop->index)%3))
+                                <div class="row">
+                                @endif
                                     <div class="col-sm-6 col-md-4 col-lg-4">
                                         <div class="product-item">
                                             <div class="product-image1">
@@ -101,10 +93,7 @@
                                                                 <img alt="" src="{{asset($item->imgURI)}}">  
                                                         </span>
                                                     @endif
-
-                                                </a>
-                                                
-                                                
+                                                </a>                                               
                                             </div>
                                             <div class="product-content">   
                                                 <h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}">{{$item->name}}</a> </h2>
@@ -113,31 +102,23 @@
                                                 @else
                                                     <span class="price"> <b>{{number_format($item->price ,2 )}}€</b> <del></del> </span>
                                                 @endif
-                                                <!--stellette-->
-                                               
-                                                
-                                                    
-                                                    <br>
+                                                <!--stellette-->                                                                                                                                                                                            <br>
                                                     <form action="{{route('wishlistadd')}}" method="post" class="formset">
                                                         @csrf
                                                         <button type="submit" value="{{$item->id}}" name="prodid" class="icon_heart buttonsizer"></button>
                                                        
-                                                    </form>
-                                                    
-                                                
+                                                    </form>    
                                             </div>
                                         </div>
                                     </div>
                                     @if((($loop->index)%3)==2||$loop->last)
-                                    </div><!--termina row-->
-                                    @endif
-                                    @endforeach
-                                    {{$items->links()}}
-                                    
-                                    
+                                </div><!--termina row-->
+                                @endif
+                                @endforeach
+                                {{$items->links()}} 
                             </div>
                         </div>
-                    </div>
+                     </div>
                 </div>
             </div>
         </div>

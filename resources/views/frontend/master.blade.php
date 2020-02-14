@@ -164,15 +164,12 @@
 						<div class="item">
 							<div class="product-item">
 								<div class="product-image">
-									 
 										@if($item->imgURI == null )
-										<img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> </a>
+										<img src="{{asset('img/home-fourteen/imgnotfound.png')}}" alt="" /> 
 										@else  
-										<img src="{{Voyager::image($item->imgURI)}}" class="imgcart1" alt="" /> </a> 
+										<img src="{{Voyager::image($item->imgURI)}}" class="imgcart1" alt="" /> 
 										
-										@endif         
-									
-									</a>
+										@endif        
 								</div>
 								<div class="product-content">
 									<h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->itemid])}}">{{$item->name}}</a> </h2>
@@ -181,18 +178,17 @@
 									@else
 									<span class="price"> <b>{{number_format((($item->price)-($item->price)*($item->sale/100)),2)}}€</b> <del></del> </span>
 									@endif
-									<div class="product-links"> 
-										
-										<br>
-										<a href="{{route('singleprod',[$item->macrocategory,$item->itemid])}}" class="add-to-cart">Item page </a>
+								<div class="product-links"> 
+								<br>
+								<a href="{{route('singleprod',[$item->macrocategory,$item->itemid])}}" class="add-to-cart">Item page </a>
 								</div>
 							</div>
 						</div>
 					</div>
-						@endforeach
-				</div>
+				@endforeach
 			</div>
 		</div>
+	</div>
 </section>
 <!-- / Our Products Ends -->
 @endsection

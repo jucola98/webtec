@@ -7,7 +7,7 @@
 
            
             
-                <section class="breadcrumb-bg-3"  style="background-image:url({{Voyager::image('banners/contactbanner.jpg')}})">  
+            <section class="breadcrumb-bg-3"  style="background-image:url({{Voyager::image('banners/contactbanner.jpg')}})">  
                 <div class="site-breadcumb">                        
                     <h1 class="title-1">SHIPPING INFO</h1> 
                         <ol class="breadcrumb breadcrumb-menubar">
@@ -41,48 +41,53 @@
                                     <i class="icon_mail_alt"></i>
                                     <h3 class="title-1">email</h3>
                                     <p>support@commercemail.com</p>
-                                    <p>cozystore@commerceamail.com</p>
-
-                                    
+                                    <p>cozystore@commerceamail.com</p>   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>   
-                </section>
+             </section>
 
 
                 <div class="container">
                         <!-- Contact Starts -->
                     <div class="row">
                         <div class="col-sm-12-2 contact-box text-center">
-                            <p>  <h3>CONSEGNA ESPRESSA</h3>
-                            CozaStore offre un servizio di consegna espressa.
-                            
-
-                            La data precisa di consegna e il costo ti verranno mostrati durante la fase di conferma dell'ordine.
-                            Se la zona in cui abiti non è servita dalla consegna espressa, questa modalità non ti verrà proposta al momento della conclusione dell'ordine.
-
-                            Gli articoli partner sono esclusi dall'offerta.
-
-                            La consegna espressa avviene dal lunedì al venerdì, esclusi i giorni festivi.
-
-                            Se l'articolo desiderato è disponibile e l'ordine viene effettuato entro le 13:00 la consegna avverrà entro il giorno lavorativo successivo.
-
-                            Se scegli la consegna espressa potrai pagare solo con carta di credito o PayPal.
-
-                            Non è possibile modificare la modalità di consegna da standard a espressa. Potrai selezionare la modalità
-                             "consegna espressa" solo al momento della conclusione dell'ordine e non successivamente.
-
+                            <p>  <h3>EXPRESS DELIVERY</h3>
+                            Which courier do you use?
+                            For Italy deliveries, we use a combination of Royal Mail, Hermes and DPD. A signature may be required.
+                            For International deliveries we use DPD and Royal Mail for standard and DHL for express. A signature will be required on most deliveries.
+                            What happens if I miss my delivery?
+                            Our carrier delivers between 9am and 10pm, which may vary depending on the service selected and a signature is required.
+                            There are a number of options available if you think you won't be in to sign for your order. We'll pass your e-mail address and
+                             mobile number (if provided) to Hermes or DPD and they'll provide you with information about your delivery by e-mail or text 
+                             message the evening before.
+                            Please note deliveries outside of the UK can take anything up to 10 days. Follow your order using the tracking link in your 
+                            despatch email to check if any delivery attempt has been made.
+                            Can I track my delivery?
+                            Most orders are sent on a tracked service, so we’ll send you a tracking link by email along with other information about your order
+                             if available.
+                            Do I pay customs or import charges?
+                            Footpatrol will pay all customs/duty orders delivered to the USA & Australia.
+                            Our products are sold on a DDU (Delivery Duty Unpaid) basis excluding orders to the USA and Australia. Additional taxes, fees 
+                            or levies may apply according to local legislation.
+                            Recipients of deliveries made outside of the European Union may have to pay import duty or formal customs entry. If this is the case, the delivery may be delayed. Footpatrol cannot 
+                            offer any assistance in these processes.
+                            To help make sure that customs duties are not payable for deliveries outside the EU, check the custom duty threshold of the 
+                            country you're sending your items to, before you order, and keep your total basket value below that threshold.
+                            Can I change or add items to my order?
+                            Unfortunately not. Once an order has been placed we cannot amend anything. If you realise an error has been made immediately after ordering, we would suggest tweeting us (@FootpatrolHelp) or asking via LiveChat if the order can be cancelled and refunded. You can then place the order again.
+                            Can I change my address after ordering?
+                            If you notice you have made a mistake in entering your house number or street name, please contact our customer care team via Twitter (@FootpatrolHelp)  or Live Chat as soon as you can after the order has been made as we will always try and accomodate 
+                            address updates. Sometimes this is not possible if too much time has elapsed between the order and the notification. Please note we cannot change PayPal addresses so please check these before ordering.
+                            Is the site secure?
+                            footpatrol.co.uk are committed to safeguarding your security and privacy. Your personal details and credit card details are treated as highly confidential and we endeavour at all times to respect your privacy.
+                            When you input your credit card details on to the web site, the information is protected by the use of Secure Socket Layer (SSL) technology. This encrypts your details and ensures that the information you submit can not be read in the unlikely event it is intercepted.
+                            Any information that we request from you to process your order, register to the site or enter for the competition will not be passed on to parties outside footpatrol.co.uk.
                              <h3>SHIPPING METHOD</h3>
-                                Il pacco verrà consegnato tramite corriere DHL entro 1-3 giorni  (dipende dal tuo CAP).
-                                Il prezzo della spedizione è € 7,95. express orders are not delivered on weekends Once your order is
-                                    shipped, we'll send a confirmation email with the expected delivery date. This date is also displayed
-                                     at the checkout. All orders from Zalando.co.uk can be delivered to an address located in the UK only.
-                                      We do not offer international shipping.
-
-                                    
+                             Click and collect and IT Standard Saver Delivery to the UK is usually within 5 working days of your order being placed.
+                            Delivery to International destinations is estimated to take up to 10 working days from your parcel being sent. You can check if we deliver to your destination in the shipping country select menu on the 'Review Basket' page.
                             </p>
                             
                             
@@ -108,15 +113,9 @@
 
                         
 
-        <!-- Contact Form Starts -->
-      
-        <!-- Contact Form Ends -->
-
-        <!-- Map Starts-->
         
-        <!-- / Map Ends -->
     </div>
-    <!-- / About Us Ends -->
+    
 </section>
 
 
