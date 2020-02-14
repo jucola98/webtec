@@ -79,32 +79,8 @@
                                                     <input type="submit" >
                                                 </form>
 
-                                                    <!--
-                                                <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
-                                                @csrf
-                                                <a class="icon_close fsz-24 " onclick="closeEditForm({{$item->variant_id}});"></a>
-                                                <input type="hidden" value="{{$item->variant_id}}"  name="variantid"/>
-                                                <input type="hidden" value="{{$item->id}}"  name="cartid"/>
-                                                <input type="hidden" value="{{$item->maxvariant}}" name="maxvariant">
-                                                    <a href="#" class="qty qty-minus">-</a>
-                                                        <input type="numeric" value="{{$item->amount}}" name="editnumber" />
-                                                    <a href="#" class="qty qty-plus">+</a>
-                                                </div>
-                                                </form>-->
-                                                    <!--                 
-                                                    <form action="{{route("editCartArticle")}}" method="post"  id="formshow{{$item->variant_id}}" style="display:none;">
-                                                        @csrf
-                                                        
-                                                        <input type="hidden" value="{{$item->variant_id}}"  name="variantid"/>
-                                                        <input type="hidden" value="{{$item->id}}"  name="cartid"/>
-                                                        <input type="number" title="Qty" value="{{$item->amount}}" min="1" max="{{$item->maxvariant}}"step="1" class="form-control qty" text="1" id="quant" style="width:50%; margin:auto;" name="editnumber"/>
-                                                        <div  style="margin:auto;">
-                                                        <input type="submit">
-                                                        <a class="icon_close fsz-24 " onclick="closeEditForm({{$item->variant_id}});"></a>
-                                                        </div>
-                                                    </form>-->
                                                 
-                                                    </div>
+                                            </div>
                                                 
                                                     
                                                 
