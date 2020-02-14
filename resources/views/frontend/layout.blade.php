@@ -74,7 +74,7 @@
                                         <ol class="cart-list">  
                                             <li>
                                                 <div class="alert">
-                                                    
+                                                
                                                     @if($cart_items!=null)
                                                         @foreach ($cart_items as $recordsCart)
                                                         
@@ -87,7 +87,11 @@
                                                             </div>
                                                         @endforeach
                                                     @else
-                                                    Empty
+                                                        
+                                                        
+                                                        @guest
+                                                            You need to be logged in to see your cart    
+                                                        @endguest
                                                     @endif
                                                     
                                                 
