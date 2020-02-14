@@ -87,20 +87,8 @@ class CartController extends Controller
               delete();
         return redirect("cart");
     }
-    /*
     
-            <form action="{{route("editCartArticle")}}" method="post">
-            @csrf
-            <input name="editnumber" type="number" title="Qty" value="0" name="quantity" min="1" max="10"step="1" class="form-control qty" text="1" id="quant" style="width:25%; margin:auto;"/>
-            <div  style="margin:auto;">
-            <input type="submit">
-            </div>
-            </form>
-    */
     function editCartArticle(Request $request){
-        //"_token" => "UrEEzND2LzPLGlujPpy3BwTUnLop4iBw2UUFb1G3"
-        //"variantid" => "1"
-        //"editnumber" => "1"
         $cart=Cart::find($request->cartid);
         $cart->amount=$request->editnumber;
         $cart->save();

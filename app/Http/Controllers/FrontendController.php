@@ -6,10 +6,11 @@ use App\Category;
 use App\Article;
 use App\Cart;
 use App\Wishlist;
+use App\Shop;
 use App\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Shop;
+
 
 class FrontendController extends Controller
 {

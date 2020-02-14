@@ -21,11 +21,6 @@ class ArticleController extends Controller
     }
 
     public function fetchProductById($macrocat,$id){
-        if(!Auth::guest()){
-        $usercart=Cart::select("variant_id","amount")->
-                  where("products_id","=",$id)->
-                  where("user_id","=",Auth::user()->id);
-                
         $articlesingle=Article::select(
                         "article.id",
                         "article.name",
@@ -43,28 +38,14 @@ class ArticleController extends Controller
                         where("category.macrocategory","=","$macrocat")->
                         join("variant","variant.product_id","=","article.id")->
                         first();
-        $fetchvariant=Variant::all()->where("product_id","=",$id);
-        $images=ArticleImg::select("image")-> where("product_id","=",$id);
-        
-        return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"cartamount"=>$usercart,"images"=>$images]);
+        if(!Auth::guest()){
+        $usercart=Cart::select("variant_id","amount")->
+                         where("products_id","=",$id)->
+                        where("user_id","=",Auth::user()->id);
+                        $fetchvariant=Variant::all()->where("product_id","=",$id);
+                        $images=ArticleImg::select("image")-> where("product_id","=",$id);
+                        return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"cartamount"=>$usercart,"images"=>$images]);
         }else{
-            $articlesingle=Article::select(
-                            "article.id",
-                            "article.name",
-                            "article.description",
-                            "article.price",
-                            "article.imgURI",
-                            "category.name as nomecat",
-                            "article.details",
-                            "article.sale",
-                            
-                            
-                            DB::raw("GROUP_CONCAT(variant.size SEPARATOR ',') as sizelist"))->
-                            where("article.id","=",$id)->
-                            join("category","article.cat_id","=","category.id")->
-                            where("category.macrocategory","=","$macrocat")->
-                            join("variant","variant.product_id","=","article.id")->
-                            first();
             $fetchvariant=Variant::all()->where("product_id","=",$id);
             $images=ArticleImg::select("image")-> where("product_id","=",$id);
             return view("frontend.singleProduct",["singart"=>$articlesingle,"details"=>$fetchvariant,"images"=>$images,"cartamount"=>null]);

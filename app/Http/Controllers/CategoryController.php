@@ -117,32 +117,25 @@ class CategoryController extends Controller
                                   join("category","article.cat_id",'=',"category.id")->
                                   where("cat_id",$category)->
                                   where("macrocategory",$macro)->
-                                  
                                   join("variant","variant.product_id","=","article.id")->
                                   groupBy("variant.product_id");
-
         if($request->has("orderby")&&$request->orderby=="asc"){
             $query=$query->orderBy("saledprice","ASC");
         }else if($request->has("orderby")&&$request->orderby=="desc"){
             $query=$query->orderBy("saledprice","DESC");
         }
-
         if($request->salesonly!==null){
             $query=$query->where("article.sale",">",0);
         }
-        
         if($variantvar!=null){
             $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
         }else{
             $query=$query->paginate(9);
         }
-        
         if($query->isEmpty()){
             
             return(abort(404));
         }else{
-            
-            
             $array=[];
             $variantst=Article::select("variant.size")->
                                     join("category","article.cat_id",'=',"category.id")->
@@ -151,9 +144,7 @@ class CategoryController extends Controller
                                     join("variant","variant.product_id","=","article.id");
             foreach($variantst->get() as $sizeget){
                 array_push($array,$sizeget->size);
-                
             }
-            
             $arraynodup=array_unique($array);
             arsort($arraynodup);
             return view('frontend.products',["items"=>$query,"orderby"=>$request->orderby,"pagingnumber"=>$request->pagingform,"sizesdistinct"=>$arraynodup]);
