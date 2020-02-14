@@ -101,9 +101,7 @@ class CategoryController extends Controller
             ->get();
         */ 
         $variantvar=$request->input("variant");
-        if($request->has("orderby")&&$request->orderby=="asc"){
-
-            $query=Article::select("article.id",
+        $query=Article::select("article.id",
                                   "article.name",
                                   "article.description",
                                   "article.price",
@@ -121,66 +119,24 @@ class CategoryController extends Controller
                                   where("macrocategory",$macro)->
                                   
                                   join("variant","variant.product_id","=","article.id")->
-                                  groupBy("variant.product_id")->
-                                  
-                                  orderBy("saledprice","ASC");
-            if($variantvar!=null){
-                $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
-            }else{
-                $query=$query->paginate(9);
-            }
-            
-            //"variant.size",
+                                  groupBy("variant.product_id");
+
+        if($request->has("orderby")&&$request->orderby=="asc"){
+            $query=$query->orderBy("saledprice","ASC");
         }else if($request->has("orderby")&&$request->orderby=="desc"){
-                                $query=Article::select("article.id",
-                                "article.name",
-                                "article.description",
-                                "article.price",
-                                "article.imgURI",
-                                "category.name as nomecat",
-                                "category.id as idcat",
-                                "category.macrocategory",
-                                "article.sale",
-                                "article.price",
-                                "variant.size",
-                                DB::raw("article.price-article.sale*article.price/100 as saledprice")
-                                )->
-                                join("category","article.cat_id",'=',"category.id")->
-                                where("cat_id",$category)->
-                                where("macrocategory",$macro)->
-                                join("variant","variant.product_id","=","article.id")->
-                                groupBy("variant.product_id")->
-                                orderBy("saledprice","DESC");
-                                if($variantvar!=null){
-                                    $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
-                                }else{
-                                    $query=$query->paginate(9);
-                                }     
-        }else{
-                                $query=Article::select("article.id",
-                                "article.name",
-                                "article.description",
-                                "article.price",
-                                "article.imgURI",
-                                "category.name as nomecat",
-                                "category.id as idcat",
-                                "category.macrocategory",
-                                "article.sale",
-                                "article.price",
-                                "variant.size",
-                                DB::raw("article.price-article.sale*article.price/100 as saledprice"))->
-                                
-                                join("category","article.cat_id",'=',"category.id")->
-                                where("cat_id",$category)->
-                                where("macrocategory",$macro)->
-                                join("variant","variant.product_id","=","article.id")->
-                                groupBy("variant.product_id");
-                                if($variantvar!=null){
-                                    $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
-                                }else{
-                                    $query=$query->paginate(9);
-                                }
+            $query=$query->orderBy("saledprice","DESC");
         }
+
+        if($request->salesonly!==null){
+            $query=$query->where("article.sale",">",0);
+        }
+        
+        if($variantvar!=null){
+            $query=$query->whereIn("variant.size",$variantvar)->paginate(9);
+        }else{
+            $query=$query->paginate(9);
+        }
+        
         if($query->isEmpty()){
             
             return(abort(404));

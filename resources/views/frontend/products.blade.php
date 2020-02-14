@@ -59,7 +59,9 @@
                                     
                                         </label>
                                     </div>
-                                           
+                                    <div>
+                                    <input type="checkbox" name="salesonly"/> Sales only 
+                                    </div>
                                             
                                             
                                         

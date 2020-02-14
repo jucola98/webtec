@@ -58,15 +58,24 @@ class FrontendController extends Controller
         return view('frontend.cart');
     }
     public function getWish(){
+        if(!Auth::guest()){
         $query=Wishlist::select("product_id","imgURI","article.name","article.price","category.macrocategory as mcat","article.sale")->where("user_id","=",Auth::user()->id)->join("article","article.id","=","wishlist.product_id")->join("category","article.cat_id","=","category.id")->get();
+        
         return view('frontend.wishlist',["wishlistdata"=>$query]);
+        }else{
+            return redirect("login");
+        }
     }
     public function getSingle(){
         return view('frontend.singleProduct');
     }
     public function getCheckout(){
+        if(!Auth::guest()){
         $query=Country::select("name");
         return view('frontend.checkout', ["shippingdata"=> $query->get()]);
+        }else{
+            return redirect("login");
+        }
     }
     public function searchProduct(Request $request){
         $query=Article::select("article.id","article.name","article.description",
