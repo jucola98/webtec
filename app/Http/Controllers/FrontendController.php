@@ -49,7 +49,8 @@ class FrontendController extends Controller
     }
     public function getShipping(){
         $query=Country::all(); 
-        return view('frontend.shipping', ["shippingdata"=> $query]);
+        $shop=Shop::select("adress","phone_number","email");
+        return view('frontend.shipping', ["shippingdata"=> $query,"shops"=>$shop->get()]);
     }
     public function getProducts(){
         return view('frontend.products');

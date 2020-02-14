@@ -9,39 +9,27 @@
             
                 
                 <section class="breadcrumb-bg-3" style="background-image:url({{Voyager::image('banners/contactbanner.jpg')}})"  >
-                
-					
-                <div class="site-breadcumb">                        
-                    <h1 class="title-1">Contact</h1> 
-                        <ol class="breadcrumb breadcrumb-menubar">
-                            <li> <a href="{{ route('master') }}"> Home </a> Contact </li>                             
-                        </ol>
-                </div>
-
-                 
-                    
-                
-                <div class="newsletter">
+                    <div class="site-breadcumb">                        
+                        <h1 class="title-1">Contact</h1> 
+                            <ol class="breadcrumb breadcrumb-menubar">
+                                <li> <a href="{{ route('master') }}"> Home </a> Contact </li>                             
+                            </ol>
+                    </div>
+                    <div class="newsletter">
                     <!-- About Us Starts -->
-                    <div class="container">
+                        <div class="container">
                         <!-- Contact Starts -->
-                        
-                        
-                        
-                        
-                        <div class="row">
-                            
-                            <div class="col-sm-4 contact-box text-center">
-                                <div class="ptb-50">
-                                
+                            <div class="row">
+                                <div class="col-sm-4 contact-box text-center">
+                                    <div class="ptb-50">
                                     <i class="icon_mobile"></i>
                                     <h3 class="title-1">Phone</h3>
                                     @foreach($shops as $shopinfo)
                                     <p>{{$shopinfo->phone_number}}</p>
                                     @endforeach
                                     
+                                    </div>
                                 </div>
-                            </div>
                             <div class="col-sm-4 contact-box text-center">
                                 <div class="ptb-50">
                                     <i class="icon_pin_alt"></i> 
@@ -57,17 +45,12 @@
                                     <h3 class="title-1">email</h3>
                                     @foreach($shops as $shopinfo)
                                     <p>{{$shopinfo->email}}</p>
-                                    @endforeach
-                                    
+                                    @endforeach   
                                 </div>
                             </div>
                         </div>
-                        </div>
-                        </div>
-                        </div>
-                        
-                           
-                        </section>
+                    </div>
+                </section>
 
                         
 
@@ -109,7 +92,7 @@
         <!-- / Map Ends -->
     </div>
     <!-- / About Us Ends -->
-</section>
+
 
 
 

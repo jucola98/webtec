@@ -13,41 +13,42 @@
                         <ol class="breadcrumb breadcrumb-menubar">
                             <li> <a href="{{ route('master') }}"> Home </a> Shipping info </li>                             
                         </ol>
-                </div>  
-                    
-                
                 <div class="newsletter">
                     <!-- About Us Starts -->
-                    <div class="container">
+                        <div class="container">
                         <!-- Contact Starts -->
-                        <div class="row">
-                            <div class="col-sm-4 contact-box text-center">
-                                <div class="ptb-50">
+                            <div class="row">
+                                <div class="col-sm-4 contact-box text-center">
+                                    <div class="ptb-50">
                                     <i class="icon_mobile"></i>
                                     <h3 class="title-1">Phone</h3>
-                                    <p>Phone 01: (39) 3489567342</p>
-                                    <p>Phone 02: (39) 3331009084</p>
+                                    @foreach($shops as $shopinfo)
+                                    <p>{{$shopinfo->phone_number}}</p>
+                                    @endforeach
+                                    
+                                    </div>
                                 </div>
-                            </div>
                             <div class="col-sm-4 contact-box text-center">
                                 <div class="ptb-50">
-                                    <i class="icon_pin_alt"></i>
+                                    <i class="icon_pin_alt"></i> 
                                     <h3 class="title-1">address</h3>
-                                    <p>Via Roma n 5, L'Aquila, AQ 67100.</p>
+                                    @foreach($shops as $shopinfo)
+                                    <p>{{$shopinfo->adress}}</p>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="col-sm-4 contact-box text-center">
                                 <div class="ptb-50">
                                     <i class="icon_mail_alt"></i>
                                     <h3 class="title-1">email</h3>
-                                    <p>support@commercemail.com</p>
-                                    <p>cozystore@commerceamail.com</p>   
+                                    @foreach($shops as $shopinfo)
+                                    <p>{{$shopinfo->email}}</p>
+                                    @endforeach   
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-             </section>
+            </section>
 
 
                 <div class="container">
@@ -110,13 +111,8 @@
                         <br><a href="{{ route ('contact') }}">CONTACT US FOR ANY QUESTION</a>
                     </div>
                 </div>  
-
-                        
-
+            </div>
         
-    </div>
-    
-</section>
 
 
 
