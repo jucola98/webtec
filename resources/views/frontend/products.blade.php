@@ -53,18 +53,9 @@
                                             </div>
                                         </label>
                                     </div>
-                                    
-
-                                    <div>
-                                        <label class="pad2"> Show sales only
-                                            <div class="pad4"><input type="checkbox" name="salesonly" /> </div>
-                                        </label>
-                                    
-                                    </div>
-
-                                    <div style="float:left;" class="pad2">
+                                    <div style="float:right;">
                                         <div>
-                                            <input type="submit" class="">
+                                            <input type="submit" class="pad">
                                         </div>
                                     </div>
                                     

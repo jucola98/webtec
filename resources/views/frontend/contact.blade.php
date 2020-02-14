@@ -73,7 +73,8 @@
 
         <!-- Contact Form Starts -->
         <div class="contact-form-wrap text-center ptb-70 row">                       
-            <form class="contact-form col-md-8 col-md-offset-2">
+            <form class="contact-form col-md-8 col-md-offset-2" action="{{route("contactUsSend")}}" method="post">
+                @csrf
                 <h2 class="section-title pb-20">  <span> If you got any questions </span> <span> please do not hesitate to send us a message. </span> </h2>
                 <div class="form-group col-sm-12 form-alert"></div>
                 <div class="">
@@ -81,13 +82,13 @@
                         <input required="" type="text" title="" data-placement="bottom" data-toggle="tooltip" value="" id="cf_name" name="cf_name" placeholder="Your Name" class="form-control name input-your-name" data-original-title="Name is required">
                     </div>
                     <div class="form-group col-sm-12">
-                        <input required="" type="text" title="" data-placement="bottom" data-toggle="tooltip" value="" id="cf_email" name="cf_email" placeholder="Your Email" class="form-control email input-email" data-original-title="Email is required">
+                        <input required="" type="email" title="" data-placement="bottom" data-toggle="tooltip" value="" id="cf_email" name="cf_email" placeholder="Your Email" class="form-control email input-email" data-original-title="Email is required">
                     </div>
                     <div class="form-group col-sm-12">
                         <input type="text" title="" data-placement="bottom" data-toggle="tooltip" value="" id="cf_website" name="cf_website" placeholder="Subject" class="form-control website input-website">
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea title="" data-placement="top" data-toggle="tooltip" id="cf_message" name="cf_message" placeholder="Message" cols="10" rows="3" class="form-control message input-message" data-original-title="Message is required"></textarea>
+                        <textarea maxlength="65,532" title="" data-placement="top" data-toggle="tooltip" id="cf_message" name="cf_message" placeholder="Message" cols="10" rows="3" class="form-control message input-message" data-original-title="Message is required"></textarea>
                     </div>
                     <div class="form-group col-sm-12">
                         <button class="btn-black btn submit-btn" type="submit"> <b> Send Message </b> </button>

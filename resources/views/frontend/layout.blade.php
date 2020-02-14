@@ -237,7 +237,7 @@
                             <div class="form-group col-sm-12 form-alert"></div>
                             <div class="form-group">
                                 <div class="mail-info">
-                                    <input name="email" placeholder="youremail@domain.com" class="form-control text" type="text">
+                                    <input name="email" placeholder="youremail@domain.com" class="form-control text" type="email" required>
                                     <button class="btn small-btn btn-black">Subscribe</button>
                                 </div>
                             </div>                                       

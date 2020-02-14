@@ -18,9 +18,9 @@ class NewsletterController extends Controller
         $news->email = $request->email;
         
         $news->save();
-        return redirect("/");
+        
         
     }
-    
+    return redirect("/");
     }
 }

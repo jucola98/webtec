@@ -40,6 +40,8 @@ Route::post('/newsletter','NewsletterController@postNews')->name("postnews");
 Route::post('/search','FrontendController@searchProduct')->name("searchProduct");
 Route::post('/checkingout', 'CheckOutController@checkOutOperations')->name('checkingOut');
 Route::post('/products/{macrocat}/{category}', 'CategoryController@productsMacroCatFilter')->name('productsPost');
+
+Route::post('/contactussend', 'ContactUsController@postMessage')->name('contactUsSend');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     
