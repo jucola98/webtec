@@ -51,7 +51,7 @@ function closeEditForm(varid){
       var idtocheck="#"+formshow;
       
       if(parseInt($(idtocheck).closest("form").find("input[name='editnumber']").val())>parseInt($(idtocheck).closest("form").find("input[name='maxvariant']").val())|| parseInt($(idtocheck).closest("form").find("input[name='editnumber']").val())<=0){
-          alert(parseInt($(idtocheck).closest("form").find("input[name='editnumber']").val())>parseInt($(idtocheck).closest("form").find("input[name='maxvariant']").val()));
+          alert("The amount that you put exceedes the stock amount");
           return false;
       }
       

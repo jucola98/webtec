@@ -75,7 +75,7 @@
                                                     <input type="hidden" value="{{$item->variant_id}}"  name="variantid"/>
                                                     <input type="hidden" value="{{$item->id}}"  name="cartid"/>
                                                     <input type="hidden" value="{{$item->maxvariant}}" name="maxvariant">
-                                                    <p> <input type="text" name="editnumber" class="qty" value="{{$item->amount}}"/></p>
+                                                    <p> <input type="text" name="editnumber" class="qty" value="{{$item->amount}}"/>/{{$item->maxvariant}}</p>
                                                     <input type="submit" >
                                                 </form>
 
