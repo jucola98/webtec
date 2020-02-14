@@ -53,8 +53,10 @@
                                             </div>
                                         </label>
                                     </div>
+
                                     <div>
-                                        <input type="checkbox" name="salesonly"/> Sales only 
+                                    <label class="pad2"> Select your size
+                                        <input type="checkbox" id="mar1"/> 
                                     </div>
                                     <div style="float:right;">
                                         <div>
