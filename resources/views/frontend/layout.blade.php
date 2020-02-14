@@ -34,16 +34,9 @@
 
         
 
-        
+      <!-- navbar -->  
     </head>
     <body class="wide">        
-
-
-        <!-- WRAPPER -->
-                  
-
-            <!-- HEADER -->
-            
             <header class=" container header-wrap header-two "> 
                 <div class="row">
                     <div class="col-md-2 col-sm-2 col-xs-12 logo-wrap">
@@ -74,11 +67,9 @@
                                         <ol class="cart-list">  
                                             <li>
                                                 <div class="alert">
-                                                
-                                                    @if($cart_items!=null)
-                                                        @foreach ($cart_items as $recordsCart)
-                                                        
-                                                            <a class="img" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}"> <img src="{{asset($recordsCart->URI)}}" alt=""/> </a>
+                                                @if($cart_items!=null)
+                                                     @foreach ($cart_items as $recordsCart)
+                                                        <a class="img" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}"> <img src="{{asset($recordsCart->URI)}}" alt=""/> </a>
                                                             <div class="cart-title">
                                                                 <a class="font-2" href="{{route('singleprod',[$recordsCart->mcat,$recordsCart->products_id])}}">{{$recordsCart->name}}</a>
                                                                 <p class="price"> 
@@ -86,13 +77,11 @@
                                                                 </p>
                                                             </div>
                                                         @endforeach
-                                                    @else
-                                                        
-                                                        
-                                                        @guest
-                                                            You need to be logged in to see your cart    
-                                                        @endguest
-                                                    @endif
+                                                @else
+                                                    @guest
+                                                        You need to be logged in to see your cart    
+                                                     @endguest
+                                                @endif
                                                     
                                                 
                                                 </div>
@@ -106,9 +95,7 @@
                                         <div class="total">
                                             <span class="font-2">sub total</span> <span class="total-price">{{$cart_total}}€</span>
                                         </div>
-
-                                        <div class="buttons">
-                                            
+                                         <div class="buttons">
                                             <div class="right"> 
                                                 <a href="{{ route('checkout') }}" class="theme-btn btn small-btn"> Checkout </a>
                                             </div>
@@ -119,10 +106,8 @@
                             <div class="top-settings"> 
                                 <a href="#" class="icon-settings icons">  </a> 
                                 <ul class="settings-popup">
-                                 <li class="additional-page font-2">   
-                                 @if ( (Auth::check()) &&  ((Auth::user()->role_id) == 2)) 
-                                
-                                                                  
+                                <li class="additional-page font-2">   
+                                @if ( (Auth::check()) &&  ((Auth::user()->role_id) == 2))                              
                                         <a href="{{ route('logout') }}" 
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -155,13 +140,9 @@
 
                                         @else
                                     
-                                        <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
-                                        
-                                        
-                                        
-                                    </li>
-                                    
-                                    @endif
+                                        <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>   
+                                </li>
+                                @endif
                                 </ul>
                             </div>                            
                         </div>
@@ -212,22 +193,16 @@
                                     </li>
                                     <li><a href="{{ route ('contact') }}">Contact</a></li>
                                     <li><a href="#bottom">About Us</a></li>
-                                    <div class="flex-center position-ref full-height">
-                                    
-                        
-                    
-                
-            
-                                    
+                                    <div class="flex-center position-ref full-height"> 
                                 </ul>
                             </div> 
                         </div>
                     </div>
                 </div>
             </header>
-			<!-- /HEADER -->
+			<!-- end navbar -->
 			
-			
+			<!-- implementazione corpo delle views-->
                 @yield("content");
 			<!-- Newsletter Starts-->
 			<section class="section-five newsletter">
@@ -247,32 +222,20 @@
                             </div>                                       
                         </form>                        
                     </div>
-                </section>
-                 <!-- new end -->
-
-            </article>
-            <!-- / CONTENT AREA -->
-
+            </section>
+     
             <!-- FOOTER -->
-            
-            
-                <footer class="footer-six" id="bottom">
+   
+            <footer class="footer-six" id="bottom">
                 <div class="footer-wrap">
                     <div class="container">
                         <div class="footer-logo">
-                        
                         <li><a href="{{ route ('shipping') }}">SHIPPING INFO</a></li>
                         <li><a href="{{ route ('contact') }}">CONTACT US</a></li>
-                        
-                            
-                            
-                        </div>
-                        
+                        </div>    
                     </div>
                 </div>
-               
                 </div>
-
             </footer>
             
             <!-- /FOOTER -->

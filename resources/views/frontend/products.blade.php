@@ -31,7 +31,7 @@
                             </div>
                             <!-- form per il filtraggio dei prodotti tramite prezzo,size e saldi -->
                             @isset($sizesdistinct)
-                            <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post" class="filtro">
+                                <form action="{{route("productsPost",[$items->first()->macrocategory,$items->first()->idcat])}}" method="post" class="filtro">
                                     @csrf
                                     <div>
                                         <label class="pad"> Sort by </label>
@@ -53,7 +53,6 @@
                                             </div>
                                         </label>
                                     </div>
-
                                     <div>
                                     <label class="pad2"> Show product on sale
                                         <input type="checkbox" id="mar1"/> 
@@ -63,15 +62,13 @@
                                             <input type="submit" class="pad" value="submit">
                                         </div>
                                     </div>
-                                    
-                            </form>
-                            
+                                </form>
                             <!-- fine form -->
                         @endisset
                         </div>    
                     </div>     
                     <div class="tab-content">
-                    <!-- Product Grid View Starts -->
+                    <!-- Visualizzazione prodotti -->
                         <div id="grid-view" class="tab-pane fade active in" role="tabpanel">
                             @foreach ($items as $item)
                             @if(!(($loop->index)%3))
@@ -94,21 +91,19 @@
                                             <div class="product-content">   
                                                 <h2 class="product-title"> <a href="{{route('singleprod',[$item->macrocategory,$item->id])}}">{{$item->name}}</a> </h2>
                                                 @if(($item->sale)>0)
-                                                    <span class="price"> <b>{{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€</b> <del>{{number_format($item->price,2)}}€</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
+                                                <span class="price"> <b>{{number_format(($item->price)-($item->price)*($item->sale/100),2)}}€</b> <del>{{number_format($item->price,2)}}€</del> </span><span class="green-color"> {{$item->sale}}% OFF</span>
                                                 @else
-                                                    <span class="price"> <b>{{number_format($item->price ,2 )}}€</b> <del></del> </span>
-                                                @endif
-                                                <!--stellette-->                                                                                                                                                                                            <br>
-                                                    <form action="{{route('wishlistadd')}}" method="post" class="formset">
-                                                        @csrf
-                                                        <button type="submit" value="{{$item->id}}" name="prodid" class="icon_heart buttonsizer"></button>
-                                                       
-                                                    </form>    
+                                                <span class="price"> <b>{{number_format($item->price ,2 )}}€</b> <del></del> </span>
+                                                @endif                                                                                                                                                                                             <br>
+                                                <form action="{{route('wishlistadd')}}" method="post" class="formset">
+                                                    @csrf
+                                                    <button type="submit" value="{{$item->id}}" name="prodid" class="icon_heart buttonsizer"></button>
+                                                </form>    
                                             </div>
                                         </div>
                                     </div>
                                     @if((($loop->index)%3)==2||$loop->last)
-                                </div><!--termina row-->
+                                </div>
                                 @endif
                                 @endforeach
                                 {{$items->links()}} 
