@@ -75,7 +75,7 @@
         <div class="contact-form-wrap text-center ptb-70 row">                       
             <form class="contact-form col-md-8 col-md-offset-2" action="{{route("contactUsSend")}}" method="post">
                 @csrf
-                <h2 class="section-title pb-20">  <span> If you got any questions </span> <span> please do not hesitate to send us a message. </span> </h2>
+                <h2 class="section-title pb-20" id="abuso">  <span> If you got any questions </span> <span> please do not hesitate to send us a message. </span> </h2>
                 <div class="form-group col-sm-12 form-alert"></div>
                 <div class="">
                     <div class="form-group col-sm-12">

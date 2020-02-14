@@ -8,7 +8,7 @@
     
     
 <!--Breadcrumb Section Start-->
-<section class="breadcrumb-bg-2" style="background-image:url({{Voyager::image('banners/skatebanner.jpg')}})">  
+<section class="breadcrumb-bg-2" style="background-image:url({{Voyager::image('banners/skatebanner.jpg')}}); background-position-x:-100px;">  
                 <div class="site-breadcumb">                        
                     <h1 class="title-1">Products</h1> 
                         <ol class="breadcrumb breadcrumb-menubar">
