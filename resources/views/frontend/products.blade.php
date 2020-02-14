@@ -53,6 +53,9 @@
                                             </div>
                                         </label>
                                     </div>
+                                    <div>
+                                        <input type="checkbox" name="salesonly"/> Sales only 
+                                    </div>
                                     <div style="float:right;">
                                         <div>
                                             <input type="submit" class="pad">
