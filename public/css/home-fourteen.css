@@ -2160,6 +2160,12 @@ textarea:focus:-ms-input-placeholder {
     
     
 }
+#cont{
+    margin-top: 20px;
+}
+#bg00{
+    background-color: #e6e6e6e5;
+}
 #padsort{
     margin-left: 5px;
     margin-right: 5px;

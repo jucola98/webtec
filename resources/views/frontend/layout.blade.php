@@ -129,8 +129,8 @@
                                         @csrf
                                         </form>
                                        
-                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
-                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
                                         <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  Wishlist </a>
                                         @elseif ( (Auth::check()) &&  ((Auth::user()->role_id) == 1))
                                         <a href="{{ route('logout') }}" 
@@ -143,16 +143,18 @@
                                         @csrf
                                         </form>
                                        
-                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span> My Cart </a>
-                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span> My Checkout </a>
+                                        <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
+                                        <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
                                         <a href="{{ route('wishlist') }}"> <span class="icon-heart icons"></span>  Wishlist </a>
                                         <a href="{{ url('/admin/profile') }}"> <span class="icon-note icons"></span>  Backoffice </a>
+                                        <a href="{{ route('orders') }}"> <span class="icon-note icons"></span>  My Orders </a>
 
                                         @else
                                     
                                         <a href="{{ route('login') }}"> <span class="icon-lock icons"></span> Log in/Sing up </a>
                                         <a href="{{ route('cart') }}"> <span class="icon-handbag icons"></span>  Cart </a>
                                         <a href="{{ route('checkout') }}"> <span class="icon-note icons"></span>  Checkout </a>
+                                        <a href="{{ route('orders') }}"> <span class="icon-note icons"></span>  My Orders </a>
                                         
                                     </li>
                                     
@@ -262,16 +264,7 @@
                             
                             
                         </div>
-                        <div class="footer-share font-2">
-                            <ul>
-                                follow us on our social
-                                  
-                                <li><a href="#">twitter</a></li>           
-                                <li><a href="#">pinterest</a></li>
-                                <li><a href="#">google+</a></li>
-                                <li><a href="#">instagram</a></li>           
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
                
