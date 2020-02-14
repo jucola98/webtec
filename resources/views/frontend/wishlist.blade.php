@@ -18,18 +18,11 @@
                     </div>
                 </section>
                 <!--Breadcrumb Section End-->
-
-                <section class="wrapper sec-space shopping-cart">                  
-                    <div class="container">
-                        
+               <section class="wrapper sec-space shopping-cart">                  
+                    <div class="container">                       
                         <h2 class="section-title"> your wishlist items </h2>
-                        
-                                
-                            
-                        
                         <!-- Shopping Cart Starts -->
-                        <div class="cart-table">
-                            
+                        <div class="cart-table">                           
                                 <table class="product-table">
                                     <thead class="font-2">
                                         <tr>
@@ -39,9 +32,7 @@
                                             <th></th> 
                                         </tr>
                                     </thead>
-        
-                                    <tbody>
-                                        
+                                    <tbody>                                       
                                    @isset($wishlistdata)
                                     @foreach ($wishlistdata as $item) 
                                         <tr>
@@ -66,12 +57,8 @@
                                                 
                                                 <form action="wishlistdelete" method="post">
                                                     @csrf
-
-
                                                 <button class="icon_close fsz-24 crossbutton" name="prodid" value="{{$item->product_id}}"></button> 
                                                 </form>
-                                                
-
                                             </td>
                                         </tr>
                                     @endforeach       
@@ -96,20 +83,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            
-                        </div>
-
-                        
-                        
-                            
-                            
-                                
-                            
+                            </div>                             
                         </div>
                         <!-- / Shopping Cart Ends -->
-                    </div>
-                  
+                    </div>                 
                 </section>
-
             </article>
             @endsection

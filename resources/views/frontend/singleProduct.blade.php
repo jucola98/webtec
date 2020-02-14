@@ -124,9 +124,6 @@
                                     <input type="number" title="Qty" value="0" name="quantity" min="1" max="{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}}"step="1" class="form-control qty" text="1" id="quant" onchange='changeValueInput(this,{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}});'>
                                     <a class="btn plus" onclick='productTextHandler(true,{{$details->first()->amount-($cartamount!=null&& !$cartamount->get()->isEmpty()?$cartamount->first()->amount:0)}});'><i class="icon_plus"></i></a>
                                 </div>
-                                
-                                
-                                
                                 <div class="add-to-cart"> 
                                     <input class="theme-btn-1 btn cart-btn" type="submit" value="Add to Cart" />
                                 </div>
@@ -145,9 +142,6 @@
                 </ul>
             </div>
         </div>
-
-
-        
         @endsection
         @section('js')
             <script src={{asset("js/CartUtils.js")}}></script>   

@@ -19,16 +19,10 @@
                 <!--Breadcrumb Section End-->
 
                 <section class="wrapper sec-space shopping-cart">                  
-                    <div class="container">
-                        
+                    <div class="container">                       
                         <h2 class="section-title"> your cart items </h2>
-                        
-                                
-                            
-                        
                         <!-- Shopping Cart Starts -->
-                        <div class="cart-table">
-                            
+                        <div class="cart-table">                           
                                 <table class="product-table">
                                     <thead class="font-2">
                                         <tr>
@@ -78,18 +72,9 @@
                                                     <p> <input type="text" name="editnumber" class="qty" value="{{$item->amount}}"/>/{{$item->maxvariant}}</p>
                                                     <input type="submit" >
                                                 </form>
-
-                                                
+                                                </div>
                                             </div>
-                                                
-                                                    
-                                                
-                                                    
-                                                    
-                                                    
                                 <!-- Products Description Starts --> 
-                                        </div>
-                                        
                                             </td>
                                             <td class="price"> {{number_format((($item->price)-($item->price)*($item->sale/100)) * $item->amount,2)}}€ </td>
                                             <td class="remove-edit">
@@ -110,10 +95,6 @@
                                     <div class="container">
                                         <div class="site-breadcumb">                        
                                         <ul class="font-2" >
-
-                                                
-                                                
-                                            
                                                 <li class="section-title pt-20 slidetext"> <b> sub total  <span class="red-color">
                                                 @if ($total>0)
                                                 €{{number_format($total,2)}}
@@ -142,15 +123,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            
-                        </div>
-
-                        
-                        
-                            
-                            
-                                
-                            
+                            </div>       
                         </div>
                         <!-- / Shopping Cart Ends -->
                     </div>
